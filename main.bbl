@@ -1,0 +1,366 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global/global}
+    \entry{abramovich-vistoli}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=97187eb4a6c3cbfa74d8150b2e476067}{%
+           family={Abramovich},
+           familyi={A\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4653d7593ec79bcfc9e4cfca1b52ab61}{%
+           family={Vistoli},
+           familyi={V\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{fullhash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{fullhashraw}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{bibnamehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authorbibnamehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authornamehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authorfullhash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authorfullhashraw}{35afeb63c430e88ad8e034685112b2f9}
+      \field{labelalpha}{AV02}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0894-0347,1088-6834}
+      \field{journaltitle}{J. Amer. Math. Soc.}
+      \field{number}{1}
+      \field{title}{Compactifying the space of stable maps}
+      \field{volume}{15}
+      \field{year}{2002}
+      \field{pages}{27\bibrangedash 75}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1090/S0894-0347-01-00380-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/S0894-0347-01-00380-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/S0894-0347-01-00380-0
+      \endverb
+    \endentry
+    \entry{Cadman}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ee296d1babfb0b6bd14b29207b80189e}{%
+           family={Cadman},
+           familyi={C\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{fullhash}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{fullhashraw}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{bibnamehash}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{authorbibnamehash}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{authornamehash}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{authorfullhash}{ee296d1babfb0b6bd14b29207b80189e}
+      \strng{authorfullhashraw}{ee296d1babfb0b6bd14b29207b80189e}
+      \field{labelalpha}{Cad07}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9327,1080-6377}
+      \field{journaltitle}{Amer. J. Math.}
+      \field{number}{2}
+      \field{title}{Using stacks to impose tangency conditions on curves}
+      \field{volume}{129}
+      \field{year}{2007}
+      \field{pages}{405\bibrangedash 427}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1353/ajm.2007.0007
+      \endverb
+    \endentry
+    \entry{Douady2020}{inbook}{}{}
+      \name{author}{2}{}{%
+        {{hash=b2541098261741f88fc53e5fd08db8da}{%
+           family={Douady},
+           familyi={D\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4fd713946e1f9c5a17e6d6a41fc969b1}{%
+           family={Douady},
+           familyi={D\bibinitperiod},
+           given={Régine},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{fullhash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{fullhashraw}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{bibnamehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authorbibnamehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authornamehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authorfullhash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authorfullhashraw}{19b550d524241a19d4732fcfd3e6f535}
+      \field{labelalpha}{DD20}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Let B be a topological space. A space overOver B (space)B is a topological space X together with a continuous map {\$}{\$}{\backslash}pi :X{\backslash}rightarrow B{\$}{\$}called projection.}
+      \field{booktitle}{Algebra and Galois Theories}
+      \field{isbn}{978-3-030-32796-5}
+      \field{title}{Coverings}
+      \field{year}{2020}
+      \field{pages}{179\bibrangedash 253}
+      \range{pages}{75}
+      \verb{doi}
+      \verb 10.1007/978-3-030-32796-5_4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-030-32796-5_4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-030-32796-5_4
+      \endverb
+    \endentry
+    \entry{SGA1-IX}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=fb0e3184fdd2fcd28fa74ca67d7cdcc1}{%
+           family={Grothendieck},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{fullhash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{fullhashraw}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{bibnamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorbibnamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authornamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorfullhash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorfullhashraw}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \field{labelalpha}{Gro71}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Revêtements Etales et Groupe Fondamental}
+      \field{isbn}{978-3-540-36910-3}
+      \field{title}{Descente Des Morphismes Etales. Application Au Groupe Fondamental}
+      \field{year}{1971}
+      \field{pages}{228\bibrangedash 260}
+      \range{pages}{33}
+    \endentry
+    \entry{Noohi-thesis}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ef46964fa6644f7c88eae2cf25c8a8ea}{%
+           family={Noohi},
+           familyi={N\bibinitperiod},
+           given={Behrang},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ProQuest LLC, Ann Arbor, MI}%
+      }
+      \strng{namehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{fullhash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{fullhashraw}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{bibnamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorbibnamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authornamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorfullhash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorfullhashraw}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \field{extraname}{1}
+      \field{labelalpha}{Noo00}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Thesis (Ph.D.)--Massachusetts Institute of Technology}
+      \field{title}{Fundamental groups of algebraic stacks}
+      \field{year}{2000}
+      \field{pages}{(no paging)}
+      \range{pages}{-1}
+      \verb{urlraw}
+      \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:0802388
+      \endverb
+      \verb{url}
+      \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:0802388
+      \endverb
+    \endentry
+    \entry{Noohi-paper}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3bfca0f8fc716ff1ec543a729d8615f4}{%
+           family={Noohi},
+           familyi={N\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{fullhash}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{fullhashraw}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{bibnamehash}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{authorbibnamehash}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{authornamehash}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{authorfullhash}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \strng{authorfullhashraw}{3bfca0f8fc716ff1ec543a729d8615f4}
+      \field{extraname}{2}
+      \field{labelalpha}{Noo04}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1474-7480,1475-3030}
+      \field{journaltitle}{J. Inst. Math. Jussieu}
+      \field{number}{1}
+      \field{title}{Fundamental groups of algebraic stacks}
+      \field{volume}{3}
+      \field{year}{2004}
+      \field{pages}{69\bibrangedash 103}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1017/S1474748004000039
+      \endverb
+    \endentry
+    \entry{Noohi-foundations}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ef46964fa6644f7c88eae2cf25c8a8ea}{%
+           family={Noohi},
+           familyi={N\bibinitperiod},
+           given={Behrang},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{fullhash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{fullhashraw}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{bibnamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorbibnamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authornamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorfullhash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorfullhashraw}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \field{extraname}{3}
+      \field{labelalpha}{Noo05}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Foundations of Topological Stacks I}
+      \field{year}{2005}
+      \verb{eprint}
+      \verb math/0503247
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0503247
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0503247
+      \endverb
+    \endentry
+    \entry{simpson-local_systems_on_proper}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=cc5a29908c62a451e5c04382f75518ef}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{fullhash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{fullhashraw}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{bibnamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorbibnamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authornamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorfullhash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorfullhashraw}{cc5a29908c62a451e5c04382f75518ef}
+      \field{labelalpha}{Sim11}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-8599,1558-8602}
+      \field{journaltitle}{Pure Appl. Math. Q.}
+      \field{number}{4}
+      \field{title}{Local systems on proper algebraic {$V$}-manifolds}
+      \field{volume}{7}
+      \field{year}{2011}
+      \field{pages}{1675\bibrangedash 1759}
+      \range{pages}{85}
+      \verb{doi}
+      \verb 10.4310/PAMQ.2011.v7.n4.a27
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/PAMQ.2011.v7.n4.a27
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/PAMQ.2011.v7.n4.a27
+      \endverb
+    \endentry
+    \entry{Taams}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=d4ac6ed0f4b97d32f5e457c6a2826887}{%
+           family={Taams},
+           familyi={T\bibinitperiod},
+           given={Lisanne},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Radboud Universtiy}%
+      }
+      \strng{namehash}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{fullhash}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{fullhashraw}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{bibnamehash}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{authorbibnamehash}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{authornamehash}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{authorfullhash}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \strng{authorfullhashraw}{d4ac6ed0f4b97d32f5e457c6a2826887}
+      \field{labelalpha}{Taa24}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished thesis}
+      \field{title}{Sheaves on Stacky Curves}
+      \field{type}{phdthesis}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://taams.eu/files/DraftThesis.pdf
+      \endverb
+      \verb{url}
+      \verb https://taams.eu/files/DraftThesis.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

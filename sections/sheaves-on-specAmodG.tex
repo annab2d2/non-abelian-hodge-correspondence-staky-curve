@@ -1,0 +1,243 @@
+\section{Sheaves on $[\Spec A / G]$} \label{section: sheaves on [spec A /G]}
+
+In the previous section, we introduced a stacky curve $\mc{X}$ and studied its fundamental group. In what follows, we want to study different moduli spaces of bundles on $\mc{X}$ and understand how they are related to the corresponding moduli spaces on $X$. As observed in \eqref{X|U}, the local structure of $\mc{X}$ around the stacky point is $[\Ab^1/\mu_e]$. Hence, a first step for understanding bundles on $\mc{X}$ is to understand coherent sheaves on $[\Ab^1 / \mu_e]$. In this section, we study more in general coherent sheaves on quotient stacks of the form $[\Spec A / G]$, where $G$ is a discrete group acting on $\Spec A$.
+
+In the rest of the section, we denote $\Spec A$ by $X$ and we work over $\Spec k$, where $k$ is an algebraically closed field of characteristic $0$.
+
+\subsection{Coherent sheaves}\label{coh([X/G])}
+
+The quotient map $ X \to [ X / G]$ is an atlas. Therefore, the datum of coherent sheaf on $[ X/ G]$ is equivalent to the datum of a coherent sheaf $\Fc$ on $X $ with descent data. The descent data is composed by an isomorphism
+\[
+\alpha \colon pr_1^* \Fc \to pr_2^* \Fc
+\]
+of coherent sheaves on $X \times_{BG} X$, and by natural isomorphisms on $X\times_{BG}X\times_{BG} X$, giving the cocycle condition.
+
+\begin{rmk}
+There is an isomorphism $X \times_{BG} X \cong G \times X$. Composing with this isomorphism, the projection $pr_2 \colon  X \times_{BG} X \to X$ is the natural projection $ G \times X \to X$ and the projection $pr_1 \colon X \times_{BG} X \to X $ is the group action $\sigma \colon G \times X \to X$.
+\end{rmk}
+
+In the case $X = \Spec A$, the coherent sheaf $\mc{F}$ corresponds to a finitely presented $A$-module $M$. The isomorphism of $\O_{G \times X}$-modules
+\[
+\alpha \colon  pr_2^* \Fc \to \sigma^* \Fc
+\]
+corresponds to an isomorphism of $(k[G] \otimes A)$-modules
+\[
+\alpha^{\#} \colon  k[G] \otimes M \to k[G] \otimes M,
+\]
+where on the left hand side we have the natural structure of $k[G] \otimes A$-module, while on the right hand side $k[G]$ acts also on $M$ via the action on $A$.
+This gives a morphism of $A$-modules
+\[
+\rho \colon M \to k[G] \otimes M.
+\]
+The morphism $\rho$ gives $M$ the structure od a $k[G]$-comodule. Indeed, the commutativity of
+% \[\begin{tikzcd}
+% 	{k[G]} & {k[G] \otimes V} \\
+% 	{k[G] \otimes V} & {k[G] \otimes k[G] \otimes V}
+% 	\arrow["\rho"', from=1-1, to=1-2]
+% 	\arrow["\rho", from=1-1, to=2-1]
+% 	\arrow["{\id_k[G] \otimes \rho}", from=1-2, to=2-2]
+% 	\arrow["{\Delta \otimes \id_V}"', from=2-1, to=2-2]
+% \end{tikzcd}\]
+\[\begin{tikzcd}
+	{k[G]} && {k[G] \otimes M} \\
+	{k[G] \otimes M} && {k[G] \otimes k[G] \otimes M}
+	\arrow["\rho", between={0.1}{0.9}, from=1-1, to=1-3]
+	\arrow["\rho", from=1-1, to=2-1]
+	\arrow["{\id_{k[G]} \otimes \rho}", from=1-3, to=2-3]
+	\arrow["{\Delta \otimes \id_M}"', from=2-1, to=2-3]
+\end{tikzcd}\]
+follows from the cocycle condition expressed by
+\[\begin{tikzcd}
+	{X \times_{[X/G]} X \times_{[X/G]} X } & {G \times G \times X } && {G \times X} & X.
+	\arrow[between={0.3}{0.7}, equals, from=1-1, to=1-2]
+	\arrow["{\id_G \times \sigma}", from=1-2, to=1-4]
+	\arrow["{m \times \id_X}", shift left, curve={height=-12pt}, from=1-2, to=1-4]
+	\arrow["{pr_{13}}", shift right, curve={height=12pt}, from=1-2, to=1-4]
+	\arrow["{pr_2}"', shift right=2, from=1-4, to=1-5]
+	\arrow["\rho", shift left=2, from=1-4, to=1-5]
+\end{tikzcd}\]
+While the commutativity of
+\[\begin{tikzcd}
+	M & {k[G] \otimes M} \\
+	& {M \cong k \otimes M}
+	\arrow["\rho", from=1-1, to=1-2]
+	\arrow["{\id_M}"', shift right, curve={height=12pt}, from=1-1, to=2-2]
+	\arrow["{\varepsilon \otimes \id_M}", from=1-2, to=2-2]
+\end{tikzcd}\]
+follows from the fact that $\alpha^{\#}$ is an isomorphism of $k[G]$-modules.
+
+In conclusion, the datum of a coherent sheaf on $[\Spec A / G]$ is equivalent to the datum of an $A$-module $M$ with the structure of $k[G]$-comodule. But to give $M$ the structure of $k[G]$-comodule is equivalent to giving it the structure of a $G$-representation. Therefore, coherent sheaves on $[\Spec A / G]$ are $A$-modules with a $G$-action. In the case $A = k$, we get an equivalence
+\[
+\left< \text{Coherent sheaves on } BG \right> \cong \left< \text{Finite dimensional } G\text{-representations} \right>.
+\]
+
+\subsection{Vector bundles}
+
+As just mentioned, a coherent sheaf on $BG$ gives a $G$-representation. Let us consider more in detail the case of vector bundles.
+A vector bundle $\Ec$ on $BG$ corresponds to a morphism $BG \to BGL_n$.
+
+\begin{rmk}
+A morphism $f \colon BG \to BGL_n$ yields a homomorphism of group schemes $G \to GL_n$.
+\end{rmk}
+\begin{proof}
+    For any test scheme $T$, consider the trivial $G$-torsor $G \times T \to T$ as an object of $BG(T)$. Then
+    \[
+    \Aut_{BG(T)}(G \times T \to T) = G(T).
+    \]
+    Notice that $f$ must map trivial torsors to trivial torsors.
+	Indeed, for $T = \Spec k$ we have that $f(G \to \Spec k)$ is a $GL_n$-torsor over $\Spec k$. Since $k$ is algebraically closed, $\Spec k$ admits only trivial torsors, therefore $f(G \to \Spec k)$ is the trivial torsor $GL_n \to \Spec k$. For other schemes $T \in \Sch/k$ the statement follows by compatibility with pullback.\\
+	% Indeed, this is trivial for $T = \Spec k$ and follows by compatibility under pullback for other schemes $T \in \Sch/k$.\\
+    % (In this part of the argument it is essential that $k$ is algebraically closed, so that $\Spec k$ admits only the trivial torsor)\\
+    Passing to the automorphisms groupoids, we get that $f$ induces a morphism of groupoids
+    \[
+    G(T) = \Aut_{BG(T)}(G \times T \to T) \to \Aut_{BGL_n}(GL_n \times T \to T ) = GL_n(T),
+    \]
+    which is functorial in $T$. This is exactly a morphism of group schemes $G \to GL_n$, i.e. an $n$-dimensional representation of $G$.
+\end{proof}
+
+% \begin{rmk}
+% Notice that the representation obtained by the above construction comes from the descent datum associated to the vector bundle $\Ec$ on $BG$. For this reason, we get exactly the same representation as in \zcref{coh([X/G])}.
+% \end{rmk}
+
+\begin{rmk}
+The $G$-representation $G \to GL_n$ found above is the same as the representation obtained by the descent data of the vector bundle $\mc{E}$ corresponding to the morphism $BG \to BGL_n$, as mentioned in \zcref{coh([X/G])}.
+\end{rmk}
+
+
+\subsection{The case of a stacky curve} \label{subsection: the case of a stacky curve}
+% Let us now focus on the case we are interested in. Let $X$ be a complex curve and $p \in X$ be a complex point. Associated to $p$ is a pair $(\O(p), s_p)$, where $O(p)$ is the line bundle associated to the effective Cartier divisor $p$ and $s_p$ is the \textit{tautological section} of $\O(p)$, vanishing at $p$.
+
+% The \textit{stacky curve} $\Xc$ is defined as the pullback
+% % \[\begin{tikzcd}
+% % 	\Xc & {[\Ab^1/\Gb_m]} \\
+% % 	X & {[\Ab^1/\Gb_m]}
+% % 	\arrow[from=1-1, to=1-2]
+% % 	\arrow[from=1-1, to=2-1]
+% % 	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+% % 	\arrow["{\wedge n}", from=1-2, to=2-2]
+% % 	\arrow["{(\O(p), s_p)}"', from=2-1, to=2-2]
+% % \end{tikzcd}\]
+% \[\begin{tikzcd}
+% 	\Xc && {[\Ab^1/\Gb_m]} \\
+% 	X & {} & {[\Ab^1/\Gb_m].}
+% 	\arrow[from=1-1, to=1-3]
+% 	\arrow[from=1-1, to=2-1]
+% 	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+% 	\arrow["{\wedge e}", from=1-3, to=2-3]
+% 	\arrow["{(\O(p), s_p)}"', from=2-1, to=2-3]
+% \end{tikzcd}\]
+% The stack $\Xc$ comes equipped with a pair $(\O(\frac{1}{e}p), \frac{1}{e}s_p)$, where $\O(\frac{1}{e}p)$ is a line bundle and $\frac{1}{e}s_p$ is a section. This pair corresponds to the upper horizontal morphism, and is characterized by the properties
+% \[
+% \pi^*\O(p) = \O(\tfrac{1}{e}p)^e, \quad \pi^* s_p = (\tfrac{1}{e}s_p)^e.
+% \]
+% The sheaf $\O(\frac{1}{e}p)$ is called the \textit{tautological sheaf} of the stacky curve $\Xc$. It corresponds to the composition
+% \[
+% \Xc \to [\Ab^1 / \Gb_m] \to B\Gb_m.
+% \]
+
+We now apply the theory to the example presented in \zcref{stacky curve}.
+As already mentioned, $\mc{X}$ is equipped with a line bundle $\O(\tfrac{1}{e}p)$.
+
+We are interested in studying the behavior of $\O(\frac{1}{e}p)$ at the stacky point of $\Xc$. Namely, considering the fiber product
+\[\begin{tikzcd}
+	{B\mu_e} & \Xc \\
+	{*}      & X,
+	\arrow["i", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow["p", from=2-1, to=2-2]
+\end{tikzcd}\]
+we are interested in the pullback $i^* \O(\frac{1}{e}p)$, which corresponds to the composition
+\[
+B\mu_n \xrightarrow{i} \Xc \to [\Ab^1 / \Gb_m] \to B\Gb_m.
+\]
+
+\begin{thm}\cite[Theorem 1.1.36]{Taams}
+In the following diagram, the outer square is cartesian
+\[\begin{tikzcd}
+	{B\mu_e} & \Xc & {[\Ab^1/\Gb_m]} & {B\Gb_m} \\
+	{*} & X & {[\Ab^1/\Gb_m]} & {B\Gb_m.}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-2, to=2-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow["{\wedge e}", from=1-3, to=2-3]
+	\arrow["{\wedge e}", from=1-4, to=2-4]
+	\arrow["p"', from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+\end{tikzcd}\]
+In particular, it is the pullback square
+\[\begin{tikzcd}
+	{B\mu_e} & {B\Gb_m} \\
+	{*} & {B\Gb_m}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{\wedge e}", from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+corresponding to the exact sequence of groups
+\[
+1 \to \mu_e \to \Gb_m \xrightarrow{\wedge e} \Gb_m.
+\]
+\end{thm}
+\begin{proof}
+    Consider the left side of the diagram
+    \begin{equation}\label{cd}
+    \begin{tikzcd}
+	{B\mu_e} &&&& {[\Ab^1/\Gb_m]} \\
+	{*} &&&& {[\Ab^1/\Gb_m].}
+	\arrow["{{(\pi^*\O(p)\vert_{B\mu_e}, \; \pi^*s_p\vert_{B\mu_e})}}", from=1-1, to=1-5]
+	\arrow["\psi", from=1-1, to=2-1]
+	\arrow["{{{\wedge e}}}", from=1-5, to=2-5]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{{(\O(p)\vert_p, \; s_p\vert_p)}}"', from=2-1, to=2-5]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=0]
+    \end{tikzcd}
+    \end{equation}
+    Since the section $s_p$ by definition vanishes at $p$, we have $s_p \vert_p = 0$. Moreover, by construction
+    \[
+    (\pi^* s_p \vert_{B\mu_e})^e = \psi^* s_p \vert_p = \psi^* 0 = 0,
+    \]
+    therefore $\pi^* s_p \vert_{B\mu_e}$ = 0. This shows that, in the diagram \eqref{cd}, the horizontal arrows factor through the inclusion $B\Gb_m \to [\Ab^1 / \Gb_m]$ given by the choice of the zero section. So we get
+    \begin{equation}\label{cd2}
+    \begin{tikzcd}
+	{B\mu_e} && {B\Gb_m} & {[\Ab^1/\Gb_m]} \\
+	{*} && {B\Gb_m} & {[\Ab^1/\Gb_m],}
+	\arrow["{\O(\frac{1}{e}p) \vert_B\mu_e}", from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-3, to=1-4]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow["{{{\wedge e}}}", from=1-4, to=2-4]
+	\arrow["{\O(p)\vert_p}", from=2-1, to=2-3]
+	\arrow[from=2-3, to=2-4]
+    \end{tikzcd}
+    \end{equation}
+    where the vertical arrow can be filled by the map induced by the $e$-th power morphism $\Gb_m \to \Gb_m$. Then, the right square in \eqref{cd2} becomes the cartesian square
+    \[\begin{tikzcd}
+	{B\Gb_m} & {[\Ab^1/\Gb_m]} \\
+	{B\Gb_m} & {[\Ab^1/\Gb_m].}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\wedge e}", from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{{{\wedge e}}}", from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+    \end{tikzcd}\]
+    This shows that in \eqref{cd2} both the outer and the rightmost squares are cartesian. Therefore, the leftmost square is also cartesian. This means that $\O(\frac{1}{e}p)\vert_{B\mu_e}$ is the line bundle obtained by the pullback square
+    \[\begin{tikzcd}
+	{B\mu_e} & {B\Gb_m} \\
+	{*} & {B\Gb_m,}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{\wedge e}", from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+    \end{tikzcd}\]
+    corresponding to the inclusion $\mu_e \hookrightarrow \Gb_m$.
+\end{proof}
+
+This means that the $\mu_e$-representation obtained as $\O(\frac{1}{e}p)\vert_{B\mu_e}$ is just the tautological character, corresponding to the inclusion $\mu_e \hookrightarrow \Gb_m$.

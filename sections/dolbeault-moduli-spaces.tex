@@ -1,0 +1,123 @@
+\section{Dolbeault moduli spaces}\label{section: dolbeault moduli spaces}
+
+Recall tha the Dolbeault moduli space is the moduli space of semistable Higgs bundles, i.e.
+\begin{gather}
+\Higgs_n^d(X) \coloneqq \left< (\mc{E}, \varphi) \mymid \mc{E} \in \Bun_n^d(X), \; \varphi\colon \mc{E} \to \mc{E} \otimes \Omega_X \right>,\\
+\mc{M}_{n, Dol}^d(X) \coloneqq \Higgs_n^{d, ss}(X).
+\end{gather}
+We can define similarly $\Higgs_{\underline{m}}^d(\mc{X})$ and $\mc{M}_{\underline{m}, Dol}^d(\mc{X})$.
+
+We now want to extend the results of the previous section to the Dolbeault moduli spaces and find an equivalence
+\begin{equation} \label{equivalence dol}
+\mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n_{-d}, Dol}^0(\mc{X}).
+\end{equation}
+
+As before, we will first extend \eqref{equivalence bun} to the moduli spaces of Higgs bundles and then \eqref{equivalence dol} will follow.
+
+\zcref{omega mc(X)} gave an isomorphism
+\begin{equation}
+\Omega_{\mc{X}} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n-1}.
+\end{equation}
+Notice moreover that, under the above isomorphism, we can give an an explicit expression for the canonical morphism
+\begin{equation} \label{eq: canonical morphism cotangent}
+\pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p).
+\end{equation}
+Namely, \eqref{eq: canonical morphism cotangent} has the form $n \id_{\pi^* \Omega_X} \otimes s^{n-1}$, where $s$ is the tautological section of $\O(\tfrac{1}{n}p)$.\\
+Indeed, the coarse moduli map $\pi \colon \mc{X} \to X $ locally around $p$ has the following form
+\[\begin{tikzcd}
+	{\Ab^1 = \Spec k[x]} \\
+	{\mc{X} = [\Ab^1 / \mu_n]} \\
+	{X = \Ab^1 / \mu_n} & {\Spec k[x^n] = \Spec k[t].}
+	\arrow["q'", from=1-1, to=2-1]
+	\arrow["{x \mapsto t = x^n}"{pos=0.6}, "q = \pi \circ q'"' sloped, curve={height=-24pt}, from=1-1, to=3-2]
+	\arrow["\pi", from=2-1, to=3-1]
+	\arrow[between={0.4}{0.6}, equals, from=3-1, to=3-2]
+\end{tikzcd}\]
+Notice that we have the relation
+\[
+\dd t = \dd x^n = n \, x^{n-1} \, \dd x,
+\]
+therefore the canonical morphism $q^* \Omega_X \to \Omega_{\Ab^1}$ corresponds to
+\begin{align}
+	k[x] \otimes_{k[t]} k[t]\dd t \; &\to \; k[x]\dd x \\
+	f(x) \otimes \dd t \quad &\mapsto \; f(x) \, n \, x^{n-1} \, \dd x.
+\end{align}
+Since $q'$ is étale, it induces isomorphisms on the cotangent sheaves. Moreover, the section $x$ corresponds via $q'$ to the tautological section $s$ of $\O(\tfrac{1}{n}p)$. In conclusion, we get that the canonical morphism $\pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p)$ ha the indicated form.
+
+Now we can use this morphism to extend the pullback functor $\pi^*$ to the Higgs bundles. In particular, we need to lift the Higgs field.
+Define
+\begin{align}
+	(\pi^*, \pi^{\#}) \colon \Higgs_n^d(X) &\to \Higgs_{n_0}^d(\mc{X}) \\
+	(E, \varphi) &\mapsto (\pi^*E, \pi^{\#}\varphi),
+\end{align}
+where $\pi^{\#}\varphi$ is defined as the composition
+\begin{multline}
+\pi^{\#} \varphi \colon \pi^*E \xrightarrow{\pi^* \varphi} \pi^*(E \otimes \Omega_X) = \pi^*E \otimes \pi^* \Omega_X \\
+\xrightarrow{\id \otimes n \hspace{0.3mm} \id \otimes s^{n-1}} \pi^*E \otimes \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p) = \pi^*E \otimes \Omega_{\mc{X}}.
+\end{multline}
+
+Similarly, in the other direction define
+\begin{align}
+	(\pi_*, \pi_{\#}) \colon \Higgs_{n_0}^d(\mc{X})  &\to \Higgs_n^d(X)\\
+	(\mc{E}, \eta) &\mapsto (\pi_*\mc{E}, \pi_{\#}\eta)
+\end{align}
+as follows.
+From the equivalence \eqref{equivalence bun pt1}, it follows that $\mc{E} = \pi^*E$, where $E \cong \pi_* \mc{E}$. By definition, $\eta$ is a morphism in $\Hom_{\mc{X}}(\mc{E}, \mc{E}\otimes\Omega_{\mc{X}})$. Now, using \zcref{omega mc(X)}, we find a chain of natural isomorphisms
+\begin{align}
+\Hom_{\mc{X}}(\mc{E}, \, \mc{E}\otimes\Omega_{\mc{X}}) & \cong \Hom_{\mc{X}}\left( \pi^*E, \, \pi^*E \otimes \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p) \right)\\
+& \cong \Hom_X\left( E, \, \pi_*(\pi^*(E \otimes \Omega_{\mc{X}}) \otimes \O(\tfrac{n-1}{n}p)) \right) \label{eq: higgs field, adjunction} \\
+& \cong \Hom_X\left( E, \, E \otimes \Omega_X \otimes \pi_*\O(\tfrac{n-1}{n}p) \right) \label{eq: higgs field, projection formula} \\
+& \cong \Hom_X\left( E, \, E \otimes \Omega_X \right), \label{eq: higgs field, pushforward}
+\end{align}
+% \begin{gather}
+% \Hom_{\mc{X}}(\mc{E}, \, \mc{E}\otimes\Omega_{\mc{X}}) \cong \Hom_{\mc{X}}\left( \pi^*E, \, \pi^*E \otimes \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p) \right) \cong\\
+% \Hom_X\left( E, \, \pi_*(\pi^*(E \otimes \Omega_{\mc{X}}) \otimes \O(\tfrac{n-1}{n}p)) \right) \cong\\
+% \Hom_X\left( E, \, E \otimes \Omega_X \otimes \pi_*\O(\tfrac{n-1}{n}p) \right) \cong \\
+% \Hom_X\left( E, \, E \otimes \Omega_X \right),
+% \end{gather}
+where \eqref{eq: higgs field, adjunction} follows by the adjunction $\pi^* \dashv \pi_*$, \eqref{eq: higgs field, projection formula} by the projection formula and \eqref{eq: higgs field, pushforward} by the isomorphism $\pi_* \O(\tfrac{n-1}{n}p) \cong \O_X$. \\
+Composing the isomorphisms, we get
+\begin{align}
+	\Hom_X(E, E \otimes \Omega_X) &\xrightarrow{\cong} \Hom_{\mc{X}}(\mc{E}, \mc{E}\otimes \Omega_{\mc{X}}) \\
+	\psi \; &\mapsto \; n \, \pi^* \psi \otimes s^{n-1}.
+\end{align}
+This shows that there exists a unique $\psi \in \Hom_X(E, E \otimes \Omega_X)$ such that $\eta = n \, \pi^* \psi \otimes s^{n-1}$, where in particular we have $\psi = \frac{1}{n} \, \pi_* \eta$. Therefore, we can define
+\[
+\pi_{\#}\eta \coloneqq \frac{1}{n} \, \pi_* \eta.
+\]
+This gives a well defined functor $(\pi_*, \pi_{\#})$.
+
+We now need to show that the functors $(\pi^*, \pi^{\#})$ and $(\pi_*, \pi_{\#})$ are inverse to each other. 
+At the level of vector bundles this was shown in \zcref{section: moduli spaces of vector bundles}. We need to show that the same holds for the Higgs fields. Indeed, computing the two compositions we get
+\begin{gather}
+\varphi \xmapsto{\pi^{\#}} n \, \pi^* \varphi \otimes s^{n-1} \xmapsto{\pi_{\#}} \frac{1}{n} \, \pi_*(n \, \pi^* \varphi \otimes s^{n-1}) = \varphi\\
+\eta \xmapsto{\pi_{\#}} \frac{1}{n} \, \pi_* \eta \xmapsto{\pi^{\#}} n \, \pi^*(\frac{1}{n} \, \pi_* \eta) \otimes s^{n-1} = n \, \pi^* \psi \otimes s^{n-1} = \eta.
+\end{gather}
+
+In conclusion, we get an equivalence
+\begin{equation}
+\begin{tikzcd}
+	{\Higgs_n^d(X)} & {\Higgs^d_{n_0}(\mc{X}).}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{{(\pi^*, \pi^{\#})}}", curve={height=-18pt}, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{{(\pi_*, \pi_{\#})}}", curve={height=-18pt}, from=1-2, to=1-1]
+	\arrow["\cong"{description}, shift right=1.5, draw=none, from=0, to=1]
+\end{tikzcd}
+\end{equation}
+
+As observed earlier, tensoring with a line bundle induces an equivalence, so we get
+\[\begin{tikzcd}
+	{\Higgs_n^d(X)} &&&& {\Higgs^0_{n_{-d}}(\mc{X}).}
+	\arrow["{(\pi^*, \pi^{\#})(-) \otimes \O(-\tfrac{d}{n}p)}", shift left=2, from=1-1, to=1-5]
+	\arrow["{(\pi_*, \pi^{\#})(\O(-\tfrac{d}{n}p) \otimes -)}", shift left=2, from=1-5, to=1-1]
+\end{tikzcd}\]
+
+Finally, we noticed that (semi)stability is preserved, therefore we get the desired equivalence
+\begin{equation}\label{eq: equivalence of dolbeault moduli spaces}
+\begin{tikzcd}
+	{\mc{M}_{n, Dol}^d(X)} &&&& {\mc{M}^0_{n_{-d}, Dol}(\mc{X}).}
+	\arrow["{(\pi^*, \pi^{\#})(-) \otimes \O(-\tfrac{d}{n}p)}", shift left=2, from=1-1, to=1-5]
+	\arrow["{(\pi_*, \pi^{\#})(\O(-\tfrac{d}{n}p) \otimes -)}", shift left=2, from=1-5, to=1-1]
+\end{tikzcd}
+\end{equation}
+
+

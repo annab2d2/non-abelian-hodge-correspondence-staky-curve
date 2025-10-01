@@ -1,0 +1,27 @@
+\subsection{Vector bundles}
+
+As just mentioned, a coherent sheaf on $BG$ gives a $G$-representation. Let us consider more in detail the case of vector bundles.
+A vector bundle $\Ec$ on $BG$ corresponds to a morphism $BG \to BGL_n$.
+
+\begin{rmk}
+A morphism $f \colon BG \to BGL_n$ yields a homomorphism of group schemes $G \to GL_n$.
+\end{rmk}
+\begin{proof}
+    For any test scheme $T$, consider the trivial $G$-torsor $G \times T \to T$ as an object of $BG(T)$. Then
+    \[
+    \Aut_{BG(T)}(G \times T \to T) = G(T).
+    \]
+    Notice that $f$ must map trivial torsors to trivial torsors.
+	Indeed, for $T = \Spec k$ we have that $f(G \to \Spec k)$ is a $GL_n$-torsor over $\Spec k$. Since $k$ is algebraically closed, $\Spec k$ admits only trivial torsors, therefore $f(G \to \Spec k)$ is the trivial torsor $GL_n \to \Spec k$. For other schemes $T \in \Sch/k$ the statement follows by compatibility with pullback.\\
+	% Indeed, this is trivial for $T = \Spec k$ and follows by compatibility under pullback for other schemes $T \in \Sch/k$.\\
+    % (In this part of the argument it is essential that $k$ is algebraically closed, so that $\Spec k$ admits only the trivial torsor)\\
+    Passing to the automorphisms groupoids, we get that $f$ induces a morphism of groupoids
+    \[
+    G(T) = \Aut_{BG(T)}(G \times T \to T) \to \Aut_{BGL_n}(GL_n \times T \to T ) = GL_n(T),
+    \]
+    which is functorial in $T$. This is exactly a morphism of group schemes $G \to GL_n$, i.e. a representation of $G$.
+\end{proof}
+
+\begin{rmk}
+Notice that the representation obtained by the above construction comes from the descent datum associated to the vector bundle $\Ec$ on $BG$. For this reason, we get exactly the same representation as in Section \ref{coh([X/G])}.
+\end{rmk}

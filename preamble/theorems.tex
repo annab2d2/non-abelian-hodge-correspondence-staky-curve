@@ -1,0 +1,48 @@
+%%%%%%%%%%%%% Set the right naming and counting to use the \zcref command from the zref-clever package %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AddToHook{env/thm/begin}{%
+\zcsetup{countertype={thm=theorem}}}
+
+\AddToHook{env/defi/begin}{%
+\zcsetup{countertype={thm=definition}}}
+
+\AddToHook{env/prop/begin}{%
+\zcsetup{countertype={thm=proposition}}}
+
+% \AddToHook{env/lemma/begin}{%
+% \zcsetup{countertype={thm=lemma}}}
+
+\AddToHook{env/cor/begin}{%
+\zcsetup{countertype={thm=corollary}}}
+
+\AddToHook{env/rmk/begin}{%
+\zcsetup{countertype={thm=remark}}}
+
+% \AddToHook{env/example/begin}{%
+% \zcsetup{countertype={thm=example}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% AMBIENTE TEOREMI
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{defi}[thm]{Definition}
+
+%\newtheorem{defi}{Definition}[section]
+%\newtheorem{thm}[defi]{Theorem}
+
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{rmk}[thm]{Remark}
+\newtheorem{example}[thm]{Example}
+
+% UNNUMBERED THEOREMS
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{defi*}{Definition}
+
+% AMBIENTE TEOREMI INTRODUZIONE
+% Define a lettered theorem environment for the Introduction
+\newtheorem{introthm}{Theorem}       % This defines a new theorem environment
+\renewcommand{\theintrothm}{\Alph{introthm}}  % Use letters (A, B, C, etc.) for numbering
+%
+\newtheorem{introprop}[introthm]{Proposition}

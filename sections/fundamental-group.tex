@@ -1,0 +1,270 @@
+\section{Fundamental group}
+
+In this section, we recall the notion of topological Deligne-Mumford stack and its fundamental group, following \cite{Noohi-thesis}, \cite{Noohi-foundations} and \cite{Noohi-paper}.
+
+\subsection{Topological DM stacks}
+
+We follow \cite{Noohi-foundations} in recalling the basic notions regarding topological stacks. Let $\Top$ be the category of compactly generated topological spaces. It becomes a site by taking the usual open coverings of topological spaces as coverings, therefore we can consider stacks over $\Top$.
+
+The usual notions related to stacks can be translated from the algebraic setting to the topological setting, e.g. representability and atlases.
+
+\begin{defi}\cite[Definition 7.1]{Noohi-foundations}
+An \textit{atlas} of a stack $\mc{X}$ is a representable epimorphism $p \colon X \to \mc{X}$. If $\mc{X}$ admits such an atlas, it is called a \textit{pretopological stack}.
+\end{defi}
+
+\begin{defi}\cite[Definition 13.8]{Noohi-foundations}
+A pretopological stack is called a \textit{topological} or \textit{weak Deligne-Mumford} if it admits a chart $p \colon X \to \mc{X}$ that is a local homeomorphism (namely, it pullbacks to surjective local homeomorphisms along topological spaces). 
+\end{defi}
+
+\begin{defi}\cite[Definition 14.3]{Noohi-foundations}
+A \textit{Deligne-Mumford topological stack} (DM topological stack) is a weak Deligne-Mumford topological stack that is locally a quotient by a \textit{mild} action of the inertia groups.\\
+Explicitly, it is required that for any point $x \colon  * \to \mc{X}$ and for any open open substack $\mc{U} \subseteq \mc{X}$ containing $x$, there exists an open substack $\mc{V} \subseteq \mc{X}$ containing $x$ such that $\mc{V} \cong [V / I_x]$, where $V$ is a topological space on which the inertia group $I_x$ acts mildly at $x$. By \textit{mild} action at $x$ we mean that any neighborhood of $x$ in $V$ contains an $I_x$-invariant neighborhood.
+\end{defi}
+
+
+\subsection{Homotopy theory and fundamental group}
+
+In this setting, it makes sense to introduce a notion of homotopy theory, that will be used to define the fundamental group.
+
+As in classical topology, we can introduce the notion of \textit{pair} of topological stacks $(\mc{X}, \mc{A})$ and of morphism of pairs $f\colon (\mc{X}, \mc{A}) \to (\mc{Y}, \mc{B})$, see \cite[Definition 17.1]{Noohi-foundations}.
+
+\begin{defi}\cite[Definition 17.2]{Noohi-foundations}
+Let $f, g \colon (\Xc, \Ac) \to (\Yc, \Bc)$ be morphisms of pairs. A \textit{homotpoy} from $f$ to $g$ is a triple $(H, \varepsilon_0, \varepsilon_1)$, where
+\begin{itemize}
+    \item $H \colon ([0, 1] \times \Xc, \; [0, 1] \times \Ac) \to (\Yc, \Bc)$ is a morphism of pairs;
+    \item $\varepsilon_0 \colon f \Rightarrow H_0$ and $\varepsilon_1 \colon H_1 \Rightarrow g$ are natural isomorphisms.
+\end{itemize}
+A homotopy between points $x, y \colon * \to \mc{X}$ is called a \textit{path}.
+\end{defi}
+
+\begin{rmk}\cite[Remark 17.3]{Noohi-foundations}
+Note that any 2-isomorphism $f \cong g$ can be regarded as an homotopy.
+\end{rmk}
+
+With the notion of homotopy at hand, we can define the homotopy groups.
+
+\begin{defi}\cite[Definition 17.5]{Noohi-foundations}
+The \textit{$n$-th homotopy group} of $\mc{X}$ pointed at $x \in \mc{X}$ is the set of pointed homotopy classes of morphisms from the $n$-sphere $\mathbb{S}^n$ into $\mc{X}$. Namely,
+\[
+\pi_n(\Xc, x) \coloneqq [(\mathbb{S}^n, *), (\Xc, x)].
+\]
+As in the classical topological case, the homotopy groups have a natural group structure and are functorial in $X$.
+\end{defi}
+
+%[We get a natural group homomorphism $\omega_x \colon I_x \to \pi_1(\Xc, x)$.]
+
+Continuing the analogy with classical topology and algebraic topology, we want to define a notion of covering space and observe that, under suitable topological hypotheses, the fundamental group $\pi_1(\mc{X}, x)$ can be recovered by the covering spaces of $\mc{X}$.
+
+\begin{defi}\cite[Definition 18.10]{Noohi-foundations}
+A morphism $\Yc \to \Xc$ is a \textit{covering map} if it is representable and for any morphism $W \to \Xc$ (with $W$ topological space), the base change $ W \times_\Xc \Yc \to W $ is a covering map.
+\end{defi}
+
+In order to recover the fundamental group from the covering spaces of $\mc{X}$, we need to define the notion of fiber and the fiber functor.
+
+\begin{defi}\cite[Definition 18.13]{Noohi-foundations}
+Given a morphism $f \colon \Yc \to \Xc$, the \textit{fiber} of $f$ over $x \in \Xc$ is defined as the groupoid of the points of the pullback $* \times_\Xc \Yc$ and denoted by $\Yc_x$.
+\end{defi}
+
+Assume that $\mc{X}$ is a path-connected topological stack.
+
+\begin{defi}\cite[Definition 18.13]{Noohi-foundations}
+Let $\Cov_{\mc{X}}$ be the category of covering spaces of $\mc{X}$.
+Define the fiber functor as 
+\begin{align}
+    F_x \colon \Cov_\Xc &\to \pi_1(\Xc, x)\mh\Set \\
+                \Yc &\mapsto \pi_0(\Yc_x),
+\end{align}
+where $\pi_0(Y_x)$ denotes the set of isomorphism classes of $\Yc_x$, and the action of $\pi_1(\mc{X}, x)$ on $\pi_0(\mc{Y}_x)$ is an analogous to the monodromy action.
+\end{defi}
+
+\begin{thm}\cite[Theorem 18.19]{Noohi-foundations}\label{fiber functor equivalence}
+If $\Xc$ is connected, locally path connected and semilocally 1-connected, then the fiber functor $F_x$ is an equivalence of categories.
+\end{thm}
+
+\begin{cor}\cite[Corollary 18.20]{Noohi-foundations}
+Under the same hypotheses, there is a natural bijection between the subgroups $H \subseteq \pi_1(\Xc, x)$ (up to conjugation) and pointed connected coverings $p \colon (\Yc, y) \to (\Xc, x)$ (up to isomorphsim). In particular, $\mc{X}$ has a \textit{universal cover}.
+\end{cor}
+
+\begin{rmk}
+The one presented is an analogous of Grothendieck's theory of Galois categories, presented in \cite{SGA1-IX}. The only difference is that in the classical theory of Galois categories the fiber functor is supposed to have values in finite sets. However, the results presented in \cite{SGA1-IX} can be easily generalized to this setting. Following this idea, \zcref{fiber functor equivalence} can be rephrased as follows.
+\end{rmk}
+
+Let $F'_x \colon \Cov_{\mc{X}} \to \Set$ be the fiber functor, considered as a $\Set$-valued functor. In analogy with the theory of Galois categories, we can define
+\[
+\pi'_1(\mc{X}, x) \coloneqq \Aut(F'_x)
+\]
+and prove that $\Cov_\mc{X}$ is equivalent to $\pi'_1(\mc{X}, x)\mh\Set$, see \cite[Remark 18.22]{Noohi-foundations}. If $\mc{X}$ is connected, locally path connected and semilocally $1$-connected, using \zcref{fiber functor equivalence} we get an equivalence
+\[
+\pi_1(\mc{X}, x) \cong \pi'_1(\mc{X}, x).
+\]
+Just like in classical topology, this shows that, under these hypotheses, the fundamental group of $\mc{X}$ can be computed from the category of covering spaces of $\mc{X}$ and in particular it can be identified with the group of deck transformations of the universal cover of $\mc{X}$.
+
+\subsection{Seifert-Van Kampen theorem}
+Using the equivalence
+\[
+\pi_1(\Xc, x) \cong \pi'_1(\Xc, x),
+\]
+we can prove a version of the Seifert-Van Kampen theorem for topological stacks. This is analogous to the classical setting of Galois categories, as exposed for example in \cite[Theorem 4.7.7]{Douady2020}. We report the proof for completeness.
+
+\begin{thm}\label{van kampen}
+Let $\mc{U}_1 \xhookrightarrow{i_1} \mc{X}$ and $\mc{U}_2 \xhookrightarrow{i_2} \mc{X}$ be open subschemes of $\mc{X}$ such that $\mc{X} = \mc{U}_1 \cup \mc{U}_2$. Let $\mc{V} \coloneqq \mc{U}_1 \times_{\mc{X}} \mc{U}_2$. Suppose that $\mc{U}_1, \mc{U}_2$ and $\mc{V}$ are connected. Then, for $x \in \mc{V}$, there is an isomorphism
+\[
+\pi_1(\mc{X}, x) \cong \pi_1(\mc{U}_1, x) *_{\pi_1(\mc{V}, x)} \pi_1(\mc{U}_2, x).
+\]
+Equivalently, the following diagram is cocartesian
+\[\begin{tikzcd}
+	{{\pi_1(\mc{V}, x)}} & {\pi_1(\mc{U}_1, x)} \\
+	{\pi_1(\mc{U}_2, x)} & {\pi_1(\mc{X}, x).}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=180}, draw=none, from=2-2, to=1-1]
+\end{tikzcd}\]
+\end{thm}
+
+\begin{proof}
+In order to simplify the notation, let $G\coloneqq \pi_1(\mc{X}, x)$, $H \coloneqq \pi_1(\mc{V}, x)$ and $G_l \coloneqq \pi_1(\mc{U}_l, x)$ for $l=1,2$, . The inclusions
+\[\begin{tikzcd}
+	{\mc{V}} & {\mc{U}_l} & {\mc{X}}
+	\arrow["{j_l}", hook, from=1-1, to=1-2]
+	\arrow["j", curve={height=-18pt}, hook, from=1-1, to=1-3]
+	\arrow["{i_l}", hook, from=1-2, to=1-3]
+\end{tikzcd}\]
+give rise to a commutative diagram
+\[\begin{tikzcd}
+	H & {G_1} \\
+	{G_2} & {G_1 *_H G_2} \\
+	&& G,
+	\arrow["{j_{1*}}", from=1-1, to=1-2]
+	\arrow["{j_{2*}}"', from=1-1, to=2-1]
+	\arrow["\iota_1", from=1-2, to=2-2]
+	\arrow["{i_{1*}}", curve={height=-12pt}, from=1-2, to=3-3]
+	\arrow["\iota_2", from=2-1, to=2-2]
+	\arrow["{i_{2*}}"', curve={height=12pt}, from=2-1, to=3-3]
+	\arrow["v", dashed, from=2-2, to=3-3]
+\end{tikzcd}\]
+where the dashed arrow can be filled out by the universal property of $G_1 *_H G_2$. We want to prove that $v$ is an isomorphism.
+
+Consider the following $2$-commutative diagram
+% \[\begin{tikzcd}
+% 	{\Cov_{\mc{X}}} && {G\mh\Set} \\
+% 	&&& {(G_1 *_H G_2)\mh \Set} \\
+% 	{\Cov_{\mc{U}_1} \times_{\Cov_{\mc{V}}} \Cov_{\mc{U}_2}} && {G_1\mh\Set \times_{H\mh\Set} G_2\mh\Set.}
+% 	\arrow["{\theta = F_x^{\mc{X}}}"', from=1-1, to=1-3]
+% 	\arrow["\alpha", from=1-1, to=3-1]
+% 	\arrow[from=1-3, to=2-4]
+% 	\arrow["\beta"', from=1-3, to=3-3]
+% 	\arrow[from=2-4, to=3-3]
+% 	\arrow["{\varphi =F_x^{\mc{U}_1} \, \times_{F_x^{\mc{V}}} \, F_x^{\mc{U}_2}}", from=3-1, to=3-3]
+% \end{tikzcd}\]
+\[\begin{tikzcd}
+	{\Cov_{\mc{X}}} &&& {G\mh\Set} \\
+	\\
+	{\Cov_{\mc{U}_1} \times_{\Cov_{\mc{V}}} \Cov_{\mc{U}_2}} &&& {G_1\mh\Set \times_{H\mh\Set} G_2\mh\Set,}
+	\arrow["{{\theta = F_x^{\mc{X}}}}", from=1-1, to=1-4]
+	\arrow["\alpha", from=1-1, to=3-1]
+	\arrow["\beta"', from=1-4, to=3-4]
+	\arrow["{{\varphi =F_x^{\mc{U}_1} \, \times_{F_x^{\mc{V}}} \, F_x^{\mc{U}_2}}}", from=3-1, to=3-4]
+\end{tikzcd}\]
+where $\alpha$ is induced by the restriction of covering spaces and $\beta$ is induced by $i_{1*}$ and $i_{2*}$.
+Notice that $\alpha$ is an equivalence of categories, obtained by the glueing of covering spaces, $\varphi$ and $\theta$ are equivalences, as a consequence of \zcref{fiber functor equivalence}. Therefore, $\beta$ is an equivalence as well.
+
+Notice moreover that the homomorphisms $(\iota_1, \iota_2)$ induce an equivalence of categories
+\[
+\gamma \colon (G_1 *_H G_2)\mh\Set \, \to \, G_1\mh\Set \, \times_{H\mh\Set} \,G_2\mh\Set,
+\]
+making the following diagram $2$-commute
+\[\begin{tikzcd}
+	{G\mh\Set} \\
+	& {(G_1 *_H G_2)\mh\Set} \\
+	{G_1\mh\Set \times_{H-set} G_2\mh\Set.}
+	\arrow["{v^*}", from=1-1, to=2-2]
+	\arrow["\beta"', from=1-1, to=3-1]
+	\arrow["\gamma", from=2-2, to=3-1]
+\end{tikzcd}\]
+Since both $\beta$ and $\gamma$ are equivalences, this shows that $v^*$ is also an equivalence and therefore, see \cite[Proposition 4.7.1]{Douady2020}, that $v$ is an isomorphism of groups.
+\end{proof}
+
+\subsection{The case of a stacky curve}\label{stacky curve}
+In this last paragraph, we want to apply the theory exposed earlier to an explicit example. The case we are interested in is the one of a \textit{stacky curve}, more specifically a curve with a unique stacky point.
+
+Let $X$ be a smooth, projective, genus $g$ curve over $\Cb$ and let $p \in X$ be a closed point. Following \cite[]{Cadman}, we construct $\mc{X} = \sqrt[e]{p/X} $ as a root stack over $X$, with multiplicity $e$ in $p$.
+
+Indeed, consider $p$ as an effective Cartier divisor on $X$. Associated to it, there is a pair $(\O(p), s_p)$, where $\O(p)$ is a line bundle and $s_p$ is a section of $\O(p)$ vanishing at $p$, called the \textit{tautological section}. This pair defines a morphism
+\[
+X \xrightarrow{(\O(p), s_p)} [\Ab^1/\Gb_m].
+\]
+Let $\wedge e \colon [\Ab^1/\Gb_m] \to [\Ab^1/\Gb_m]$ be the morphism induced by taking the $e$-th power maps on $\Ab^1$ and on $\Gb_m$. Define $\mc{X}$ as the pullback
+\begin{equation} \label{eq: definition of X}
+\begin{tikzcd}
+	\Xc && {[\Ab^1/\Gb_m]} \\
+	X & {} & {[\Ab^1/\Gb_m].}
+	\arrow[from=1-1, to=1-3]
+	\arrow["\pi"', from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{\wedge e}", from=1-3, to=2-3]
+	\arrow["{(\O(p), s_p)}"', from=2-1, to=2-3]
+\end{tikzcd}
+\end{equation}
+The vertical map $\pi$ is a coarse moduli map, see \cite[Corollary 2.3.7]{Cadman}.
+The stack $\Xc$ comes equipped with a pair $(\O(\frac{1}{e}p), \frac{1}{e}s_p)$, where $\O(\frac{1}{e}p)$ is a line bundle and $\frac{1}{e}s_p$ is a section of $\O(\tfrac{1}{e}p)$. This pair corresponds to the upper horizontal morphism in \eqref{eq: definition of X}, and is characterized by the properties
+\[
+\pi^*\O(p) = \O(\tfrac{1}{e}p)^{\otimes e}, \quad \pi^* s_p = (\tfrac{1}{e}s_p)^{\otimes e}.
+\]
+The sheaf $\O(\frac{1}{e}p)$ is called the \textit{tautological sheaf} of the stacky curve $\Xc$. It corresponds to the composition
+\[
+\Xc \to [\Ab^1 / \Gb_m] \to B\Gb_m.
+\]
+
+With an abuse of notation, we denote by $p$ also the stacky point in $\mc{X}$ above $p$. Notice that in $p$ the scheme $\mc{X}$ has the structure
+\begin{equation}\label{punctual structure X}
+\begin{tikzcd}
+	{B\mu_e} & \Xc \\
+	{\{p\}} & X.
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow[hook, from=2-1, to=2-2]
+\end{tikzcd}
+\end{equation}
+More explicitly, if $U \cong \Ab^1$ is an affine neighborhood of $p$, we have that
+\begin{equation}\label{X|U}
+\mc{X}\vert_U \cong [\Ab^1/\mu_e],
+\end{equation}
+see \cite[Lemma 2.3.1]{Cadman}.
+Away from $p$ the morphism $\pi$ is an isomorphism
+\begin{equation}\label{X-p}
+\mc{X} \setminus \{ p \} \cong X \setminus \{p\}.
+\end{equation}
+
+Therefore, we can use the isomorphisms \eqref{X|U} and \eqref{X-p} to compute the fundamental group of $\mc{X}$. Let $U$ be as above, consider $\mc{U}_1 = \pi^{-1}(U)$, $\mc{U}_2 = \mc{X} \setminus \{ p\}$ and take a point $x \in \mc{U}_1 \cap \mc{U}_2 \eqqcolon \mc{V}$.
+Then by \eqref{X-p} the substack $\mc{U}_2$ is a punctured curve and therefore
+\[
+\pi_1(\mc{U}_2, x) = \langle a_i, b_i \mid i =1, \dots g \rangle.
+\]
+In order to compute $\pi_1(\mc{U}_1, x)$, notice that $[\Ab^1/\mu_e]$ is a Deligne-Mumford stack with atlas $q \colon \Ab^1 \to [\Ab^1/\mu_e]$. In particular, the morphism $q$ is étale, i.e. a covering map. Since $\Ab^1$ is simply connected, this is the universal cover of $\mc{U}_1$. As observed in the previous paragraph, the fundamental group can be identified with the group of deck transformations of the universal cover. Since $q$ is a $\mu_e$-bundle, this shows that
+\[
+\pi_1(\mc{U}_1, x) = \mu_e =  \langle c \mid c^e=1 \rangle.
+\]
+Finally, the intersection $\mc{V}$ is isomorphic to $\Ab^1 \setminus\{0\}$, therefore
+\[
+\pi_1(\Vc, x) = \langle d \rangle.
+\]
+Now we can use \zcref{van kampen} to compute the fundamental group of $\mc{X}$. Indeed, the inclusions $j_1\colon \mc{V} \to \mc{U}_1$ and $j_2 \colon \mc{V} \to \mc{U}_2$ induce
+\begin{align}
+j_{1*}\colon \pi_1(\mc{V}, x) & \to \pi_1(\mc{U}_1, x)\\
+d & \mapsto c,
+\end{align}
+\begin{align}
+j_{2*}\colon \pi_1(\mc{V}, x) & \to \pi_1(\mc{U}_2, x)\\
+d & \mapsto \prod_{i = 1}^g [a_i, b_i].
+\end{align}
+Therefore we get
+\begin{equation} \label{eq: fundamental group of stacky curve}
+\pi_1(\Xc) = \left\langle a_i, \, b_i, \, c \mymid \prod_{i = 1}^g [a_i, b_i] = c, \; c^e = 1 \right\rangle
+\end{equation}
+% \[
+% = \left\langle a_i, b_i \,\middle|\, \left(\prod_{i = 1}^g [a_i, b_i]\right)^e = 1 \right\rangle
+% \]

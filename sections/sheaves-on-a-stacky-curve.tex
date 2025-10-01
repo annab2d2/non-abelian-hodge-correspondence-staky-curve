@@ -1,0 +1,232 @@
+\section{Sheaves on a stacky curve}
+
+In \zcref{section: sheaves on [spec A /G]}, we studied the behavior of the tautological sheaf $\O(\tfrac{1}{e}p)$ at the stacky point of the root stack $\mc{X}$. In this section we move on to further understand vector bundles on $\mc{X}$. We follow \cite[]{Taams}, and work in a slightly more general setting than before, namely we consider $\mc{C}$ a stacky curve with possibly finitely many stacky points and $C$ its coarse moduli space. In the last section, we will apply the theory to our case and study moduli spaces of vector bundles over $\mc{X}$.
+
+\subsection{Coherent sheaves} \label{subsection: coherent sheaves}
+
+Let $\mc{C}$ be a stacky curve, i.e. a regular, separated, finite type, connected Deligne-Mumford stack of dimension $1$ over an algebraically closed field $k$ of characteristic $0$, such that it has a Zariski open subscheme.
+
+In particular, $\mc{C}$ has only a finite number of stacky points. Denote by $\underline{p}$ the set of the stacky points of $\mc{C}$ and for $p \in \underline{p}$ denote by $e_p$ the multiplicity of $\mc{C}$ at $p$. The stacky curve $\mc{C}$ admits a coarse moduli space $C$ and is a root stack over the curve $C$. In particular, at each point $p \in \underline{p}$ the stack $\mc{C}$ has the same structure as observed in \eqref{punctual structure X}, namely
+\[\begin{tikzcd}
+	{B\mu_{e_p}} & \Cc \\
+	{\{ p \}} & C.
+	\arrow["i", from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+
+Let $\Fc \in \coh(\Cc)$ be a coherent sheaf on $\Cc$. As observed \zcref{subsection: the case of a stacky curve}, its pullback to $B\mu_{e_p}$ is a $\mu_{e_p}$-representation. Since $\mu_{e_p}$ is an abelian group, the representation decomposes as a direct sum of characters. In particular, denoting by $k_i$ the character $\zeta \mapsto \zeta^i$, we get a decomposition
+\[
+i^* \Fc = \bigoplus_{i \in \Zb / e_p \Zb} k_i^{m_{p,i}}.
+\]
+\begin{defi}\cite[Definition 1.2.7]{Taams}
+With the notation as above, we can define the vector of \textit{multiplicities} of $\Fc$ at $p$ as
+\[
+m_p(\Fc) \coloneqq (m_{p,0}, \dots m_{p, e_p-1}).
+\]
+Denote by $\underline{m}(\mc{F})$ the collection of the multiplicity vectors at all the stacky points $p \in \underline{p}$.
+\end{defi}
+
+% Similarly, we define the $i$-th \textit{twisted degree} of $\Fc$ at $p$ as
+% \[
+% d_{p,i} \coloneqq \deg \pi_*\left( \Fc \otimes \O( \tfrac{i}{e_p} p) \right)
+% \]
+% and the vector of twisted degrees as
+% \[
+% d_p(\Fc) \coloneqq (d_{p,0}, \dots d_{p, e_p-1}).
+% \]
+
+The case we are interested in is $\mc{C} = \mc{X} = \sqrt[e]{p / X} $. As proven in \zcref{subsection: the case of a stacky curve}, the tautological sheaf $\O(\frac{1}{e} p)$ corresponds to the tautological character $\zeta \mapsto \zeta$, therefore
+\[
+m_p(\O(\tfrac{1}{e}p)) = (0, 1, 0, \dots 0).
+\]
+
+Since pullback commutes with tensor products, and $k_i \otimes k_j = k_{i+j}$, we see that tensoring with the tautological sheaf acts as a shift operator on the multiplicity vector.
+
+We now want to understand how the multiplicities interact wih the pullback and pushforward functors $\pi^*$ and $\pi_*$.
+
+\begin{prop}\cite[Example 1.2.9]{Taams} \label{multiplicity of pullback}
+If $F$ is a coherent sheaf on $C$, then $m_p(\pi^* F) = (n, 0, \dots 0)$ for any $p \in \underline{p}$. Namely, the pullback $\pi^* F$ is endowed with the trivial $\mu_{e_p}$ action at each $p$.
+\end{prop}
+
+\begin{prop}\cite[Corollary 1.2.6]{Taams} \label{pi_*pi^* isom}
+If $F$ is a coherent sheaf on $C$, then the natural morphism $F \to \pi_*\pi^* F$ is an isomorphism.
+\end{prop}
+
+\begin{prop}\cite[Theorem 1.2.10]{Taams} \label{pi^*pi_* isom}
+If $\mc{F}$ is a coherent sheaf on $\mc{C}$ such that $m_p(\Fc) = (n, 0, \dots , 0)$ for all $p \in \underline{p}$, then the natural morphism $\pi^* \pi_* \Fc \to \Fc$ is an isomorphism.
+\end{prop}
+
+Notice that if $\mc{E}$ is a vector bundle on $\mc{C}$, we have that
+\begin{equation} \label{eq: rank = sum of multiplicities}
+\sum_{i = 0}^{e_p -1} m_{p,i}(\mc{E}) = \rank \mc{E}
+\end{equation}
+for any $p \in \underline{p}$. In particular, if $\mc{L}$ is a line bundle, then for each $p \in \underline{p}$ there exists a unique index $a_p$ such that $m_{p, a_p} =1$, while $m_{p,i} = 0$ for all other indices $i \neq a_p$.
+
+\begin{thm}\cites[Corollary 3.2.1]{Cadman}[Corollary 1.2.11]{Taams} \label{picard group stacky curve}
+Let $\mc{L}$ be a line bundle on $\mc{C}$. For each stacky point $p \in \underline{p}$ let $a_p$ be the unique number such that $m_{p, a_p}\neq 0 $. Then there exist a unique (up to isomorphism) line bundle $L$ on $C$ such that
+\begin{equation}\label{line bundle on stacky curve}
+\mc{L} \cong \pi^*L \otimes \bigotimes_p \O(\tfrac{1}{e_p}p)^{\otimes a_p}.
+\end{equation}
+In particular, $L$ is characterized by the property $\pi_* \mc{L} \cong L$.
+\end{thm}
+
+\begin{rmk}
+Using the decomposition \eqref{line bundle on stacky curve} and \zcref{pi_*pi^* isom}, we get the property $\pi_* \O(\tfrac{k}{e_p}p) = \O( \lfloor \tfrac{k}{e_p} \rfloor p )$.
+\end{rmk}
+
+% \begin{comment}
+\subsection{Degree of vector bundles on a stacky curve} \label{subsection: Degree of vector bundles on a stacky curve}
+
+Let us recall the definition of the Groethendieck group.
+If $X$ is a Noetherian scheme, $K(X)$ is the abelian group generated by isomorphism classes of coherent sheaves on $X$, modulo the relations given by $\mc{F} = \mc{F'} + \mc{F''}$ if there is a short exact sequence
+\[
+0 \to \mc{F'} \to \mc{F} \to \mc{F''} \to 0.
+\]
+
+\begin{thm}
+If $C$ is a regular, separated, geometrically connected curve, then the pair $(\det, \rank)\colon K(C) \to \pic_C \oplus \Zb $ defines an isomorphism.
+\end{thm}
+
+\begin{thm}\cite[Theorem 1.2.27]{Taams}
+Let $\mc{C}$ be a stacky curve, with stacky points $\underline{p}$. Then the following is a group isomorphism
+\[
+K(\Cc) \xrightarrow{\left(\det \circ \pi_*, \; \rank, \; (m_{p, i})_{i=1}^{e_p-1}\right)} \pic(C) \oplus \Zb \oplus \bigoplus_{p \in \underline{p}} \Zb^{e_p-1}.
+\]
+\end{thm}
+
+\begin{defi}\cite[Definition 1.2.28]{Taams}
+This theorem allows us to define the determinant on $\mc{C}$ as
+\begin{align}
+	\det \colon K(\mc{C}) \xrightarrow{\left(\det \circ \pi_*, \; (m_{p, i})_{i=1}^{e_p-1}\right)} \pic(C) \oplus \bigoplus_{p \in \underline{p}} \Zb^{e_p-1} &\longrightarrow \pic(\mc{C}) \\
+	(L, \underline{m}) \quad &\mapsto \; \pi^*L \otimes \O(\tfrac{i}{e_p}p)^{\otimes m_{p,i}}.
+\end{align}
+\end{defi}
+
+\begin{rmk}
+Note that the above definition respects the property that a line bundle is its own determinant. Actually, the map $\det$ is the unique group homomorphism $K(\mc{C}) \to \pic(\mc{C})$ such that $\det(\mc{L}) = \mc{L}$ for any line bundle $\mc{L}$ on $\mc{C}$. Indeed, isomorphism  between $\det(\mc{L})$ and $\mc{L}$ follows from the decomposition \eqref{line bundle on stacky curve}.
+\end{rmk}
+
+\begin{rmk}\label{det = determinant}
+Using the splitting principle and the above observation, we can prove that for vector bundles on $\mc{C}$ this is indeed the determinant map, i.e. 
+\[
+\det(\mc{E}) = \bigwedge_{i=0}^{\rank \mc{E}} \mc{E}.
+\]
+Therefore, the usual formulas for determinant of vector bundles hold, for example
+\begin{equation} \label{eq: det of tensor product}
+\det(\mc{E}_1 \otimes \mc{E}_2) = \det(\mc{E}_1)^{\rank \mc{E}_2} \, \det(\mc{E}_2)^{\rank \mc{E}_1}.
+\end{equation}
+\end{rmk}
+
+\begin{rmk}
+Suppose $\underline{p} = (p_1, \dots , p_n)$. \zcref{picard group stacky curve} gives an isomorphism
+\[
+\pic(\mc{C}) \cong \pic(C)\left[ \frac{\O(p_1)}{e_1}, \dots , \frac{\O(p_n)}{e_n} \right].
+\]
+We can use this isomorphism to define the degree of a coherent sheaf on $\mc{C}$.
+\end{rmk}
+
+\begin{defi}\cite[Definition 1.2.29]{Taams}
+Consider the composition
+\[
+K(\mc{C}) \xrightarrow{\det} \pic(\mc{C}) \xrightarrow{\cong} \pic(C)\left[ \frac{\O(p_1)}{e_1}, \dots , \frac{\O(p_n)}{e_n} \right] \xrightarrow{\deg} \Zb\left[ \frac{1}{e_1}, \dots , \frac{1}{e_n} \right] \subseteq \Qb.
+\]
+The degree of a coherent sheaf $\mc{F}$ is defined as its image under this composition.
+\end{defi}
+
+\begin{rmk} \label{pullback preserves degree}
+The degree map $\deg\colon K(\mc{C}) \to \Qb$ is characterized by the fact that the pullback $\pi^* \colon K(C) \to K(\mc{C})$ is degree preserving.
+\end{rmk}
+
+\begin{rmk} \label{degree of tensor product}
+Using \zcref{eq: det of tensor product}, we get the classical formula for the degree of the tensor products of line bundles. Namely, if $\mc{E}_1$ and $\mc{E}_2$ are vector bundles on $\mc{C}$, we get
+\begin{equation}
+\deg(\mc{E}_1 \otimes \mc{E}_2) = \rank \mc{E}_2 \, \deg \mc{E}_1 + \rank \mc{E}_1 \, \deg \mc{E}_2.
+\end{equation}
+\end{rmk}
+
+In general, if we want to compute the degree of vector bundle on $\mc{C}$, we need first to consider its determinant bundle. It will have a decomposition as in \eqref{line bundle on stacky curve}. Then it suffices to use the properties
+\begin{gather}
+\deg \pi^* L = \deg L \\
+\deg \O(\tfrac{1}{e_p}p) = \tfrac{1}{e_p}
+\end{gather}
+to conclude.
+
+Putting these properties together, we get the following.
+
+\begin{prop}\cite[Theorem 1.2.30]{Taams}
+If $\mc{E}$ is a vector bundle on $\mc{C}$, its degree can be computed via
+\begin{equation}\label{formula degree-multiplicities}
+\deg \mc{E} = \deg(\pi_* \mc{E}) + \sum_{p \in \underline{p}} \frac{1}{e_p} \sum_{i=0}^{e_p -1} i \, m_{e_p, i}.
+\end{equation}
+In particular, for line bundles we get $\deg \pi_*\mc{L} = \lfloor\deg \mc{L} \rfloor$.
+\end{prop}
+% \end{comment}
+
+\subsection{Numerical invariants for vector bundles} \label{subsection: numerical invariants for vector bundles}
+
+In \zcref{subsection: Degree of vector bundles on a stacky curve,subsection: coherent sheaves} we introduced two numerical invariants associated to a vector bundle $\mc{E}$ on $\mc{C}$, the multiplicities vector $\underline{m}(\mc{E})$ and the degree $\deg \mc{E}$. They are correlated by \zcref{formula degree-multiplicities}. More explicitly, there is another numerical invariant we can associate to $\mc{E}$, namely
+\begin{equation} \label{d_0 def}
+d_0(\mc{E}) \coloneqq \deg(\pi_* \mc{E}).
+\end{equation}
+Then \zcref{formula degree-multiplicities} shows that the datum $(\underline{m}(\mc{E}), \deg \mc{E})$ is equivalent to the datum $(\underline{m}(\mc{E}), d_0(\mc{E}))$.
+
+As shown in \cite[Section 1.3]{Taams}, these are the only the numerical invariants appearing in the coefficients of the Hilbert polynomial of $\mc{E}$, therefore they will determine a connected component of the moduli stack of vector bundles on $\mc{C}$.
+
+For the sake of completeness, let us also introduce a third equivalent pair of numerical invariants. Of course, in the study of vector bundles another invariant to consider is the rank. As observed in \zcref{eq: rank = sum of multiplicities}, for all $p \in \underline{p}$ we have
+\begin{equation}
+\rank \mc{E} = \sum_{i=0}^{e_p-1} m_{p,i}.
+\end{equation}
+
+Let us also introduce another notion of degree, that captures the behavior of $\mc{E}$ at the stacky points.
+
+\begin{defi}\cite[Definition 1.2.7]{Taams} \label{def: twisted degrees}
+Let $\mc{F}$ be a coherent sheaf on $\mc{C}$. The \textit{twisted degrees} of $\mc{F}$ at $p \in \underline{p}$ are
+\[
+d_{p, i}(\mc{F}) \coloneqq \deg \left( \pi_* \mc{F} \otimes \O(\tfrac{i}{e_p}p) \right).
+\]
+Write $d_p(\mc{F}) = (d_{p, 0}, \dots d_{p, e_p-1})$ for the vector of twisted degrees at $p$ and $\underline{d}(\mc{F})$ for the collection of all twisted degrees.
+\end{defi}
+
+Notice that by definition we have $d_{p,0}(\mc{F}) = d_0(\mc{F})$ for all $p \in \underline{p}$ .
+
+Finally, for a vector bundle $\mc{E}$, the datum $(\underline{m}(\mc{E}), \;  d_0(\mc{E}))$ is equivalent to the datum $(\rank \mc{E}, \; \underline{d}(\mc{E}))$. Indeed we have the following result.
+
+\begin{prop}\cite[Corollary 1.2.21]{Taams} \label{discrete data}
+Let $\mc{E}$ be a vector bundle on $\mc{C}$ and $p \in \underline{p}$ a stacky point. Then $m_{p,i} = d_{p, i} - d_{p, i-1}$ for $i = 1, \dots e_p-1$ and $m_{p,0} = \rank \mc{E} - \sum_{i=1}^{e_p-1} m_{p, i}$.
+\end{prop}
+
+In conclusion, to a vector bundle $\mc{E}$ we can associate three equivalent pairs of numerical invariants, i.e. the pairs  $(\underline{m}(\mc{E}), \deg \mc{E}), \; (\underline{m}(\mc{E}), d_0(\mc{E}))$ and $(\rank \mc{E}, \underline{d}(\mc{E}))$. Each of these pairs determines the coefficients of the Hilbert polynomial of $\mc{E}$ and therefore determines the connected component of $\mc{E}$ in the moduli space of vector bundles on $\mc{C}$.
+
+\subsection{Cotangent sheaf}
+\begin{defi}
+Let $f \colon \mc{X} \to \mc{Y}$ be a morphism of Deligne Mumford stacks. The cotangent sheaf $\Omega_{\Xc / \Yc}$ is the sheaf on the étale site of $\mc{X}$ defined as follows.
+Let $\mc{I}$ be the kernel of the morphism $\O_\Xc \otimes_{f^{-1}\O_\Yc} \O_\Xc \to \O_\Xc$. Then $\Omega_{\Xc / \Yc} \coloneqq \Ic / \Ic^2$.
+\end{defi}
+
+\begin{rmk}
+This has the usual properties of the cotangent sheaf. In particular, we have the following.
+\begin{itemize}
+	\item If we have morphisms $\mc{X} \xrightarrow{f} \mc{Y} \xrightarrow{g} \mc{Z}$, then we get an exact sequence of sheaves on $\mc{X}$
+	\[
+	f^* \Omega_{\Yc / \Zc} \to \Omega_{\Xc / \Zc} \to \Omega_{\Xc / \Yc} \to 0.
+	\]
+	Moreover, if $\O_\mc{X}$ is locally free over $f^{-1}\O_\mc{Y}$, then the sequence can be extended with $0$ to the left.
+	
+	\item If $i \colon \mc{Y} \to \mc{X}$ is a closed immersion with ideal sheaf $\mc{J}$, then the sequence
+	\[
+	\mc{J}/ \mc{J}^2 \to i^* \Omega_\mc{X} \to \Omega_\mc{Y} \to 0
+	\]
+	is exact.	
+\end{itemize}
+\end{rmk}
+
+\begin{thm} \cite[Theorem 1.2.34]{Taams} \label{omega mc(X)}
+Let $\pi \colon \mc{C} \to C$ be a smooth stacky curve, with set of stacky points $\underline{p}$. Then
+\[
+\Omega_\mc{C} \cong \pi^* \Omega_C \otimes \bigotimes_{p \in \underline{p}} \O(\tfrac{1}{e_p}p)^{\otimes e_p -1}.
+\]
+\end{thm}
+

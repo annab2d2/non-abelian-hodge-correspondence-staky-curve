@@ -1,0 +1,91 @@
+\section{Moduli spaces of vector bundles}\label{section: moduli spaces of vector bundles}
+
+We now come to the study of $\Bun_n(\mc{C})$, the moduli stack of rank $n$ vector bundles on $\mc{C}$.
+As mentioned in \zcref{subsection: numerical invariants for vector bundles}, we have three equivalent pairs of invariants associated to a vector bundle on $\mc{C}$. Each of these pairs determines a connected component of the moduli stack. Indeed, we have the following.
+
+\begin{thm}\cite[Corollary 2.0.9, Theorem 2.0.10]{Taams} \label{connected components of the moduli stack}
+Let $\Bun_{n}^{\underline{d}}(\mc{C})$ be the substack of $\Bun(\mc{C})$ defined by
+\begin{equation}
+\Bun_{n}^{\underline{d}}(\mc{C}) \coloneqq \left< \mc{E} \in \Bun(\mc{C}) \mymid (\rank \mc{E}, \underline{d}(\mc{E})) = (n, \underline{d})\right>.
+\end{equation}
+Then the substacks $\Bun_{n}^{\underline{d}}(\mc{C})$ are the connected components of $\Bun(\mc{C})$. Moreover, the stack $\Bun(\mc{C})$ is smooth, so the connected components coincide with the irreducible components and they are smooth.
+\end{thm}
+
+Let $\Bun_{\underline{m}}^d$ be the substack of $\Bun(\mc{C})$ defined by
+\begin{equation}
+\Bun^{d}_{\underline{m}}(\mc{C}) \coloneqq \left< \mc{E} \in \Bun(\mc{C}) \mymid (\underline{m}(\mc{E}), \deg \mc{E}) = (\underline{m}, d)\right>.
+\end{equation}
+Using \zcref{connected components of the moduli stack}, if we fix the rank $n$, we get a decomposition
+\[
+\Bun_n(\mc{C}) = \coprod_{\underline{d}} \Bun_{n}^{\underline{d}}(\mc{C}) = \coprod_{(\underline{m}, d)} \Bun_{\underline{m}}^d (\mc{C}),
+\]
+where the latter union ranges over the pairs $(\underline{m}, d)$ such that for all $p \in \underline{p}$ we have $\sum_{i=0}^{e_p-1}m_{p, i} = n$.
+
+Consider now the case where $C = X$ is a smooth projective genus $g$ curve and $\mc{C} = \mc{X} = \sqrt[n]{p / X}$ has a unique stacky point of multiplicity $e = n$. Then, for a vector bundle $\mc{E} $ on $\mc{X}$ the multiplicity $\underline{m}$ is just the vector $(m_{p, 0}, \dots m_{p, n-1})$ of multiplicities of $\mc{E}$ at $p$. Equivalently, it classifies the representation obtained as $\mc{E}\vert_{B \mu_n}$.
+
+We now want to show an equivalence of categories
+\begin{equation} \label{equivalence bun pt1}
+\Bun_n^d(X) \cong \Bun_{(0, \dots, 0, n, 0, \dots, 0 )}^0(\mc{X}),
+\end{equation}
+where on the right hand side, the $n$ is in the position $-d (\mod n)$. In order to simplify the notation, let us denote this multiplicity vector by $n_{-d}$. Similarly, we will denote $(n, 0, \dots, 0)$ by $n_0$.
+% POSSIBLE ALTERNATIVE SYMBOL: $n \mathbb{1}_{-d}$
+
+As a first step, let us show that the pullback and pushforward functors define equivalences $\Bun_n^d(X) \cong \Bun_{n_0}^d(\mc{X}).$
+
+First of all, we need to observe that the pullback and pushforward functors map vector bundles to vector bundles, preserving the invariants.
+
+For $\pi^*$, it is known that the pullback maps vector bundles to vector bundles of the same rank and the degree on $\mc{X}$ was define so that $\pi^*$ would preserve the degree, see \zcref{pullback preserves degree}.
+%Moreover, $d_{p,0}(\pi^*E)$ is defined as $\deg \pi_* \pi^* E$. By \zcref{pi_*pi^* isom}, we have $\pi_* \pi^* E \cong E$, therefore $d_{p, 0} = d$.
+Moreover, we noticed in \zcref{multiplicity of pullback} that, for $F \in \Bun_n(X)$, the multiplicity of $\pi^*F$ at $p$ is $(n, 0, \dots, 0)$, or equivalently that $\pi^*F \vert_{B \mu_n}$ is the trivial representation.
+Therefore $\pi^*$ restricts as a well defined functor
+\[
+\pi^* \colon \Bun_n^d(X) \to \Bun_{n_0}^d(\mc{X}).
+\]
+
+In the other direction, we first need to show that the pushforward $\pi_* \colon \qcoh(\mc{X}) \to \qcoh(X)$ maps vector bundles to vector bundles. This is \cite[Theorem 2.3.4]{abramovich-vistoli}. 
+Since the rank of a vector bundle on a connected stack is the same at each point and $\pi$ is an isomorphism away from $p$, it is also clear that $\pi_*$ maps rank $n$ vector bundles to rank $n$ vector bundles. 
+Finally, \zcref{formula degree-multiplicities} shows that, if the multiplicities vector is $(n, 0, \dots, 0)$, the degree of $\pi_* \mc{E}$ equals the degree of $\mc{E}$.
+Therefore, $\pi_*$ restricts to a well defined functor
+\[
+\pi_* \colon \Bun_{n_0}^d(\mc{X}) \to \Bun_n^d(X).
+\]
+
+The fact that these are inverse equivalences are just \zcref{pi_*pi^* isom,pi^*pi_* isom}.
+
+Notice that these are equivalences of categories of vector bundles, preserving both the rank and the degree. Therefore, they preserve (semi)stability.
+
+Notice now that tensoring with $\O(-\frac{1}{n}p)^{\otimes d}$ defines an equivalence $\Bun_{n_0}^d(\mc{X}) \cong \Bun_{n_{-d}}^0(\mc{X})$. Explicitly,
+\[\begin{tikzcd}
+	{\Bun_{n_0}^d(\mc{X})} & {\Bun_{n_{-d}}^0(\mc{X}).}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{- \otimes \O(-\frac{d}{n}p)}", curve={height=-18pt}, from=1-1, to=1-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\O(\frac{d}{n}p) \otimes -}", curve={height=-18pt}, from=1-2, to=1-1]
+	\arrow["\cong"{description}, draw=none, from=0, to=1]
+\end{tikzcd}\]
+Clearly the two maps are inverse to each other. The only nontrivial thing to show is that they respect the defined invariants.
+Firstly, it was already observed in \zcref{subsection: coherent sheaves} that the tautological line bundle acts as a shift operator on the multiplicities. Therefore, $n_0$ becomes $n_{-d}$ after tensoring and vice versa.
+Secondly, using \zcref{degree of tensor product}, we get
+\[
+\deg\left( \mc{E} \otimes \O(-\tfrac{d}{n}p) \right) = \deg \mc{E} + n \left( -\frac{d}{n} \right) = 0.
+\]
+Finally, notice how these equivalences also preserve (semi)stability.
+Indeed, let $\mc{E} \in \Bun_{n_0}^d(\mc{X})$ be a semistable vector bundle. Since the indicated functors are equivalences, in particular they preserve subbundles. Therefore, it suffices to show that if $\mc{E}' \subseteq \mc{E}$ is a subbundle such that $\mu(\mc{E}') \leq \mu(\mc{E})$, then $\mu(\mc{E}' \otimes \O(-\frac{d}{n}p)) \leq \mu(\mc{E} \otimes \O(-\frac{d}{n}p))$. This follows from the simple computation
+\[
+\mu(\mc{E}' \otimes \O(-\tfrac{d}{n}p)) = \frac{\deg \mc{E}' - \rank \mc{E}' \frac{d}{n}}{\rank \mc{E}'} = \mu(\mc{E}') - \frac{d}{n}.
+\]
+Repeating the same computation for $\mc{E}$, one shows that $\mu(\mc{E}' \otimes \O(-\frac{d}{n}p)) \leq \mu(\mc{E} \otimes \O(-\frac{d}{n}p))$. The computation in the other direction is completely analogous.
+
+Putting everything together, we get an equivalence of categories
+\begin{equation} \label{equivalence bun}
+\begin{tikzcd}
+	{\Bun_n^d(X)} &&& {\Bun_{n_{-d}}^0(\mc{X}),}
+	\arrow["{\pi^*(-) \otimes \O(-\tfrac{d}{n}p)}", shift left=2, from=1-1, to=1-4]
+	\arrow["{\pi_*(\O(-\tfrac{d}{n}p) \otimes -)}", shift left=2, from=1-4, to=1-1]
+\end{tikzcd}
+\end{equation}
+that restricts to an equivalence
+\[\begin{tikzcd}
+	{\Bun_n^{d, ss}(X)} &&& {\Bun_{n_{-d}}^{0, ss}(\mc{X}).}
+	\arrow["{\pi^*(-) \otimes \O(-\tfrac{d}{n}p)}", shift left=2, from=1-1, to=1-4]
+	\arrow["{\pi_*(\O(-\tfrac{d}{n}p) \otimes -)}", shift left=2, from=1-4, to=1-1]
+\end{tikzcd}\]
+

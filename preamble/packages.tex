@@ -1,0 +1,97 @@
+%%%%%%%%%%%%% LANGUAGE AND BIBLIOGRAPHY %%%%%%%%%%%%%%%%%
+%%% Allows the use of accented characters
+\usepackage[T1]{fontenc} %come sot\to
+
+%%% Allows typing accented characters directly
+\usepackage[utf8]{inputenc} %aggiunge caratteri accentati
+
+\usepackage[main=english]{babel} %lingua
+
+%%% Bubliography
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{bibliography.bib} %specifica il file della bibliografia
+
+\renewcommand\mkbibnamefamily[1]{\textsc{#1}} %autori in maiuscoletto
+\usepackage{csquotes}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%% PLOTTING AND GRAPHICS %%%%%%%%%%%%%%%%
+%%% Plot graphs
+% \usepackage{pgfplots}
+% \pgfplotsset{compat=1.15}
+
+%%% Include images
+\usepackage{graphicx}
+
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows}
+
+\usepackage{quiver}
+
+
+%%%%%%%%%%% MATH AND SYMBOLS %%%%%%%%%%%%%%%%%%
+%%% Math fonts and symbols
+\usepackage{amsfonts,amssymb}
+
+% %%% Needed for \mathbb, i.e. for the characteristic function symbol
+% \usepackage[bb=dsserif]{mathalpha}
+
+%%% Use \mathscr{}
+\usepackage{mathrsfs}
+
+%%% Special mathematical symbols
+\usepackage{stmaryrd}
+
+% %%% Enhanced math environments, like align, gather...
+% \usepackage{amsmath}
+
+%% Extension of amsmath with extra math symbols, alignment tools, and fixes. Automatically loads amsmath
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs,showmanualtags} %% Numbers only equations that are referenced. Allows manual tagging without being overridden by automatic numbering.
+\numberwithin{equation}{section} %% Equations are numbered according to the section
+
+%%% Put labels over symbols. Already part of amsmath
+%\usepackage{stackrel}
+
+%%% Theorem environments
+\usepackage{amsthm}
+
+%%% Relative font sizing in math (\mathlarger{...}), for example to make sums bigger
+% \usepackage{relsize}
+
+%%% Draw cancel lines through terms, for simplifying expression. Contains the command \cancel{}
+% \usepackage{cancel}
+
+
+%%%%%%%%%%%% LAYOUT AND FORMATTING %%%%%%%%%%%%%%%%%%%%%
+%%% Fine control of figure/table placement ([H] option)
+\usepackage{float}
+
+%%% Resize, scale, trim boxes (including images and tables). Contains the command \adjustbox
+\usepackage{adjustbox}
+
+%%% Customizes lists (itemize, enumerate) spacing and labels.
+\usepackage{enumitem}
+
+%%% Verbatim (code/text) blocks without formatting.
+\usepackage{verbatim}
+% The verbatim environment prints text exactly as typed: every character (including \ { } % # _ ^ ~), spaces, and line breaks are preserved. The command is \begin{verbatim} \end{verbatim}.
+
+%%% Comment big portions of text with \begin{comment} \end{comment}
+\usepackage{comment}
+
+%%%%%%%%%% MANAGING REFERENCES %%%%%%%%%%%%%%%%%%%%
+\usepackage{zref-clever} % Allows to automatically add the type of the reference with the command \zcref{}. It is also compatible with equations
+\zcsetup{capfirst} % Option of zref-clever to ca\pitalize the first letter of the referenced statement with \zcref{}
+
+\usepackage{hyperref} % Classical references manager. Contains the \eqref{} command, which completes the referred equation with parentheses (e.g. (2)), but doesn't write the type like \zcref{} (e.g. Equation(2))
+\hypersetup{
+  colorlinks,
+  citecolor=magenta,
+  linkcolor=black,
+  urlcolor=blue}%NB da caricare per ultimo, nel caso usare \phantomsection per la bibliografia
+
+

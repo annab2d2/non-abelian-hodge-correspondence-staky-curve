@@ -1,0 +1,134 @@
+\section{Betti and De Rham moduli spaces}\label{section: de rham moduli space}
+
+We now come to the study of the Betti and de Rham moduli spaces of the stacky curve $\mc{X}$.
+Recall that
+\begin{gather}
+\mc{M}_{n, DR}(\mc{X}) \coloneqq \left< (\mc{E}, \nabla) \mymid \mc{E}\in \Bun_n(\mc{X}), \; \nabla\colon \mc{E} \to \mc{E}\otimes \Omega_{X} \text{ is a flat connection} \right> \\
+\mc{M}_{n, B}(\mc{X}) \coloneqq \text{Rep}(\pi_1(\mc{X}, x), GL_n).
+\end{gather}
+The Riemann-Hilbert correspondence establishes an isomorphism
+% natural isomorphism
+% \begin{equation}
+% \mc{M}_{DR}(\mc{X}) \cong \mc{M}_B(\mc{X}),
+% \end{equation}
+% inducing an isomorphism
+of the coarse moduli spaces
+\begin{equation} \label{eq: riemann holbert correspondence}
+M_{n, DR}(\mc{X})^{\text{an}} \cong M_{n, B}(\mc{X})^{\text{an}}.
+\end{equation}
+If we fix a rank $n$ and use the presentation of $\pi_1(\mc{X}, x)$ found in \eqref{eq: fundamental group of stacky curve}, we get
+\begin{equation} \label{eq: de rham moduli space rnk n}
+M_{n, B}(\mc{X}) \cong \left\{ ((A_i, B_i)_{i = 1}^g, C) \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C, \, C^n = Id \right\} // GL_n.
+\end{equation}
+As already observed for the moduli space of vector bundles $\Bun(\mc{X})$ and for the Dolbeault moduli space, also the de Rham moduli space admits a decomposition in connected components
+\begin{equation}
+\mc{M}_{n, DR}(\mc{X}) = \coprod_{\underline{d}} \mc{M}_{n, DR}^{\underline{d}}(\mc{X}) = \coprod_{(\underline{m}, d)} \mc{M}_{\underline{m}, DR}^d(\mc{X}),
+\end{equation}
+with the latter union ranging over the pairs $(\underline{m}, d)$ such that $\sum_{i=0}^{n-1}m_{i} = n$. 
+Recall that for a vector bundle to admit a flat connection it is a necessary condition that $\deg \mc{E} = 0$. Therefore we can set $\mc{M}_{\underline{m}, DR} \coloneqq \mc{M}_{\underline{m}, DR}^0(\mc{X})$ and get
+\begin{equation}
+\mc{M}_{n, DR}(\mc{X}) = \coprod_{\underline{m}} \mc{M}_{\underline{m}, DR}(\mc{X}).
+\end{equation}
+
+This decomposition gives decomposition in connected components of the coarse moduli space
+\begin{equation} \label{eq: de rham moduli space, decomposition}
+M_{n, DR}(\mc{X}) = \coprod_{\underline{m}} M_{\underline{m}, DR}(\mc{X}).
+\end{equation}
+We now want to understand how this decomposition of the coarse moduli space $M_{n, DR}$ translates to the Betti moduli space, and in particular to the character variety on the right hand side of \eqref{eq: de rham moduli space rnk n}.
+
+\subsection{The monodromy representation}
+The isomorphism in \zcref{eq: riemann holbert correspondence} is obtained by mapping a pair $(\mc{E}, \nabla)$ to the associated monodromy representation at $x$. In particular, the matrices $A_i, \, B_i, \, C$ in \eqref{eq: de rham moduli space rnk n} are obtained by the action of the generators $a_i, \, b_i, \, c$ of the fundamental group of $\mc{X}$, as expressed in \zcref{stacky curve}, and are well defined up to conjugation.
+
+The multiplicity vector $\underline{m}(\mc{E})$ depends only on the behavior of $\mc{E}$ at the stacky point, and therefore can be computed in a neighborhood of $p$ isomorphic to $[\Ab^1 / \mu_n]$. In particular, looking back at the Seifert-Van Kampen computation of $\pi_1(\mc{X}, x)$ in \zcref{stacky curve}, we see that the decomposition \eqref{eq: de rham moduli space, decomposition} will translate on the character variety only in terms of conditions on the matrix $C$.
+
+In particular, after restricting to $[\Ab^1/ \mu_n]$, we can find the matrix $C$ as obtained by the monodromy action of the generator of $\pi_1([\Ab^1 / \mu_n], x) \cong \mu_n$ on $(\mc{E}\vert_{[\Ab^1 / \mu_n]}, \nabla\vert_{[\Ab^1 / \mu_n]})$.
+
+Therefore, let us consider the case of a vector bundle $\mc{E}$ on $[\Ab^1 / \mu_n]$, with a flat connection $\nabla$.
+As mentioned in \zcref{stacky curve}, the projection map
+\begin{equation}
+p \colon \Ab^1 \to [\Ab^1 / \mu_n]
+\end{equation}
+is a principal $\mu_n$-bundle and it is the universal cover of $[\Ab^1 / \mu_n]$. The datum of the pair $(\mc{E}, \nabla)$ is equivalent to the $\mu_n$-equivariant pair $(p^*\mc{E}, p^*\nabla)$ on $\Ab^1$. The fundamental group of $[\Ab^1 / \mu_n]$ is identified with $\mu_n$ and under this identification the monodromy action on $(\mc{E}, \nabla)$ is the pushforward of the $\mu_n$-action on $(p^*\mc{E}, p^*\nabla)$.
+
+Since $\Ab^1$ is simply connected and $p^*\nabla$ is a flat connection on $p^*\mc{E}$, the pair $(p^*\mc{E}, p^*\nabla)$ is actually equivalent to the trivial bundle, with the standard derivation. Moreover, since $\Ab^1$ is affine, this is just the sheafification of the pair $(\Cb[x]^n, \dd)$. The $\mu_n$-equivariant structure corresponds to an action
+\begin{equation}
+\mu_n \to \Aut_{\Cb[x]}( (\Cb[x]^n, \dd) ).
+\end{equation}
+Notice that an automorphism $\varphi\colon \Cb[x]^n \to \Cb[x]^n$ fixes the differential $\dd$ if and only if $\dd(\varphi) = 0$. Therefore we have the following isomorphisms
+\begin{equation}
+\begin{tikzcd}
+	{\Aut_{\Cb[x]}(\Cb[x]^n)} & {GL_n(\Cb[x])} \\
+	{\Aut_{\Cb[x]}((\Cb[x]^n, \dd))} & {GL_n(\Cb).}
+	\arrow["\cong"{marking, allow upside down}, draw=none, from=1-1, to=1-2]
+	\arrow["\subseteq"{marking, allow upside down}, draw=none, from=2-1, to=1-1]
+	\arrow["\cong"{marking, allow upside down}, draw=none, from=2-1, to=2-2]
+	\arrow["\subseteq"{marking, allow upside down}, draw=none, from=2-2, to=1-2]
+\end{tikzcd}
+\end{equation}
+In particular, the $\mu_n$-equivariant structure on $(p^*\mc{E}, p^*\nabla)$ gives an action
+\begin{equation}
+\rho \colon \mu_n \to GL_n(\Cb),
+\end{equation}
+i.e. an $n$-dimensional representation of $\mu_n$, which is exactly the monodromy representation of the pair $(\mc{E}, \nabla)$.
+
+We now want to compare this with the representation obtained as $\mc{E}\vert_{B\mu_n}$. Consider
+\begin{equation}
+\begin{tikzcd}
+	{* = \{ 0 \}} & {\Ab^1} \\
+	{B\mu_n} & {[\Ab^1 / \mu_n]}
+	\arrow["i", hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["p", from=1-2, to=2-2]
+	\arrow["j"', hook, from=2-1, to=2-2]
+\end{tikzcd}\
+\end{equation}
+The representation associated to $\mc{E}\vert_{B\mu_n}$ is obtained by the $\mu_n$-equivariant structure of $(p\vert_{\{0\}})^* \mc{E}\vert_{B\mu_n}$, corresponding to a morphism
+\begin{equation}
+\mu_n \to \Aut_{\{0\}}((p\vert_{\{0\}})^* \mc{E}\vert_{B\mu_n}) = \Aut_{\{0\}}( i^* p^* \mc{E} ).
+\end{equation}
+Under the identifications $\qcoh(\Ab^1) \cong \Cb[x]\mh\Mod$ and $\qcoh(*) \cong \Cb\mh\Mod$, the restriction $i^*$ is just the morphism of evaluation at $0$. Since $p^* \mc{E}$ is the trivial rank $n$ vector bundle, we get
+\begin{equation}
+\begin{tikzcd}
+	{\mu_n} & {GL_n(\Cb[x])} & {\Aut_{\Ab^1}(p^* \mc{E})} \\
+	& {GL_n(\Cb)} & {\Aut_{\{0\}}(i^* p^* \mc{E}).}
+	\arrow["{\rho'}", from=1-1, to=1-2]
+	\arrow["\sigma"', from=1-1, to=2-2]
+	\arrow["\cong"{marking, allow upside down}, draw=none, from=1-2, to=1-3]
+	\arrow["{{\text{ev}_0}}", from=1-2, to=2-2]
+	\arrow["{{i^*}}", from=1-3, to=2-3]
+	\arrow["\cong"{marking, allow upside down}, draw=none, from=2-2, to=2-3]
+\end{tikzcd}
+\end{equation}
+But $\rho'$ must factor through the inclusion
+\begin{equation}
+\Aut_{\Ab^1}( (p^*\mc{E}, \nabla) ) \subseteq \Aut_{\Ab^1}(p^*\mc{E}),
+\end{equation}
+so we get
+\begin{equation}
+\begin{tikzcd}
+	{\mu_n} & {GL_n(\Cb)} & {GL_n(\Cb[x])} \\
+	&& {GL_n(\Cb).}
+	\arrow["\rho", from=1-1, to=1-2]
+	\arrow["{\rho'}", curve={height=-18pt}, from=1-1, to=1-3]
+	\arrow["\sigma"', from=1-1, to=2-3]
+	\arrow["\subseteq"{marking, allow upside down}, draw=none, from=1-2, to=1-3]
+	\arrow["{{\text{ev}_0}}", from=1-3, to=2-3]
+\end{tikzcd}
+\end{equation}
+Clearly the composition $GL_n(\Cb) \subseteq GL_n(\Cb[x]) \xrightarrow{\text{ev}_0} GL_n(\Cb)$ is the identity, so the representations $\rho$ and $\sigma$ coincide.
+
+In conclusion, we obtained that the monodromy representation of a pair $(\mc{E}, \nabla)$ coincides with the representation obtained as $\mc{E}\vert_{B \mu_n}$.
+
+\subsection{Betti moduli space}
+
+Applying the result to the computation of the coarse moduli spaces, we get that
+\begin{equation}
+M_{\underline{m}, B}(\mc{X}) \cong \left\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C_{\underline{m}} \right\} // GL_n,
+\end{equation}
+where $C_{\underline{m}}$ is a matrix representing the action of the generator of $\mu_n$ in the representation defined by the multiplicity vector $\underline{m}$.
+In particular, $C_{\underline{m}}$ can be taken as a diagonal matrix with exactly $m_l$ entries equal to $\mathrm{e}^{\frac{2 \pi \mathrm{i}}{n} l}$.
+
+In the case $\underline{m} = n_{-d}$, we get
+\begin{equation}
+M_{n_{-d}, B}(\mc{X}) \cong \left\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \right\} // GL_n,
+\end{equation}
