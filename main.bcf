@@ -2415,6 +2415,10 @@
     <bcf:citekey order="41" intorder="1">Taams</bcf:citekey>
     <bcf:citekey order="42" intorder="1">abramovich-vistoli</bcf:citekey>
     <bcf:citekey order="43" intorder="1">simpson-local_systems_on_proper</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">appendix-by-nakajima</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Hausel-RodriguezVillega</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Simpson-Hodge-filtration</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">Hausel-RodriguezVillega</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
