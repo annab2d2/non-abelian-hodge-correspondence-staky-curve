@@ -37,6 +37,64 @@ M_{n, Dol}^d(X)^{\text{top}} \cong \left( \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^
 \end{equation}
 therefore the space on the right hand side can be interpreted as version of the character variety for bundles of nonzero degree on $X$.
 
+The picture can be explained with more clarity by embedding both $M_{n, Dol}^d$ and $M_{n, DR}^d$ in a bigger moduli space $M_{n, Hdg}^d$. Indeed, for a fixed complex number $\lambda$, define the notion of $\lambda$-connection on a vector bundle $\mc{E}$ as a morphism $\nabla\colon \mc{E} \to \mc{E} \otimes \Omega$, respecting the Leibniz rule up to the scalar $\lambda$, namely
+\[
+\nabla(f \cdot s) = s \otimes \dd f + \lambda f \cdot \nabla(s).
+\]
+Then $M_{n, Hdg}^d(\mc{X})$ is the moduli space parametrising isomorphism classes of triples $(\mc{E}, \nabla, \lambda)$. Notice that
+\begin{itemize}
+	\item the multplicative group $\Gb_m$ acts on $M_{n, Hdg}^{d}$ by
+	\[
+	t \cdot (\Ec, \nabla) = (\Ec, t \nabla);
+	\]
+	\item there is a $\Gb_m$-equivariant projection
+	\begin{align}
+	\pi\colon M_{n, Hdg}^d &\to \Ab^1 \\
+	(\mc{E}, \nabla, \lambda) &\mapsto \lambda,
+	\end{align}
+	where $\Gb_m$ acts on $\Ab^1$ with weight one;
+	\item the fibers $\pi^{-1}(\lambda)$ are all isomorphic for $\lambda \neq 0$ to $\pi^{-1}(1) = M_{n, DR}^d$, while $pi^{-1}(0)= M_{n, Dol}^d$.
+\end{itemize}
+This picture restricts to any connected component, determined by numerical invariants. Summing up, letting $M_{Hdg} \coloneqq M_{n_{-d}, Hdg}^0(\mc{X}), M_{Dol} \coloneqq M_{n_{-d}, Dol}^0(\mc{X})$ and $M_{Dr} \coloneqq M_{n_{-d}, DR}^0(\mc{X})$, we have the following diagram
+\begin{equation}
+\begin{tikzcd}
+	{M_{Dol}} & {M_{Hdg}} & {M_{DR}} & {M_B} \\
+	{\{ 0 \}} & {\Ab^1} & {\{ 1 \},}
+	\arrow["i", hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow["j"', hook', from=1-3, to=1-2]
+	\arrow["\psi", "\cong"', from=1-3, to=1-4]
+	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-3, to=2-2]
+\end{tikzcd}
+\end{equation}
+where the inclusions $i$ and $j$ are algebraic, while $\psi$ is an isomorphism of complex manifold that is only defined analytically via the Riemann-Hilbert correspondence \eqref{riemann hilbert DM stack}.
+
+We want to compare the singular cohomology with rational coefficients of $M_{Dol}, \; M_{Hdg}, \; M_{DR}$. The idea to use the Bia\l{y}nicki-Birula decomposition was inspired by Nakajima's appendix to \cite{appendix-by-nakajima}.
+%Nakajima used this argument for point counting; since we want to compute cohomology instead, we will need some extra steps.
+
+Notice that $M_{Hdg}$ is a \textit{semiprojective variety}, according to the terminology used in \cite{Hausel-RodriguezVillega}. This means that it is a quasi-projective variety with a $\Gb_m$-action such that
+\begin{itemize}
+    \item the fixed point locus $M_{Hdg}^{\Gb_m}$ is proper;
+    \item the limit point $\displaystyle \lim_{t \to 0} t \cdot x$ exists for all $x \in M_{Hdg}$.
+\end{itemize}
+Indeed, these properties are \cite[Lemma 10.4, Corollary 10.3]{Simpson-Hodge-filtration}.
+
+Then the picture above respects the assumptions of \cite[Corollary 1.3.3]{Hausel-RodriguezVillega}, proving the following theorem.
+
+\begin{thm}
+The inclusions $i$ and $j$ induce isomorphisms of mixed hodge structures in cohomology
+\[
+H^k(M_{Dol}) \cong H^k(M_{Hdg}) \cong H^k(M_{DR}).
+\]
+\end{thm}
+
+Now we are left to try and understand how $\psi$ acts on the mixed Hodge structures. A first step in this direction, is to choose generators of pure weights for the various cohomology rings and track their weight along the various isomorphisms. In order to do this, we take the universal bundle $(\mc{E}_\text{univ}, \nabla_\text{univ})$ on $M_{Hdg}$.
+
 \subsection{Comparing the cohomologies of the moduli spaces}
 
 If we want to compare the cohomology of the moduli spaces, it is more useful to try and use algebraic maps, instead of the homeomorphism \zcref{non abelian Hodge DM stack}, since the use of algebraic maps allows to compare Hodge structures.
