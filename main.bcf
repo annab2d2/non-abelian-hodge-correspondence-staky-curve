@@ -2419,10 +2419,10 @@
     <bcf:citekey order="45" intorder="1">Hausel-RodriguezVillega</bcf:citekey>
     <bcf:citekey order="46" intorder="1">Simpson-Hodge-filtration</bcf:citekey>
     <bcf:citekey order="47" intorder="1">Hausel-RodriguezVillega</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">appendix-by-nakajima</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">Hausel-RodriguezVillega</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">Simpson-Hodge-filtration</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">Hausel-RodriguezVillega</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">MARKMAN2006</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">markman2001</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">Tamas-Hausel</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">Shende-weights</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">

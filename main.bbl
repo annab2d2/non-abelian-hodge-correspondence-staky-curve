@@ -259,6 +259,131 @@
       \field{pages}{113\bibrangedash 156}
       \range{pages}{44}
     \endentry
+    \entry{Tamas-Hausel}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=044c11ee38ec9311f63c208b2db20b4f}{%
+           family={Hausel},
+           familyi={H\bibinitperiod},
+           given={Tamás},
+           giveni={T\bibinitperiod}}}%
+        {{hash=37fd632ee172b298c810cdfe20ab8eb0}{%
+           family={Thaddeus},
+           familyi={T\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b96546889119e133a94672ea7e4c38b}
+      \strng{fullhash}{2b96546889119e133a94672ea7e4c38b}
+      \strng{fullhashraw}{2b96546889119e133a94672ea7e4c38b}
+      \strng{bibnamehash}{2b96546889119e133a94672ea7e4c38b}
+      \strng{authorbibnamehash}{2b96546889119e133a94672ea7e4c38b}
+      \strng{authornamehash}{2b96546889119e133a94672ea7e4c38b}
+      \strng{authorfullhash}{2b96546889119e133a94672ea7e4c38b}
+      \strng{authorfullhashraw}{2b96546889119e133a94672ea7e4c38b}
+      \field{labelalpha}{HT04}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0024-6115,1460-244X}
+      \field{journaltitle}{Proc. London Math. Soc. (3)}
+      \field{number}{3}
+      \field{title}{Generators for the cohomology ring of the moduli space of rank 2 {H}iggs bundles}
+      \field{volume}{88}
+      \field{year}{2004}
+      \field{pages}{632\bibrangedash 658}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1112/S0024611503014618
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1112/S0024611503014618
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1112/S0024611503014618
+      \endverb
+    \endentry
+    \entry{markman2001}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=17e0133bc1cdd66296a9c026a8c211f9}{%
+           family={Markman},
+           familyi={M\bibinitperiod},
+           given={Eyal},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{fullhash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{fullhashraw}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{bibnamehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authorbibnamehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authornamehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authorfullhash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authorfullhashraw}{17e0133bc1cdd66296a9c026a8c211f9}
+      \field{extraname}{1}
+      \field{labelalpha}{Mar02}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0075-4102,1435-5345}
+      \field{journaltitle}{J. Reine Angew. Math.}
+      \field{title}{Generators of the cohomology ring of moduli spaces of sheaves on symplectic surfaces}
+      \field{volume}{544}
+      \field{year}{2002}
+      \field{pages}{61\bibrangedash 82}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1515/crll.2002.028
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/crll.2002.028
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/crll.2002.028
+      \endverb
+    \endentry
+    \entry{MARKMAN2006}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=17e0133bc1cdd66296a9c026a8c211f9}{%
+           family={Markman},
+           familyi={M\bibinitperiod},
+           given={Eyal},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{fullhash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{fullhashraw}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{bibnamehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authorbibnamehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authornamehash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authorfullhash}{17e0133bc1cdd66296a9c026a8c211f9}
+      \strng{authorfullhashraw}{17e0133bc1cdd66296a9c026a8c211f9}
+      \field{extraname}{2}
+      \field{labelalpha}{Mar07}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Let M be a smooth and compact moduli space of stable coherent sheaves on a projective surface S with an effective (or trivial) anti-canonical line bundle. We find generators for the cohomology ring of M, with integral coefficients. When S is simply connected and a universal sheaf E exists over S×M, then its class [E] admits a Künneth decomposition as a class in the tensor product Ktop0(S)⊗Ktop0(M) of the topological K-rings. The generators are the Chern classes of the Künneth factors of [E] in Ktop0(M). The general case is similar.}
+      \field{issn}{0001-8708}
+      \field{journaltitle}{Advances in Mathematics}
+      \field{number}{2}
+      \field{title}{Integral generators for the cohomology ring of moduli spaces of sheaves over Poisson surfaces}
+      \field{volume}{208}
+      \field{year}{2007}
+      \field{pages}{622\bibrangedash 646}
+      \range{pages}{25}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.aim.2006.03.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001870806000946
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0001870806000946
+      \endverb
+      \keyw{Moduli spaces,Vector bundles,Coherent sheaves,Poisson surfaces}
+    \endentry
     \entry{Noohi-thesis}{book}{}{}
       \name{author}{1}{}{%
         {{hash=ef46964fa6644f7c88eae2cf25c8a8ea}{%
@@ -364,6 +489,44 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/math/0503247
+      \endverb
+    \endentry
+    \entry{Shende-weights}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e0753055678dd73b837981566ecffb18}{%
+           family={Shende},
+           familyi={S\bibinitperiod},
+           given={Vivek},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0753055678dd73b837981566ecffb18}
+      \strng{fullhash}{e0753055678dd73b837981566ecffb18}
+      \strng{fullhashraw}{e0753055678dd73b837981566ecffb18}
+      \strng{bibnamehash}{e0753055678dd73b837981566ecffb18}
+      \strng{authorbibnamehash}{e0753055678dd73b837981566ecffb18}
+      \strng{authornamehash}{e0753055678dd73b837981566ecffb18}
+      \strng{authorfullhash}{e0753055678dd73b837981566ecffb18}
+      \strng{authorfullhashraw}{e0753055678dd73b837981566ecffb18}
+      \field{labelalpha}{She17}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1073-7928,1687-0247}
+      \field{journaltitle}{Int. Math. Res. Not. IMRN}
+      \field{number}{22}
+      \field{title}{The weights of the tautological classes of character varieties}
+      \field{year}{2017}
+      \field{pages}{6832\bibrangedash 6840}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1093/imrn/rnv363
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/imrn/rnv363
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/imrn/rnv363
       \endverb
     \endentry
     \entry{simpson-local_systems_on_proper}{article}{}{}
