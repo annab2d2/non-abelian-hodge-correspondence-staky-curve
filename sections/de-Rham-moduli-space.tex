@@ -117,11 +117,14 @@ so we get
 \end{equation}
 Clearly the composition $GL_n(\Cb) \subseteq GL_n(\Cb[x]) \xrightarrow{\text{ev}_0} GL_n(\Cb)$ is the identity, so the representations $\rho$ and $\sigma$ coincide.
 
-In conclusion, we obtained that the monodromy representation of a pair $(\mc{E}, \nabla)$ coincides with the representation obtained as $\mc{E}\vert_{B \mu_n}$.
+In conclusion, we obtained the following result.
+\begin{prop} \label{prop: monodromy representation}
+The monodromy representation of a pair $(\mc{E}, \nabla)$ coincides with the representation obtained as $\mc{E}\vert_{B \mu_n}$.
+\end{prop}
 
 \subsection{Betti moduli space}
 
-Applying the result to the computation of the coarse moduli spaces, we get that
+Applying \zcref{prop: monodromy representation} to the computation of the coarse moduli spaces, we get that
 \begin{equation}
 M_{\underline{m}, B}(\mc{X}) \cong \left\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C_{\underline{m}} \right\} // GL_n,
 \end{equation}
@@ -129,6 +132,10 @@ where $C_{\underline{m}}$ is a matrix representing the action of the generator o
 In particular, $C_{\underline{m}}$ can be taken as a diagonal matrix with exactly $m_l$ entries equal to $\mathrm{e}^{\frac{2 \pi \mathrm{i}}{n} l}$.
 
 In the case $\underline{m} = n_{-d}$, we get
+
+\begin{prop}
+The $n_{-d}$ stratum of coarse moduli space of the Betti moduli space of $\mc{X}$ is isomorphic to the following variety
 \begin{equation}
-M_{n_{-d}, B}(\mc{X}) \cong \left\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \right\} // GL_n,
+M_{n_{-d}, B}(\mc{X}) \cong \left\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \right\} // GL_n.
 \end{equation}
+\end{prop}

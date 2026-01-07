@@ -31,11 +31,13 @@ On the other hand, the equivalence \eqref{eq: equivalence of dolbeault moduli sp
 M_{n, Dol}^d(X) \cong M_{n_{-d}, Dol}^0(\mc{X}).
 \end{equation}
 
-Finally, putting these together we get an homeomorphism
+\begin{prop}
+Putting the above homeomorphisms together, we get an homeomorphism
 \begin{equation}
 M_{n, Dol}^d(X)^{\text{top}} \cong \left( \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \,\bigg|\, \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} // GL_n \right)^{\text{top}},
 \end{equation}
 therefore the space on the right hand side can be interpreted as version of the character variety for bundles of nonzero degree on $X$.
+\end{prop}
 
 The picture can be explained with more clarity by embedding both $M_{n, Dol}^0$ and $M_{n, DR}^0$ in a bigger moduli space $M_{n, Hdg}^0$. Indeed, for a fixed complex number $\lambda$, define the notion of $\lambda$-connection on a vector bundle $\mc{E}$ as a morphism $\nabla\colon \mc{E} \to \mc{E} \otimes \Omega$, respecting the Leibniz rule up to the scalar $\lambda$, namely
 \[
@@ -72,9 +74,9 @@ This picture restricts to any connected component, determined by numerical invar
 	\arrow[from=2-3, to=2-2]
 \end{tikzcd}
 \end{equation}
-where the inclusions $i$ and $j$ are algebraic, while $\psi$ is an isomorphism of complex manifolds that is only defined analytically via the Riemann-Hilbert correspondence \eqref{riemann hilbert DM stack}.
+where the inclusions $i$ and $j$ are algebraic, while $\psi$ is an diffeomorphism of complex manifolds that is only defined analytically via the Riemann-Hilbert correspondence \eqref{riemann hilbert DM stack}.
 
-We want to compare the singular cohomology with rational coefficients of $M_{Dol}, \; M_{Hdg}, \; M_{DR}$. The idea to use the Bia\l{y}nicki-Birula decomposition was inspired by Nakajima's appendix to \cite{appendix-by-nakajima}.
+We want to compare the singular cohomology with rational coefficients of $M_{Dol}, \; M_{Hdg}, \; M_{DR}$ and their Hodge structures. The idea to use the Bia\l{y}nicki-Birula decomposition was inspired by Nakajima's appendix to \cite{appendix-by-nakajima}.
 %Nakajima used this argument for point counting; since we want to compute cohomology instead, we will need some extra steps.
 
 Notice that $M_{Hdg}$ is a \textit{semiprojective variety}, according to the terminology used in \cite{Hausel-RodriguezVillega}. This means that it is a quasi-projective variety with a $\Gb_m$-action such that
@@ -93,7 +95,7 @@ H^k(M_{Dol}) \cong H^k(M_{Hdg}) \cong H^k(M_{DR}).
 \]
 \end{thm}
 
-Now we are left to understand how $\psi$ acts on the mixed Hodge structures. A first step in this direction, is to choose generators of pure weights for the various cohomology rings and track their weight along the various isomorphisms. In order to do this, we take the universal bundle $(\mc{E}_\text{univ}, \nabla_\text{univ})$ on $M_{Hdg}$.
+We are now left to understand how $\psi$ acts on the mixed Hodge structures. A first step in this direction, is to choose generators of pure weights for the various cohomology rings and track their weight along the various isomorphisms. In order to do this, we take the universal bundle $(\mc{E}_\text{univ}, \nabla_\text{univ})$ on $M_{Hdg}$.
 
 [\textbf{TO DO}: existence of universal objects]
 
@@ -118,19 +120,19 @@ Since moreover the cohomology of $M_{Dol}$ carries a pure Hodge structure [\text
 
 Consider now
 \begin{equation}
-j^* \circ (i^*)^{-1} \colon H^*(M_{Dol} \times X) \to H^*(M_{DR} \times X).
+j^* \circ (i^*)^{-1} \colon H^*(M_{Dol} \times \mc{X}) \to H^*(M_{DR} \times \mc{X}).
 \end{equation}
 Since $i$, and $j$ are algebraic maps, this is an isomorphism of pure (mixed) Hodge structures, mapping $c_i(\mc{E}_{\text{univ}})$ to $c_i(\mc{E}_{\text{univ}})$. Equivalently,
 \begin{equation}
 j^* \circ (i^*)^{-1} \colon H^*(M_{Dol}) \to H^*(M_{DR})
 \end{equation}
-is an isomorphism of pure Hodge structures, mapping the K\"unneth components $e_{i,j}$ of the Chern classes of the universal bundle on $M_{Dol} \times X$ to the K\"unneth components $e_{i,j}$ of the Chern classes on the universal bundle on $M_{DR} \times X$.
+is an isomorphism of pure Hodge structures, mapping the K\"unneth components $e_{i,j}$ of the Chern classes of the universal bundle on $M_{Dol} \times \mc{X}$ to the K\"unneth components $e_{i,j}$ of the Chern classes on the universal bundle on $M_{DR} \times \mc{X}$.
 
 Finally, consider
 \begin{equation}
-\psi^* \colon H^*(M_{DR} \times X) \to H^*(M_{B} \times X).
+\psi^* \colon H^*(M_{DR} \times \mc{X}) \to H^*(M_{B} \times \mc{X}).
 \end{equation}
-This induces an isomorphism on the cohomology rings, therefore the K\"unneth components of $\psi^* c_i(\mc{E}_{\text{univ}})$ generate the cohomology ring of $M_{DR}$. But it is not a morphism of mixed Hodge structures. Nontheless, we have the following.
+This induces an isomorphism on the cohomology rings, therefore the K\"unneth components of $\psi^* c_i(\mc{E}_{\text{univ}})$ generate the cohomology ring of $M_{B}$. But it is not a morphism of mixed Hodge structures. Nontheless, we have the following.
 \begin{thm}\cite[]{Shende-weights} \label{thm: weights of the tautological classes in betti moduli space}
 Under the isomorphism $\psi^* \colon  H^*(M_{DR}) \to H^*(M_{B})$, the K\"unneth components $e_{i,j}$ of the $i$-th Chern class of the universal bundle $c_i(\mc{E}_{\text{univ}})$ are mapped to cohomology classes of weight $2i$.
 \end{thm}

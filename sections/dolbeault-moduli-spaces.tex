@@ -7,23 +7,30 @@ Recall tha the Dolbeault moduli space is the moduli space of semistable Higgs bu
 \end{gather}
 We can define similarly $\Higgs_{\underline{m}}^d(\mc{X})$ and $\mc{M}_{\underline{m}, Dol}^d(\mc{X})$.
 
-We now want to extend the results of the previous section to the Dolbeault moduli spaces and find an equivalence
+We now want to extend \zcref{thm: eqv Bun} to the Dolbeault moduli spaces and prove the following.
+\begin{thm} \label{thm: eqv Dol}
+There is an equivalence of categories
 \begin{equation} \label{equivalence dol}
 \mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n_{-d}, Dol}^0(\mc{X}).
 \end{equation}
+\end{thm}
 
-As before, we will first extend \eqref{equivalence bun} to the moduli spaces of Higgs bundles and then \eqref{equivalence dol} will follow.
+As before, we will first extend \zcref{lemma Bun} to the moduli spaces of Higgs bundles and then \zcref{thm: eqv Dol} will follow. For convenience, we split the proof of \zcref{thm: eqv Dol} in intermediate lemmas.
 
-\zcref{omega mc(X)} gave an isomorphism
+\begin{lemma}
+Under the isomorphism
 \begin{equation}
-\Omega_{\mc{X}} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n-1}.
+\Omega_{\mc{X}} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n-1}
 \end{equation}
-Notice moreover that, under the above isomorphism, we can give an an explicit expression for the canonical morphism
+shown in \zcref{omega mc(X)}, the canonical morphism
 \begin{equation} \label{eq: canonical morphism cotangent}
-\pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p).
+\pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p)
 \end{equation}
-Namely, \eqref{eq: canonical morphism cotangent} has the form $n \id_{\pi^* \Omega_X} \otimes s^{n-1}$, where $s$ is the tautological section of $\O(\tfrac{1}{n}p)$.\\
-Indeed, the coarse moduli map $\pi \colon \mc{X} \to X $ locally around $p$ has the following form
+has the form $n \id_{\pi^* \Omega_X} \otimes s^{n-1}$, where $s$ is the tautological section of $\O(\tfrac{1}{n}p)$.
+\end{lemma}
+
+\begin{proof}
+The coarse moduli map $\pi \colon \mc{X} \to X $ locally around $p$ has the following form
 \[\begin{tikzcd}
 	{\Ab^1 = \Spec k[x]} \\
 	{\mc{X} = [\Ab^1 / \mu_n]} \\
@@ -42,9 +49,10 @@ therefore the canonical morphism $q^* \Omega_X \to \Omega_{\Ab^1}$ corresponds t
 	k[x] \otimes_{k[t]} k[t]\dd t \; &\to \; k[x]\dd x \\
 	f(x) \otimes \dd t \quad &\mapsto \; f(x) \, n \, x^{n-1} \, \dd x.
 \end{align}
-Since $q'$ is étale, it induces isomorphisms on the cotangent sheaves. Moreover, the section $x$ corresponds via $q'$ to the tautological section $s$ of $\O(\tfrac{1}{n}p)$. In conclusion, we get that the canonical morphism $\pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p)$ ha the indicated form.
+Since $q'$ is étale, it induces isomorphisms on the cotangent sheaves. Moreover, the section $x$ corresponds via $q'$ to the tautological section $s$ of $\O(\tfrac{1}{n}p)$. In conclusion, we get that the canonical morphism $\pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p)$ has the indicated form.
+\end{proof}
 
-Now we can use this morphism to extend the pullback functor $\pi^*$ to the Higgs bundles. In particular, we need to lift the Higgs field.
+Now we can use this morphism to extend the pullback functor $\pi^*$ to Higgs bundles. In particular, we need to lift the Higgs field.
 Define
 \begin{align}
 	(\pi^*, \pi^{\#}) \colon \Higgs_n^d(X) &\to \Higgs_{n_0}^d(\mc{X}) \\
@@ -87,14 +95,10 @@ This shows that there exists a unique $\psi \in \Hom_X(E, E \otimes \Omega_X)$ s
 \]
 This gives a well defined functor $(\pi_*, \pi_{\#})$.
 
-We now need to show that the functors $(\pi^*, \pi^{\#})$ and $(\pi_*, \pi_{\#})$ are inverse to each other. 
-At the level of vector bundles this was shown in \zcref{section: moduli spaces of vector bundles}. We need to show that the same holds for the Higgs fields. Indeed, computing the two compositions we get
-\begin{gather}
-\varphi \xmapsto{\pi^{\#}} n \, \pi^* \varphi \otimes s^{n-1} \xmapsto{\pi_{\#}} \frac{1}{n} \, \pi_*(n \, \pi^* \varphi \otimes s^{n-1}) = \varphi\\
-\eta \xmapsto{\pi_{\#}} \frac{1}{n} \, \pi_* \eta \xmapsto{\pi^{\#}} n \, \pi^*(\frac{1}{n} \, \pi_* \eta) \otimes s^{n-1} = n \, \pi^* \psi \otimes s^{n-1} = \eta.
-\end{gather}
+We can now phrase the analogue of \zcref{lemma Bun}.
 
-In conclusion, we get an equivalence
+\begin{lemma}\label{lemma Dol}
+The functors $(\pi^*, \pi^{\#})$ and $(\pi_*, \pi_{\#})$ define inverse equivalences of categories
 \begin{equation}
 \begin{tikzcd}
 	{\Higgs_n^d(X)} & {\Higgs^d_{n_0}(\mc{X}).}
@@ -103,6 +107,15 @@ In conclusion, we get an equivalence
 	\arrow["\cong"{description}, shift right=1.5, draw=none, from=0, to=1]
 \end{tikzcd}
 \end{equation}
+\end{lemma}
+
+\begin{proof}
+At the level of vector bundles this is \zcref{lemma Bun}. We need to show that the same holds for the Higgs fields. Indeed, computing the two compositions we get
+\begin{gather}
+\varphi \xmapsto{\pi^{\#}} n \, \pi^* \varphi \otimes s^{n-1} \xmapsto{\pi_{\#}} \frac{1}{n} \, \pi_*(n \, \pi^* \varphi \otimes s^{n-1}) = \varphi\\
+\eta \xmapsto{\pi_{\#}} \frac{1}{n} \, \pi_* \eta \xmapsto{\pi^{\#}} n \, \pi^*(\frac{1}{n} \, \pi_* \eta) \otimes s^{n-1} = n \, \pi^* \psi \otimes s^{n-1} = \eta.
+\end{gather}
+\end{proof}
 
 As observed earlier, tensoring with a line bundle induces an equivalence, so we get
 \[\begin{tikzcd}
@@ -120,4 +133,4 @@ Finally, we noticed that (semi)stability is preserved, therefore we get the desi
 \end{tikzcd}
 \end{equation}
 
-
+This concludes the proof of \zcref{thm: eqv Dol}.

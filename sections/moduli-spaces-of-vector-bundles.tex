@@ -23,15 +23,28 @@ where the latter union ranges over the pairs $(\underline{m}, d)$ such that for 
 
 Consider now the case where $C = X$ is a smooth projective genus $g$ curve and $\mc{C} = \mc{X} = \sqrt[n]{p / X}$ has a unique stacky point of multiplicity $e = n$. Then, for a vector bundle $\mc{E} $ on $\mc{X}$ the multiplicity $\underline{m}$ is just the vector $(m_{p, 0}, \dots m_{p, n-1})$ of multiplicities of $\mc{E}$ at $p$. Equivalently, it classifies the representation obtained as $\mc{E}\vert_{B \mu_n}$.
 
-We now want to show an equivalence of categories
+We now want to show the following result.
+\begin{thm} \label{thm: eqv Bun}
+There is an equivalence of categories
 \begin{equation} \label{equivalence bun pt1}
-\Bun_n^d(X) \cong \Bun_{(0, \dots, 0, n, 0, \dots, 0 )}^0(\mc{X}),
+\Bun_n^d(X) \cong \Bun_{(0, \dots, 0, n, 0, \dots, 0 )}^0(\mc{X})
 \end{equation}
-where on the right hand side, the $n$ is in the position $-d (\mod n)$. In order to simplify the notation, let us denote this multiplicity vector by $n_{-d}$. Similarly, we will denote $(n, 0, \dots, 0)$ by $n_0$.
-% POSSIBLE ALTERNATIVE SYMBOL: $n \mathbb{1}_{-d}$
+preserving (semi)stability, where on the right hand side the $n$ is in the position $-d (\mod n)$.
+\end{thm}
 
-As a first step, let us show that the pullback and pushforward functors define equivalences $\Bun_n^d(X) \cong \Bun_{n_0}^d(\mc{X}).$
+In order to simplify the notation, let us denote the multiplicity vector on the right hand side by $n_{-d}$. Similarly, we will denote $(n, 0, \dots, 0)$ by $n_0$.
 
+The most relevant step in the proof is the following
+
+\begin{lemma} \label{lemma Bun}
+The pullback and pushforward functors define equivalences
+\begin{equation}
+\Bun_n^d(X) \cong \Bun_{n_0}^d(\mc{X}),
+\end{equation}
+which preserve (semi)stability.
+\end{lemma}
+
+\begin{proof}
 First of all, we need to observe that the pullback and pushforward functors map vector bundles to vector bundles, preserving the invariants.
 
 For $\pi^*$, it is known that the pullback maps vector bundles to vector bundles of the same rank and the degree on $\mc{X}$ was define so that $\pi^*$ would preserve the degree, see \zcref{pullback preserves degree}.
@@ -49,11 +62,14 @@ Therefore, $\pi_*$ restricts to a well defined functor
 \[
 \pi_* \colon \Bun_{n_0}^d(\mc{X}) \to \Bun_n^d(X).
 \]
-
 The fact that these are inverse equivalences are just \zcref{pi_*pi^* isom,pi^*pi_* isom}.
 
 Notice that these are equivalences of categories of vector bundles, preserving both the rank and the degree. Therefore, they preserve (semi)stability.
+\end{proof}
 
+Now the proof of \zcref{thm: eqv Bun} follows easily.
+
+\begin{proof}
 Notice now that tensoring with $\O(-\frac{1}{n}p)^{\otimes d}$ defines an equivalence $\Bun_{n_0}^d(\mc{X}) \cong \Bun_{n_{-d}}^0(\mc{X})$. Explicitly,
 \[\begin{tikzcd}
 	{\Bun_{n_0}^d(\mc{X})} & {\Bun_{n_{-d}}^0(\mc{X}).}
@@ -73,6 +89,7 @@ Indeed, let $\mc{E} \in \Bun_{n_0}^d(\mc{X})$ be a semistable vector bundle. Sin
 \mu(\mc{E}' \otimes \O(-\tfrac{d}{n}p)) = \frac{\deg \mc{E}' - \rank \mc{E}' \frac{d}{n}}{\rank \mc{E}'} = \mu(\mc{E}') - \frac{d}{n}.
 \]
 Repeating the same computation for $\mc{E}$, one shows that $\mu(\mc{E}' \otimes \O(-\frac{d}{n}p)) \leq \mu(\mc{E} \otimes \O(-\frac{d}{n}p))$. The computation in the other direction is completely analogous.
+\end{proof}
 
 Putting everything together, we get an equivalence of categories
 \begin{equation} \label{equivalence bun}
