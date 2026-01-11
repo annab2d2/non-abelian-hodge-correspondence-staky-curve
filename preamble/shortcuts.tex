@@ -101,3 +101,13 @@
 \newcommand{\Top}{\catname{Top}}
 \newcommand{\Cov}{\catname{Cov}}
 \newcommand{\Set}{\catname{Set}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define a helper for the path sequences
+\newcommand{\tikzpath}[1]{%
+  \begin{tikzpicture}[baseline={(v0.center)}, xscale=0.6, yscale=1]
+    \tikzset{dot/.style={circle, fill, inner sep=0.8pt}}
+    \node[dot, label=below:{\tiny $v_0$}] (v0) at (0,0) {};
+    #1
+  \end{tikzpicture}%
+}
