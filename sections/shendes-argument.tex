@@ -233,17 +233,17 @@ On objects define $\lambda$ by
   };
 \end{tikzpicture}
 \end{equation}
-Notice that $\varphi_{\underline{g}}$ is well defined because the conditions on the boundaries of $2$-simplices in $F$ ans in $E$ are equivalent, and it is a group homomorphism by definition of the group operation in $E$, obtained by composing paths. Therefore $\lambda$ is well defined at the level of objects.
+Notice that $\varphi_{\underline{g}}$ is well defined because the conditions on the boundaries of $2$-simplices in $F$ and in $E$ are equivalent, and it is a group homomorphism by definition of the group operation in $E$, obtained by composing paths. Therefore $\lambda$ is well defined at the level of objects.
 On morphisms, define $\lambda$ by
 \begin{align}
 \lambda \colon G(S)^{\# X_0} \times F(S) &\longrightarrow G(S) \times \Hom(E, G)(S) \\
   \left((g_v)_{v \in X_0}, (g_e)_{e \in X_1}\right) &\longmapsto (g_{v_0}, \varphi_{\underline{g}}).
 \end{align}
-Observe now that $\lambda$ is a morphism of groupoids, i.e. it commutes with source and target maps. The source maps is the projection on the second factor in both groupoids, which commutes with $\lambda$ by definition. The target map is the group action, so compatibility with $\lambda$ means
+Observe now that $\lambda$ is a morphism of groupoids, i.e. it commutes with source and target maps. The source map is the projection on the second factor in both groupoids, which commutes with $\lambda$ by definition. The target map is the group action, so compatibility with $\lambda$ means
 \begin{equation}
 g_{v_0} \cdot \varphi_{\underline{g}} = \lambda\left((g_v)_v \cdot (g_e)_e \right).
 \end{equation}
-Since $(g_v)_v \cdot (g_e)_e = \left(g_{\partial_0 e} g_e g_{\partial_1 e}^{-1}\right)_e$, the right-hand side is the homomorphism
+Since $(g_v)_v \cdot (g_e)_e = \left(g_{\partial_0 e} \, g_e \, g_{\partial_1 e}^{-1}\right)_e$, the right-hand side is the homomorphism
 \begin{equation}
 \begin{tikzpicture}[>=stealth, auto, node distance=1.2cm]
   % Row 1: Diagram maps to long product
@@ -424,7 +424,7 @@ This is made into a groupoid by considering homotopies of simplicial morphisms. 
 
 Notice that, since $BG$ is a Kan complex, homotopy of maps into $BG$ is indeed an equivalence relation \cite[Corollary 6.2]{SimplicialHomotopyTheory}, therefore $\Hom_{SSch}(\Delta_{X, S}, BG)$ is a well defined groupoid. Then we can define $\shHom_{SSch}(\Delta_X, BG)$ as the stackification of $\shHom_{SSch}(\Delta_X, BG)^{\text{pre}}$.
 
-\begin{thm}
+\begin{thm} \label{thm: stack of local systems as stack of simplicial maps}
 There is an isomorphism of stacks
 \begin{equation}
 \left[ \text{Hom}(\pi_1(X, v_0), G) / G \right] \cong \shHom_{SSch}(\Delta_X, BG)
@@ -466,5 +466,44 @@ Consider therefore two morphisms $f, f' \in \Hom_{SSch}(\Delta_{X,S}, BG)$. A ho
 	\arrow["{f'}"', from=3-1, to=2-3]
 \end{tikzcd}
 \end{equation}
-commutes. This
+commutes. Giving $H$ is equivalent to giving for all $n$ a family of morphisms $h^n_i \colon (\Delta_{X,S})_n \to (BG)_n$ for $i = 0, \dots, n$ satisfying suitable compatibility conditions with face and degeneracy maps. Explicitly, the relationship between $H$ and $h$ is given by
+\begin{equation} \label{eq: homotopy}
+h^n_j = H^{n+1}_{j+1} \, s^n_j \quad \text{for } j=0,\dots, n.
+\end{equation}
+\zcref{BG is 2-coskeleton} shows that $H$ is determined by its degree one part, with degree two giving a compatibility condition. Then \zcref{eq: homotopy} shows that the homotopy $h$ is determined by its degree zero part, with degree one giving a compatibility condition.\\
+Let $f, f' \in \Hom(\Delta_{X, S}, BG)$ be simplicial maps and let $h$ be a homotopy between $f$ and $f'$. Suppose $f$ and $f'$ give elements $(g_e)_{e \in X_1} \in G(S)^{\# X_1}$ and $(g'_e)_{e \in X_1} \in G(S)^{\# X_1}$ respectively. The homotopy $h$ is determined in degree zero by a single morphism
+\begin{equation}
+h^0_0 \colon  X_0 \to G(S),
+\end{equation}
+corresponding to $(l_v)_{v \in X_0} \in G(S)^{\# X_0}$, and in degree one to a pair of morphisms
+\begin{equation}
+h_i^1 \colon X_1 \to G(S) \times G(S), \quad i=0,1,
+\end{equation}
+corresponding to $(l_{i,e}, \, l_{i,e}' )_{e \in X_1} \in (G(S) \times G(S))^{\# X_1}$. By definition, $h$ needs to satisfy the following identities
+\begin{gather}
+d_0^2 \, h_0^1 = f_1, \quad d_2^2 \, h_1^1 = f'_1,\\
+\quad d_0^2 \, h_1^1 = h_0^0 \, d_0^1, \quad d_2^2 \, h_0^1 = h_0^0 \, d_1^1,\\
+d_1^2 \, h_0^1 = d_1^2 \, h_1^1,
+\end{gather}
+which show that
+\begin{gather}
+l_{0,e}= g_e, \quad l_{1,e}' = g_e',\\
+l_{1,e}= l_{\partial_0 e}, \quad l_{0, e}' = l_{\partial_1 e}, \\
+g_e \, l_{0,e}' = l_{1, e} \, g_{e}'.
+\end{gather}
+In particular, we find that $h$ is determined by $(l_v)_{v \in X_0}$, imposing the relationship
+\begin{equation}
+g_{e} = l_{\partial_0 e} \, g_e' \, l_{\partial_1 e}^{-1}.
+\end{equation}
+This is exactly the action of $G(S)^{\# X_0}$ on $F(S)$, showing that the groupoids $\Hom(\Delta_{X, S}, BG)$ and $\left[ F / G^{\# X_0} \right]^{\text{pre}}(S)$ are isomorphic and concluding the proof of the theorem.
 \end{proof}
+
+\subsection{Shende's proof}
+In \cite{Shende-weights}, Shende uses \zcref{thm: stack of local systems as stack of simplicial maps} to compute the weights of the tautological classes on $H^*([\Hom(\pi_1(X, v_0), G) / G], \Qb)$. Let us first recall Shende's argument, and later explain how it can be extended to the case of $\mc{X}$ stacky curve.
+
+Let $\mc{M}_{B,G}(X) \coloneqq \left[ \Hom(\pi_1(X), G) / G \right]$ be the stack of $G$-local systems on $X$.
+As explained in \zcref{section: The nonabelian Hodge homeomorphism}, under the analytic map
+\begin{equation}
+\psi \colon \mc{M}_B \to \mc{M}_{DR},
+\end{equation}
+the universal bundle on $\mc{M}_{DR} \times X$ pulls back to the universal bundle $\mc{E}_{\text{univ}}$ on $\mc{M}_{DR} \times X$. The key issue is that $\psi$ is not algebraic and indeed $\mc{E}_{univ}$ is not algebraic. This is what makes the weights of $c_i(\mc{E}_{\text{univ}})=\psi^* c_i(\mc{E}_{\text{univ}})$ difficult to compute. The main point is that after passing to the simplicial construction explained in the previous section we get an algebraic universal bundle.
