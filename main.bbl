@@ -190,6 +190,52 @@
       \verb https://doi.org/10.1007/978-3-030-32796-5_4
       \endverb
     \endentry
+    \entry{SimplicialHomotopyTheory}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=412faf071798330e91007f59ae2d6ee2}{%
+           family={Goerss},
+           familyi={G\bibinitperiod},
+           given={Paul\bibnamedelima G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=34394d8ae626e3433634862abdc5b4b3}{%
+           family={Jardine},
+           familyi={J\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkhäuser Verlag, Basel}%
+      }
+      \strng{namehash}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{fullhash}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{fullhashraw}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{bibnamehash}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{authorbibnamehash}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{authornamehash}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{authorfullhash}{ba044f0b8b164d19eb892a329552e01b}
+      \strng{authorfullhashraw}{ba044f0b8b164d19eb892a329552e01b}
+      \field{labelalpha}{GJ09}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-0346-0188-7}
+      \field{note}{Reprint of the 1999 edition [MR1711612]}
+      \field{series}{Modern Birkhäuser Classics}
+      \field{title}{Simplicial homotopy theory}
+      \field{year}{2009}
+      \field{pages}{xvi+510}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/978-3-0346-0189-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-0346-0189-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-0346-0189-4
+      \endverb
+    \endentry
     \entry{SGA1-IX}{inproceedings}{}{}
       \name{author}{1}{}{%
         {{hash=fb0e3184fdd2fcd28fa74ca67d7cdcc1}{%

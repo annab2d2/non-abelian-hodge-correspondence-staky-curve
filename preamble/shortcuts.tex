@@ -103,6 +103,8 @@
 \newcommand{\Set}{\catname{Set}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Tikz commands and shortcuts
+
 % Define a helper for the path sequences
 \newcommand{\tikzpath}[1]{%
   \begin{tikzpicture}[baseline={(v0.center)}, xscale=0.6, yscale=1]
@@ -110,4 +112,26 @@
     \node[dot, label=below:{\tiny $v_0$}] (v0) at (0,0) {};
     #1
   \end{tikzpicture}%
+}
+
+% Helper command for the graph fragment with dots in the middle
+  \newcommand{\graphfragment}[1]{
+    \begin{tikzpicture}[baseline=(v0.base), scale=0.8]
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_0$}] (v0) at (0,0) {};
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_1$}] (v1) at (0.8,0) {};
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_n$}] (vn) at (1.8,0) {};
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_0$}] (v0end) at (2.6,0) {};
+      
+      \draw[-{Stealth}] (v0) -- node[above] {\tiny $e_0$} (v1);
+      \draw[dashed] (v1) -- (vn);
+      \draw[-{Stealth}] (vn) -- node[above] {\tiny $e_n$} (v0end);
+    \end{tikzpicture}
+  }
+
+  %%% Tikzcd
+  % Set global style for all tikz-cd diagrams. All Math is to be in \displaystyle
+\tikzcdset{
+  every diagram/.append style={
+    cells={font=\everymath\expandafter{\the\everymath\displaystyle}}
+  }
 }
