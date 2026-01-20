@@ -270,6 +270,45 @@
       \field{pages}{228\bibrangedash 260}
       \range{pages}{33}
     \endentry
+    \entry{Heinloth-Gm-gerbes}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5d20a46a6d2322ce7e469d8a4d42ba4c}{%
+           family={Heinloth},
+           familyi={H\bibinitperiod},
+           given={Jochen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{fullhash}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{fullhashraw}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{bibnamehash}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{authorbibnamehash}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{authornamehash}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{authorfullhash}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \strng{authorfullhashraw}{5d20a46a6d2322ce7e469d8a4d42ba4c}
+      \field{labelalpha}{Hei05}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1631-073X,1778-3569}
+      \field{journaltitle}{C. R. Math. Acad. Sci. Paris}
+      \field{number}{10}
+      \field{title}{Twisted {C}hern classes and {$\Bbb G_m$}-gerbes}
+      \field{volume}{341}
+      \field{year}{2005}
+      \field{pages}{623\bibrangedash 626}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/j.crma.2005.09.041
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.crma.2005.09.041
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.crma.2005.09.041
+      \endverb
+    \endentry
     \entry{Hausel-RodriguezVillega}{article}{}{}
       \name{author}{2}{}{%
         {{hash=044c11ee38ec9311f63c208b2db20b4f}{%
@@ -535,6 +574,44 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/math/0503247
+      \endverb
+    \endentry
+    \entry{Olsson-sheaves-on-artin-stacks}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a7554a741543f1f36342629af74900ef}{%
+           family={Olsson},
+           familyi={O\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7554a741543f1f36342629af74900ef}
+      \strng{fullhash}{a7554a741543f1f36342629af74900ef}
+      \strng{fullhashraw}{a7554a741543f1f36342629af74900ef}
+      \strng{bibnamehash}{a7554a741543f1f36342629af74900ef}
+      \strng{authorbibnamehash}{a7554a741543f1f36342629af74900ef}
+      \strng{authornamehash}{a7554a741543f1f36342629af74900ef}
+      \strng{authorfullhash}{a7554a741543f1f36342629af74900ef}
+      \strng{authorfullhashraw}{a7554a741543f1f36342629af74900ef}
+      \field{labelalpha}{Ols07}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0075-4102,1435-5345}
+      \field{journaltitle}{J. Reine Angew. Math.}
+      \field{title}{Sheaves on {A}rtin stacks}
+      \field{volume}{603}
+      \field{year}{2007}
+      \field{pages}{55\bibrangedash 112}
+      \range{pages}{58}
+      \verb{doi}
+      \verb 10.1515/CRELLE.2007.012
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/CRELLE.2007.012
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/CRELLE.2007.012
       \endverb
     \endentry
     \entry{Shende-weights}{article}{}{}

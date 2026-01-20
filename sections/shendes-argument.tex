@@ -1,5 +1,6 @@
 \section{Shende's argument}
-In order to compare the Hodge structures of the De Rham and the Betti moduli spaces, we employ Shende's idea presented in \cite[]{Shende-weights}. Shende replaced a topological space, in particular a complex manifold, with a simplicial scheme and use this simplicial decomposition to give a presentation of the Betti moduli space as a simplicial scheme. The main point of the construction is that, while the Betti moduli space doesn't admit a universal local system, since such a local system would not be of algebraic nature, this simplicial replacement does. As we saw in the previous system, universal bundles are the key to comparing the cohomology rings because the K\"unneth components of their Chern classes are generators.
+In order to compare the Hodge structures of the De Rham and the Betti moduli spaces, we employ Shende's idea presented in \cite[]{Shende-weights}. The idea is to replace a complex manifold by a simplicial scheme and use this simplicial decomposition to give a presentation of the Betti moduli space as a simplicial scheme.
+The main point of the construction is that, while the Betti moduli space doesn't admit a universal local system, since such a local system would not be of algebraic nature, this simplicial replacement does. As we saw in the previous system, universal bundles are the key to comparing the cohomology rings because the K\"unneth components of their Chern classes are generators.
 
 In what follows, we will first explain in detail the idea behind Shende's construction. Then we will see how it applies to our case, when instead of a complex manifold as studied in \cite[]{Shende-weights} we have a stacky curve.
 
@@ -58,7 +59,7 @@ E(\Delta_X, v_0) = \Biggl\langle
       \tikzset{dot/.style={circle, fill, inner sep=0.8pt}}
       \node[dot] (v0) at (0,0) {}; 
       \node[dot] (v1) at (1,0) {}; \node[dot] (v2) at (2,0) {};
-      \draw[-{Stealth}] (v0) -- node[below]{\tiny $\partial_1 \sigma$} (v1);
+      \draw[-{Stealth}] (v0) -- node[below]{\tiny $\partial_2 \sigma$} (v1);
       \draw[-{Stealth}] (v1) -- node[below]{\tiny $\partial_0 \sigma$} (v2);
     \end{tikzpicture}
     & =
@@ -66,7 +67,7 @@ E(\Delta_X, v_0) = \Biggl\langle
       \tikzset{dot/.style={circle, fill, inner sep=0.8pt}}
       \node[dot] (v0) at (0,0) {};
       \node[dot] (v1) at (1,0) {};
-      \draw[-{Stealth}] (v0) -- node[below]{\tiny $\partial_2 \sigma$} (v1);
+      \draw[-{Stealth}] (v0) -- node[below]{\tiny $\partial_1 \sigma$} (v1);
     \end{tikzpicture} \quad
     \forall \sigma \in X_2
   \end{aligned}
@@ -159,7 +160,7 @@ There is an isomorphism $\pi_1(|\Delta_X|, v_0) \simeq E(\Delta_X, v_0)$.
 \end{rmk}
 
 \begin{prop}\label{prop: stack of local systems - simplicial version}
-Let X be a path-connected topological space. Suppose that $\pi_{1}(X, v_0)$ is finitely presented, e.g. if $X$ is compact. Let $\Delta_X$ be a simplicial set whose geometric realization is homotopy equivalent to $X$, having $v_0$ as a vertex. Call $X_i$ the $i$-th skeleton of $\Delta_X$.
+Let X be a path-connected topological space. Suppose that $\pi_{1}(X, v_0)$ is finitely presented, e.g. if $X$ is a complex manifold. Let $\Delta_X$ be a simplicial set whose geometric realization is homotopy equivalent to $X$, having $v_0$ as a vertex. Call $X_i$ the $i$-th skeleton of $\Delta_X$.
 Then the isomorphism $\pi_1(X, v_0) \simeq E(\Delta_X, v_0)$ induces an equivalence of quotient stacks
 \begin{equation}
 \begin{tikzpicture}[>=stealth]
@@ -171,8 +172,8 @@ Then the isomorphism $\pi_1(X, v_0) \simeq E(\Delta_X, v_0)$ induces an equivale
 
   % Define the right node containing the set of functions
   \node (right) at (6.5,0) {
-    $\left[ \{ (g_e)_{e \in X_1} \mid g_{\partial_1 \sigma} 
-            \, g_{\partial_0 \sigma}^{-1} \, g_{\partial_2 \sigma} = 1 
+    $\left[ \{ (g_e)_{e \in X_1} \mid g_{\partial_1 \sigma}^{-1} 
+            \, g_{\partial_0 \sigma} \, g_{\partial_2 \sigma} = 1 
             \quad \forall \ \sigma \in X_2 \} / G^{\# X_0} 
     \right],$
   };
@@ -187,7 +188,7 @@ Then the isomorphism $\pi_1(X, v_0) \simeq E(\Delta_X, v_0)$ induces an equivale
 
 \end{tikzpicture}
 \end{equation}
-where $G^{\# X_0}$ acts on $F \coloneqq \left\{ (g_e)_{e \in X_1} \mid g_{\partial_1 \sigma} \, g_{\partial_0 \sigma}^{-1} \, g_{\partial_2 \sigma} = 1 \quad \forall \ \sigma \in X_2 \right\}$ by edge-boundaries, i.e.
+where $G^{\# X_0}$ acts on $F \coloneqq \left\{ (g_e)_{e \in X_1} \mid g_{\partial_1 \sigma}^{-1} \, g_{\partial_0 \sigma} \, g_{\partial_2 \sigma} = 1 \quad \forall \ \sigma \in X_2 \right\}$ by edge-boundaries, i.e.
 \begin{equation}
 (g_v)_{v \in X_0} \cdot (g_e)_{e \in X_1} = (g_{\partial_0 e} \, g_e \, g_{\partial_1 e}^{-1})_{e \in X_1}.
 \end{equation}
@@ -203,7 +204,7 @@ Using \zcref{iso fundamental group - edge-path group}, in proving \zcref{prop: s
 We actually prove that the quotients prestacks are equivalent. Namely, we show that for $S$ scheme over $\mathbb{C}$ the groupoids
 \begin{equation}
 \begin{tikzcd}
-	{G(S) \times \Hom(E, G)(S)} & {\Hom(E(\Delta_X, v_0), G)(S)}
+	{G(S) \times \Hom(E, G)(S)} & {\Hom(E, G)(S)}
 	\arrow[shift right, from=1-1, to=1-2]
 	\arrow[shift left, from=1-1, to=1-2]
 \end{tikzcd}
@@ -233,17 +234,17 @@ On objects define $\lambda$ by
   };
 \end{tikzpicture}
 \end{equation}
-Notice that $\varphi_{\underline{g}}$ is well defined because the conditions on the boundaries of $2$-simplices in $F$ and in $E$ are equivalent, and it is a group homomorphism by definition of the group operation in $E$, obtained by composing paths. Therefore $\lambda$ is well defined at the level of objects.
+Notice that $\varphi_{\underline{g}}$ is well defined because the conditions on the boundaries of $2$-simplices in $F$ and in $E$ are equivalent, and it is a group homomorphism by definition of the group operation in $E$, obtained by concatenating paths. Therefore $\lambda$ is well defined at the level of objects.
 On morphisms, define $\lambda$ by
 \begin{align}
 \lambda \colon G(S)^{\# X_0} \times F(S) &\longrightarrow G(S) \times \Hom(E, G)(S) \\
   \left((g_v)_{v \in X_0}, (g_e)_{e \in X_1}\right) &\longmapsto (g_{v_0}, \varphi_{\underline{g}}).
 \end{align}
 Observe now that $\lambda$ is a morphism of groupoids, i.e. it commutes with source and target maps. The source map is the projection on the second factor in both groupoids, which commutes with $\lambda$ by definition. The target map is the group action, so compatibility with $\lambda$ means
-\begin{equation}
+\begin{equation} \label{eq: lambda action}
 g_{v_0} \cdot \varphi_{\underline{g}} = \lambda\left((g_v)_v \cdot (g_e)_e \right).
 \end{equation}
-Since $(g_v)_v \cdot (g_e)_e = \left(g_{\partial_0 e} \, g_e \, g_{\partial_1 e}^{-1}\right)_e$, the right-hand side is the homomorphism
+Since $(g_v)_v \cdot (g_e)_e = \left(g_{\partial_0 e} \, g_e \, g_{\partial_1 e}^{-1}\right)_e$, the right-hand side of \eqref{eq: lambda action} is the homomorphism
 \begin{equation}
 \begin{tikzpicture}[>=stealth, auto, node distance=1.2cm]
   % Row 1: Diagram maps to long product
@@ -252,15 +253,15 @@ Since $(g_v)_v \cdot (g_e)_e = \left(g_{\partial_0 e} \, g_e \, g_{\partial_1 e}
   \node[right=0.2cm of start_graph] (mapsto) {$\longmapsto$};
   
   \node[right=0.2cm of mapsto] (product) {
-    $( g_{v_0} g_{e_n} g_{v_n}^{-1} ) 
-     ( g_{v_n} g_{e_{n-1}} g_{v_{n-1}}^{-1} ) 
+    $( g_{v_0} \, g_{e_n} \, g_{v_n}^{-1} ) \,
+     ( g_{v_n} \, g_{e_{n-1}} \, g_{v_{n-1}}^{-1} ) \, 
      \dots 
-     ( g_{v_1} g_{e_0} g_{v_0}^{-1} )$
+     ( g_{v_1} \, g_{e_0} \, g_{v_0}^{-1} )$
   };
 
   % Row 2: Simplified product
   \node[below=0.6cm of product.west, anchor=west] (simplified) {
-    $= \quad g_{v_0} g_{e_n} g_{e_{n-1}} \dots g_{e_1} g_{e_0} g_{v_0}^{-1}$
+    $= \quad g_{v_0} \, g_{e_n} \, g_{e_{n-1}} \dots g_{e_1} \, g_{e_0} \, g_{v_0}^{-1}$
   };
 
   % Row 3: Conjugation notation
@@ -301,10 +302,10 @@ For simplicity assume $\gamma_{v_0}$ to be trivial. On objects, define $\mu$ by
 \end{align}
 Notice that $(g_e^{\varphi})_{e \in X_1}$ as defined above does belong to $F(S)$ because of the relations on boundaries of $2$-simplices in $E$. On morphisms, define $\mu$ by
 \begin{align}
-\mu \colon G(S) \times \Hom(E, G)(S) &\longrightarrow G(S)^{X_0} \times F(S) \\
+\mu \colon G(S) \times \Hom(E, G)(S) &\longrightarrow G(S)^{\# X_0} \times F(S) \\
 (g, \varphi) & \mapsto \left((g)_{v \in X_0}, (g_e^{\varphi})_{e \in X_1}\right).
 \end{align}
-As before, the compatibility of $\lambda$ with the source maps is trivial, so we only need to check commutativity with the group actions, which holds by the following computation
+As before, the compatibility of $\mu$ with the source maps is trivial, so we only need to check commutativity with the group actions, which holds by the following computation
 \begin{multline}
 \mu(g \cdot \varphi) = \mu(g \, \varphi \, g^{-1}) = (g_e^{g \varphi g^{-1}})_{e \in X_1} = (g \, (\gamma_{\partial_0 e} * e * \gamma_{\partial_1 e}^{-1}) \, g ^{-1})_{e \in X_1} \\
 = (g \, g_e^{\varphi} \, g^{-1})_{e \in X_1} = (g)_{v \in X_0} \cdot (g_e^{\varphi})_{e \in X_1}.
@@ -317,7 +318,7 @@ Finally, we need to show that $\lambda$ and $\mu$ are inverse equivalences. We s
 % = \lambda( (\varphi(\gamma_{v_0}*e*\gamma_{v_1}))_{e \in X_1} )
 = \left[
 \graphfragment{}
-\mapsto g_{e_n}^{\varphi} \cdot \dots \cdot g_{e_0}^{\varphi}\right].
+\mapsto g_{e_n}^{\varphi} \dots g_{e_0}^{\varphi}\right].
 \end{equation}
 The triviality follows from
 \begin{align}
@@ -328,7 +329,7 @@ g_{e_n}^{\varphi} \cdot \dots \cdot g_{e_0}^{\varphi} &= \varphi(\gamma_{v_0}*e_
 where the first equality is because $\varphi$ is a group homomorphism and the second is because $\gamma_{v_0}$ is trivial.\\
 Finally, we compute the other composition
 \begin{equation}
-\mu \circ \lambda (\underline{g}) = \mu(\varphi_{\underline{g}}) = (g_e^{\varphi_{\underline{g}}})_{e \in X_1} = (\varphi_{\underline{g}}(\gamma_{\partial_0 e} * e * \gamma_{\partial_1 e}^{-1}))_{e \in X_1}.
+\mu \circ \lambda (\underline{g}) = \mu(\varphi_{\underline{g}}) = \big(g_e^{\varphi_{\underline{g}}}\big)_{e \in X_1} = \big(\varphi_{\underline{g}}(\gamma_{\partial_0 e} * e * \gamma_{\partial_1 e}^{-1})\big)_{e \in X_1}.
 \end{equation}
 For $\gamma_v =
 \begin{tikzpicture}[baseline={(v.center)}, xscale=0.6, yscale=1]
@@ -354,14 +355,14 @@ Notice that throughout the argument we never made any choices of elements in $G(
 \end{proof}
 
 Now we want to define a third equivalent stack to the stack of local systems. Actually, \zcref{prop: stack of local systems - simplicial version} is just an intermediate step and not the equivalence used in \cite{Shende-weights}.\\
-Recall that any algebraic stack can be thought of as a smooth groupoid in schemes, and in particular it can be extended to a simplicial scheme by taking iterated fibered products of an atlas over the base. For example, the classifying stack $BG$ can be realized as
+Recall that any algebraic stack can be thought of as a smooth groupoid in algebraic spaces, and in particular it can be extended to a simplicial algebraic space by taking iterated fibered products of an atlas over the base. For example, the classifying stack $BG$ can be realized as
 \begin{equation}
 \begin{tikzcd}
 	\dots & {G \times G} && G & {\Spec k.}
 	\arrow["\vdots"'{yshift=5pt}, shift left, from=1-1, to=1-2]
 	\arrow["{d_1 = m}"{description}, from=1-2, to=1-4]
-	\arrow["{d_0 = pr_2}", shift left=3, from=1-2, to=1-4]
-	\arrow["{d_2 = pr_1}"', shift right=3, from=1-2, to=1-4]
+	\arrow["{d_0 = pr_1}", shift left=3, from=1-2, to=1-4]
+	\arrow["{d_2 = pr_2}"', shift right=3, from=1-2, to=1-4]
 	\arrow[shift right=2, from=1-4, to=1-5]
 	\arrow[shift left=2, from=1-4, to=1-5]
 \end{tikzcd}
@@ -388,19 +389,22 @@ The simplicial classifying space $BG$ has the property that for any simplicial s
 	\arrow[shift left=2, from=2-2, to=2-3]
 \end{tikzcd}
 \end{equation}
-where $f_1$ and $f_2$ commute with face and degeneracy maps. Note moreover that, since the projections $G \times G \to G$ are face maps, the value of $f_2$ is uniquely determined by the value of $f_1$, but the existence of $f_2$ imposes conditions on $f_1$. It follows that the set of simplicial maps $f \colon  Y \to BG$ is in bijection with the set of morphisms $f_1 \colon  Y_1 \to G$ which can be extended (necessarily uniquely) to \eqref{eq: maps to BG}.
+where $f_1$ and $f_2$ commute with face and degeneracy maps. Note moreover that, since the projections $G \times G \to G$ are face maps, the value of $f_2$ is uniquely determined by the value of $f_1$, but the existence of $f_2$ imposes conditions on $f_1$ due to the compatibility with the multiplication in $G$. It follows that the set of simplicial maps $f \colon  Y \to BG$ is in bijection with the set of morphisms $f_1 \colon  Y_1 \to G$ which can be extended (necessarily uniquely) to \eqref{eq: maps to BG}.
 \end{rmk}
 
 
-The simplicial set $\Delta_X$ can also be given the structure of a simplicial scheme, by replacing any simplex by $\Spec k$. The case we are interested in is when $X$ is a complex curve. In this case, there are no simplices of dimension greater than two and therefore $\Delta_X$ is degenerate in degree greater than two and can be realized as a simplicial scheme as
+The simplicial set $\Delta_X$ can also be given the structure of a simplicial scheme, by replacing every simplex by $\Spec k$
+% The case we are interested in is when $X$ is a complex curve. In this case, there are no simplices of dimension greater than two and therefore $\Delta_X$ is degenerate in degree greater than two and can be realized as a simplicial scheme as
 \begin{equation}
-\begin{tikzcd}%[cells={font=\everymath\expandafter{\the\everymath\displaystyle}}]
-	{\coprod_{X_2} \Spec k} & {\coprod_{X_1} \Spec k} & {\coprod_{X_0} \Spec k.}
-	\arrow[from=1-1, to=1-2]
-	\arrow[shift left=3, from=1-1, to=1-2]
-	\arrow[shift right=3, from=1-1, to=1-2]
-	\arrow[shift right=2, from=1-2, to=1-3]
-	\arrow[shift left=2, from=1-2, to=1-3]
+\begin{tikzcd}
+	{\Delta_{X}} & \dots & {\coprod_{X_2} \Spec k} & {\coprod_{X_1} \Spec k} & {\coprod_{X_0} \Spec k.}
+	\arrow["{=}"{marking, allow upside down}, draw=none, from=1-1, to=1-2]
+	\arrow["\vdots"'{yshift=5pt}, shift left, from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[shift left=3, from=1-3, to=1-4]
+	\arrow[shift right=3, from=1-3, to=1-4]
+	\arrow[shift right=2, from=1-4, to=1-5]
+	\arrow[shift left=2, from=1-4, to=1-5]
 \end{tikzcd}
 \end{equation}
 
@@ -411,16 +415,17 @@ Consider now the presheaf of groupoids $\shHom_{SSch}(\Delta_X, BG)^{\text{pre}}
 where $\Delta_{X,S}$ is the fibered product over $\Spec k$ of $\Delta_X$ with $S$, i.e.
 \begin{equation}
 \begin{tikzcd}
-	{\Delta_{X,S}} & {\coprod_{X_2} S} & {\coprod_{X_1} S} & {\coprod_{X_0} S.}
+	{\Delta_{X,S}} & \dots & {\coprod_{X_2} S} & {\coprod_{X_1} S} & {\coprod_{X_0} S.}
 	\arrow["{=}"{marking, allow upside down}, draw=none, from=1-1, to=1-2]
-	\arrow[from=1-2, to=1-3]
-	\arrow[shift left=3, from=1-2, to=1-3]
-	\arrow[shift right=3, from=1-2, to=1-3]
-	\arrow[shift right=2, from=1-3, to=1-4]
-	\arrow[shift left=2, from=1-3, to=1-4]
+	\arrow["\vdots"'{yshift=5pt}, shift left, from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[shift left=3, from=1-3, to=1-4]
+	\arrow[shift right=3, from=1-3, to=1-4]
+	\arrow[shift right=2, from=1-4, to=1-5]
+	\arrow[shift left=2, from=1-4, to=1-5]
 \end{tikzcd}
 \end{equation}
-This is made into a groupoid by considering homotopies of simplicial morphisms. Namely, if $f,g \in \Hom_{SSch}(\Delta_{X, S}, BG)$, an isomorphism $f \xrightarrow{\sim} g$ will be a homotopy such that $d_0^n h_0^n = f_n$ and $d_{n+1}^n h_n^n = g_n$ for $n = 0, 1, 2$.
+This is made into a groupoid by considering homotopies of simplicial morphisms. Namely, if $f,f' \in \Hom_{SSch}(\Delta_{X, S}, BG)$, an isomorphism $f \xrightarrow{\sim} f'$ will be a homotopy such that $d_0^{n+1} h_0^n = f_n$ and $d_{n+1}^{n+1} h_n^n = f'_n$ for all $n$.
 
 Notice that, since $BG$ is a Kan complex, homotopy of maps into $BG$ is indeed an equivalence relation \cite[Corollary 6.2]{SimplicialHomotopyTheory}, therefore $\Hom_{SSch}(\Delta_{X, S}, BG)$ is a well defined groupoid. Then we can define $\shHom_{SSch}(\Delta_X, BG)$ as the stackification of $\shHom_{SSch}(\Delta_X, BG)^{\text{pre}}$.
 
@@ -448,11 +453,11 @@ functorial in $S$. Consider $f \in \Hom_{SSch}(\Delta_{X, S}, BG)$. By \zcref{BG
 \begin{equation}
 f_2 \colon \coprod_{X_2} S \to G \times G \quad \text{and} \quad f_1 \colon \coprod_{X_1} S \to G,
 \end{equation}
-respecting face and degeneracy maps. These correspond to choices of elements $(h_{\sigma}, l_{\sigma})_{\sigma \in X_2} \in (G(S) \times G(S))^{\# X_2}$ and $(g_e)_{e \in X_1} \in G(S)^{\# X_1}$. The compatibility with face maps gives the conditions
+respecting face and degeneracy maps. These correspond to choices of elements $(l_{\sigma}, l'_{\sigma})_{\sigma \in X_2} \in (G(S) \times G(S))^{\# X_2}$ and $(g_e)_{e \in X_1} \in G(S)^{\# X_1}$. The compatibility with face maps gives the conditions
 \begin{equation}
-g_{d_0 \sigma} = l_{\sigma}, \quad g_{d_1 \sigma} = h_{\sigma} \, l_{\sigma}, \quad g_{d_2 \sigma} = h_{\sigma}.
+g_{\partial_0 \sigma} = l_{\sigma}, \quad g_{\partial_1 \sigma} = l_{\sigma} \, l'_{\sigma}, \quad g_{\partial_2 \sigma} = l'_{\sigma}.
 \end{equation}
-Therefore, the morphism $f$ is uniquely determined by the choice of $(g_e)_{e \in X_1}$ such that $g_{d_2 \sigma} \, g_{d_0 \sigma} \, g_{d_1 \sigma}^{-1} = 1$ for all $2$-simplices $\sigma$. Therefore the groupoids $\Hom_{SSch}(\Delta_{X, S}, BG)$ and $\left[ F / G^{\# X_0} \right]^{\text{pre}}(S)$ have the same objects. We now want to show that they also have the same groupoid structure, i.e. that homotopies on the left-hand side correspond to the action of $G(S)^{\# X_0}$ on $F(S)$.
+Therefore, the morphism $f$ is uniquely determined by the choice of $(g_e)_{e \in X_1}$ such that $g_{\partial_1 \sigma}^{-1} \, g_{\partial_0 \sigma} \, g_{\partial_2 \sigma}  = 1$ for all $2$-simplices $\sigma$. Therefore the groupoids $\Hom_{SSch}(\Delta_{X, S}, BG)$ and $\left[ F / G^{\# X_0} \right]^{\text{pre}}(S)$ have the same objects. We now want to show that they also have the same groupoid structure, i.e. that homotopies on the left-hand side correspond to the action of $G(S)^{\# X_0}$ on $F(S)$.
 Consider therefore two morphisms $f, f' \in \Hom_{SSch}(\Delta_{X,S}, BG)$. A homotopy $H \colon f \Rightarrow f'$ is a simplicial map $H \colon \Delta_{X,S} \times \Delta^1 \to BG$ such that
 \begin{equation}
 \begin{tikzcd}
@@ -470,8 +475,8 @@ commutes. Giving $H$ is equivalent to giving for all $n$ a family of morphisms $
 \begin{equation} \label{eq: homotopy}
 h^n_j = H^{n+1}_{j+1} \, s^n_j \quad \text{for } j=0,\dots, n.
 \end{equation}
-\zcref{BG is 2-coskeleton} shows that $H$ is determined by its degree one part, with degree two giving a compatibility condition. Then \zcref{eq: homotopy} shows that the homotopy $h$ is determined by its degree zero part, with degree one giving a compatibility condition.\\
-Let $f, f' \in \Hom(\Delta_{X, S}, BG)$ be simplicial maps and let $h$ be a homotopy between $f$ and $f'$. Suppose $f$ and $f'$ give elements $(g_e)_{e \in X_1} \in G(S)^{\# X_1}$ and $(g'_e)_{e \in X_1} \in G(S)^{\# X_1}$ respectively. The homotopy $h$ is determined in degree zero by a single morphism
+\zcref{BG is 2-coskeleton} shows that $H$ is determined by its degree one part, with degree two giving a compatibility condition. Then \zcref{eq: homotopy} shows that the morphisms $h^n_j$ are determined by the degree zero part, with degree one giving a compatibility condition.\\
+Let $f, f' \in \Hom_{SSch}(\Delta_{X, S}, BG)$ be simplicial maps and let $h$ be a homotopy between $f$ and $f'$. Suppose $f$ and $f'$ give elements $(g_e)_{e \in X_1} \in G(S)^{\# X_1}$ and $(g'_e)_{e \in X_1} \in G(S)^{\# X_1}$ respectively. The homotopy $h$ is determined in degree zero by a single morphism
 \begin{equation}
 h^0_0 \colon  X_0 \to G(S),
 \end{equation}
@@ -506,4 +511,55 @@ As explained in \zcref{section: The nonabelian Hodge homeomorphism}, under the a
 \begin{equation}
 \psi \colon \mc{M}_B \to \mc{M}_{DR},
 \end{equation}
-the universal bundle on $\mc{M}_{DR} \times X$ pulls back to the universal bundle $\mc{E}_{\text{univ}}$ on $\mc{M}_{DR} \times X$. The key issue is that $\psi$ is not algebraic and indeed $\mc{E}_{univ}$ is not algebraic. This is what makes the weights of $c_i(\mc{E}_{\text{univ}})=\psi^* c_i(\mc{E}_{\text{univ}})$ difficult to compute. The main point is that after passing to the simplicial construction explained in the previous section we get an algebraic universal bundle.
+the universal bundle $(\mc{E}_{\text{univ}, \nabla_{\text{univ}}})$ on $\mc{M}_{DR} \times X$ pulls back to the universal local system $\mc{E}_{\text{univ}}$ on $\mc{M}_{DR} \times X$. The key issue is that $\psi$ is not algebraic and indeed $\mc{E}_{\text{{univ}}}$ is not algebraic. This is what makes the weights of $c_i(\mc{E}_{\text{univ}})=\psi^* c_i(\mc{E}_{\text{univ}})$ difficult to compute. The main insight is that, after passing to the simplicial construction explained in the previous section, we get an algebraic universal bundle.
+
+As in \zcref{section: The nonabelian Hodge homeomorphism}, let $e_{i,j}$ be the K\"unneth components of the Chern classes of the universal bundle on $\mc{M}_{DR}\times X$. Then
+\begin{equation}
+\varepsilon_{i,j} \coloneqq \psi^*(e_{i,j})
+\end{equation}
+are the K\"unneth components of the Chern classes of the universal bundle on $\mc{M}_B \times X$, which generate the cohomology ring $H^*(\mc{M}_B, \Qb)$.
+
+As shown in \cite[\S 4]{Olsson-sheaves-on-artin-stacks}, any algebraic stack can be viewed as a simplicial algebraic space by taking iterated fibered products of an atlas and this construction induces an isomorphism in cohomology, preserving mixed Hodge structures. In particular, the weights of the classes $\varepsilon_{i,j}$ can be computed after replacing $\mc{M}_B$ by a simplicial scheme. Using \zcref{thm: stack of local systems as stack of simplicial maps}, we have that
+\begin{equation}
+\mc{M}_B(X) \cong \shHom_{SSch}(\Delta_X, BG),
+\end{equation}
+therefore a simplicial scheme realizing $\mc{M}_B(X)$ is the internal $\inHom_{SSch}(\Delta_X, BG)$. The universal bundle $\mc{E}_{\text{univ}}$ defines a morphism
+\begin{equation}
+\varphi_{\text{univ}}\colon \inHom_{SSch}(\Delta_X, BG) \times \Delta_X \to BG,
+\end{equation}
+i.e. the object in
+\begin{multline}
+\Hom_{SSch}(\inHom_{SSch}(\Delta_X, BG) \times \Delta_X, BG) \\
+\cong \Hom_{SSch}(\inHom_{SSch}(\Delta_X, BG), \inHom_{SSch}(\Delta_X, BG))
+\end{multline}
+corresponding to the identity. This in particular shows that $\varphi_{\text{univ}}$ is algebraic.
+Therefore
+\begin{equation}
+\varphi_{\text{univ}}^* \colon H^*(BG, \Qb) \to H^*(\inHom_{SSch}(\Delta_X, BG), \Qb) \otimes H^*(\Delta_X, \Qb)
+\end{equation}
+preserves the mixed Hodge structures. The case we are interested in concerns moduli spaces of vector bundles, i.e. for $G = GL_n$. Recall that
+\begin{equation}
+H^*(BGL_n, \Qb) = \Qb[c_1, \dots, c_n]
+\end{equation}
+and that the Chern classes are exactly the pullbacks of the $c_i$'s, namely
+\begin{equation}
+c_i(\mc{E}_{\text{univ}}) = \varphi_{\text{univ}}^*(c_i).
+\end{equation}
+Since $c_i$ has pure weight $2i$, we get that
+\begin{equation}
+c_i(\mc{E}_{\text{univ}}) = \sum_{j} \varepsilon_{i,j} \otimes x_{i,j}
+\end{equation}
+has pure weight $2i$. Since the simplicial scheme $\Delta_X$ is formed by several copies of $\Spec \Cb$ in each degree, its mixed Hodge structure only has weight zero. Therefore the $x_{i,j}$'s have weight zero and $\varepsilon_{i,j}$ has pure weight $2i$ for all $j$, proving \zcref{thm: weights of the tautological classes in betti moduli space}.
+
+Notice that \zcref{thm: weights of the tautological classes in betti moduli space} is about the weights of the tautological classes of the moduli stack $\mc{M}_B$, but in \zcref{section: The nonabelian Hodge homeomorphism} we were studying the cohomology rings of the moduli spaces. Due to \cite{Heinloth-Gm-gerbes}, we see that the two things are actually equivalent. Indeed, we are working with moduli spaces of stable bundles, which only admit scalar automorphisms. Therefore the moduli map
+\begin{equation}
+\mc{M} \to M
+\end{equation}
+is a $\Gb_m$-gerbe in all the cases considered. So \cite[Lemma 3.1]{Heinloth-Gm-gerbes} shows that
+\begin{equation}
+H^*(\mc{M}, \Qb) \cong H^*(M, \Qb)[z],
+\end{equation}
+where $z$ is the first Chern class of a vector bundle on $\mc{M}$ of weight 1. Applying this to the Betti and De Rham moduli stacks $\mc{M}_B$ and $\mc{M}_{DR}$, we can rephrase \zcref{thm: weights of the tautological classes in betti moduli space}.
+\begin{thm}
+Under the isomorphism $\psi^* \colon  H^*(M_{DR}) \to H^*(M_{B})$, the K\"unneth components $e_{i,j}$ of the $i$-th Chern class of the universal bundle $c_i(\mc{E}_{\text{univ}})$ are mapped to cohomology classes of weight $2i$.
+\end{thm}
