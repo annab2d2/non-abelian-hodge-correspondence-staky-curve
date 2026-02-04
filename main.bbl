@@ -294,7 +294,7 @@
       \field{issn}{1631-073X,1778-3569}
       \field{journaltitle}{C. R. Math. Acad. Sci. Paris}
       \field{number}{10}
-      \field{title}{Twisted {C}hern classes and {$\Bbb G_m$}-gerbes}
+      \field{title}{Twisted {C}hern classes and {$\Gb_m$}-gerbes}
       \field{volume}{341}
       \field{year}{2005}
       \field{pages}{623\bibrangedash 626}
@@ -743,7 +743,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Algebraic geometry---{S}anta {C}ruz 1995}
-      \field{isbn}{0-8218-0895-8; 0-8218-0493-6}
+      \field{isbn}{0-8218-0895-8}
       \field{series}{Proc. Sympos. Pure Math.}
       \field{title}{The {H}odge filtration on nonabelian cohomology}
       \field{volume}{62, Part 2}

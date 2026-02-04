@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.10.31)  4 FEB 2026 18:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.10.31)  4 FEB 2026 18:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/anna/Documents/progetto latex/main"
-(/home/anna/Documents/progetto latex/main.tex
+**"/home/anna/Documents/progetto latex/paper/paper"
+(/home/anna/Documents/progetto latex/paper/paper.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -23,7 +23,7 @@ File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (./preamble/packages.tex (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (../preamble/packages.tex (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2024/02/08 v1.3d Input encoding file
@@ -547,8 +547,8 @@ File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \arrowsize=\dimen199
-)) (./quiver.sty
-Package: quiver 2025/06/24 quiver
+)) (/usr/share/texlive/texmf-dist/tex/latex/quiver/quiver.sty
+Package: quiver 2021/01/11 quiver
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -572,21 +572,7 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfdecorationsegmentlength=\dimen262
 )
 \tikz@lib@dec@box=\box64
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texlive/texmf-dist/tex/latex/spath3/tikzlibraryspath3.code.tex (/usr/share/texlive/texmf-dist/tex/latex/spath3/spath3.sty
-Package: spath3 2024/05/31 v2.8 Functions for manipulating PGF soft paths
-\g__spath_output_int=\count428
-\l__spath_tmpa_dim=\dimen263
-\l__spath_tmpb_dim=\dimen264
-\l__spath_tmpa_int=\count429
-\l__spath_tmpb_int=\count430
-\l__spath_move_x_dim=\dimen265
-\l__spath_move_y_dim=\dimen266
-\l__spath_rectx_dim=\dimen267
-\l__spath_recty_dim=\dimen268
-\g__spath_anon_int=\count431
-)
-\l__tikzspath_tmpa_int=\count432
-)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -610,21 +596,21 @@ Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks34
-\ex@=\dimen269
+\ex@=\dimen263
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen270
+\pmbraise@=\dimen264
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count433
+\inf@bad=\count428
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count434
-\leftroot@=\count435
+\uproot@=\count429
+\leftroot@=\count430
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count436
-\DOTSCASE@=\count437
+\classnum@=\count431
+\DOTSCASE@=\count432
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -634,30 +620,30 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen271
+\big@size=\dimen265
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count438
+\macc@depth=\count433
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count439
+\c@MaxMatrixCols=\count434
 \dotsspace@=\muskip22
-\c@parentequation=\count440
-\dspbrk@lvl=\count441
+\c@parentequation=\count435
+\dspbrk@lvl=\count436
 \tag@help=\toks35
-\row@=\count442
-\column@=\count443
-\maxfields@=\count444
+\row@=\count437
+\column@=\count438
+\maxfields@=\count439
 \andhelp@=\toks36
-\eqnshift@=\dimen272
-\alignsep@=\dimen273
-\tagshift@=\dimen274
-\tagwidth@=\dimen275
-\totwidth@=\dimen276
-\lineht@=\dimen277
+\eqnshift@=\dimen266
+\alignsep@=\dimen267
+\tagshift@=\dimen268
+\tagwidth@=\dimen269
+\totwidth@=\dimen270
+\lineht@=\dimen271
 \@envbody=\toks37
 \multlinegap=\skip74
 \multlinetaggap=\skip75
@@ -668,30 +654,30 @@ LaTeX Info: Redefining \] on input line 2954.
 Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count445
-\calc@Bcount=\count446
-\calc@Adimen=\dimen278
-\calc@Bdimen=\dimen279
+\calc@Acount=\count440
+\calc@Bcount=\count441
+\calc@Adimen=\dimen272
+\calc@Bdimen=\dimen273
 \calc@Askip=\skip76
 \calc@Bskip=\skip77
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count447
+\calc@Ccount=\count442
 \calc@Cskip=\skip78
 ) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count448
-\l_MT_multwidth_dim=\dimen280
+\g_MT_multlinerow_int=\count443
+\l_MT_multwidth_dim=\dimen274
 \origjot=\skip79
-\l_MT_shortvdotswithinadjustabove_dim=\dimen281
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen282
-\l_MT_above_intertext_sep=\dimen283
-\l_MT_below_intertext_sep=\dimen284
-\l_MT_above_shortintertext_sep=\dimen285
-\l_MT_below_shortintertext_sep=\dimen286
+\l_MT_shortvdotswithinadjustabove_dim=\dimen275
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen276
+\l_MT_above_intertext_sep=\dimen277
+\l_MT_below_intertext_sep=\dimen278
+\l_MT_above_shortintertext_sep=\dimen279
+\l_MT_below_shortintertext_sep=\dimen280
 \xmathstrut@box=\box67
-\xmathstrut@dim=\dimen287
+\xmathstrut@dim=\dimen281
 ) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks39
@@ -705,7 +691,7 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks44
 ) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count449
+\c@float@type=\count444
 \float@exts=\toks45
 \float@box=\box68
 \@float@everytoks=\toks46
@@ -718,7 +704,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks47
 \XKV@tempa@toks=\toks48
 )
-\XKV@depth=\count450
+\XKV@depth=\count445
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -728,39 +714,39 @@ Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box70
 )
-\tc@llx=\dimen288
-\tc@lly=\dimen289
-\tc@urx=\dimen290
-\tc@ury=\dimen291
+\tc@llx=\dimen282
+\tc@lly=\dimen283
+\tc@urx=\dimen284
+\tc@ury=\dimen285
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2025/02/26 v2.3 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen292
-\adjbox@Height=\dimen293
-\adjbox@Depth=\dimen294
-\adjbox@Totalheight=\dimen295
-\adjbox@pwidth=\dimen296
-\adjbox@pheight=\dimen297
-\adjbox@pdepth=\dimen298
-\adjbox@ptotalheight=\dimen299
+\adjbox@Width=\dimen286
+\adjbox@Height=\dimen287
+\adjbox@Depth=\dimen288
+\adjbox@Totalheight=\dimen289
+\adjbox@pwidth=\dimen290
+\adjbox@pheight=\dimen291
+\adjbox@pdepth=\dimen292
+\adjbox@ptotalheight=\dimen293
  (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count451
+\c@checkoddpage=\count446
 ) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box71
-\sift@deathcycles=\count452
-\@vwid@loff=\dimen300
-\@vwid@roff=\dimen301
+\sift@deathcycles=\count447
+\@vwid@loff=\dimen294
+\@vwid@roff=\dimen295
 )) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip83
-\enit@outerparindent=\dimen302
+\enit@outerparindent=\dimen296
 \enit@toks=\toks49
 \enit@inbox=\box72
-\enit@count@id=\count453
-\enitdp@description=\count454
+\enit@count@id=\count448
+\enitdp@description=\count449
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks50
@@ -786,7 +772,7 @@ Package zref Info: New property: page on input line 769.
 Package: zref-user 2023-09-14 v2.35 Module user for zref (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2023-09-14 v2.35 Module abspage for zref (HO)
-\c@abspage=\count455
+\c@abspage=\count450
 Package zref Info: New property: abspage on input line 67.
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
@@ -798,16 +784,16 @@ Package zref Info: New property: zc@cntval on input line 88.
 Package zref Info: New property: zc@pgval on input line 103.
 Package zref Info: New property: zc@enclval on input line 151.
 Package zref Info: New property: zc@enclcnt on input line 157.
-\g__zrefclever_page_format_int=\count456
+\g__zrefclever_page_format_int=\count451
 Package zref Info: New property: zc@pgfmt on input line 169.
-\l__zrefclever_tmpa_int=\count457
-\l__zrefclever_sort_prior_a_int=\count458
-\l__zrefclever_sort_prior_b_int=\count459
-\l__zrefclever_type_count_int=\count460
-\l__zrefclever_label_count_int=\count461
-\l__zrefclever_ref_count_int=\count462
-\l__zrefclever_range_count_int=\count463
-\l__zrefclever_range_same_count_int=\count464
+\l__zrefclever_tmpa_int=\count452
+\l__zrefclever_sort_prior_a_int=\count453
+\l__zrefclever_sort_prior_b_int=\count454
+\l__zrefclever_type_count_int=\count455
+\l__zrefclever_label_count_int=\count456
+\l__zrefclever_ref_count_int=\count457
+\l__zrefclever_range_count_int=\count458
+\l__zrefclever_range_same_count_int=\count459
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
@@ -821,13 +807,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count465
+\c@section@level=\count460
 ) (/usr/share/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen303
-\Hy@linkcounter=\count466
-\Hy@pagecounter=\count467
+\@linkdim=\dimen297
+\Hy@linkcounter=\count461
+\Hy@pagecounter=\count462
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -835,7 +821,7 @@ Now handling font encoding PD1 ...
 ) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count468
+\Hy@SavedSpaceFactor=\count463
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -848,17 +834,17 @@ Package hyperref Info: Plain pages OFF on input line 4172.
 Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
-\c@Hy@tempcnt=\count469
+\c@Hy@tempcnt=\count464
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen304
+\XeTeXLinkMargin=\dimen298
  (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count470
-\Field@Width=\dimen305
-\Fld@charsize=\dimen306
+\Fld@menulength=\count465
+\Field@Width=\dimen299
+\Fld@charsize=\dimen300
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -870,9 +856,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count471
-\c@Item=\count472
-\c@Hfootnote=\count473
+\Hy@abspage=\count466
+\c@Item=\count467
+\c@Hfootnote=\count468
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -881,9 +867,9 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\HyAnn@Count=\count474
-\Fld@listcount=\count475
-\c@bookmark@seq@number=\count476
+\HyAnn@Count=\count469
+\Fld@listcount=\count470
+\c@bookmark@seq@number=\count471
  (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -894,35 +880,35 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip84
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 98.
-) (./preamble/theorems.tex
-\c@thm=\count477
-\c@introthm=\count478
-) (./preamble/shortcuts.tex)
+) (../preamble/theorems.tex
+\c@thm=\count472
+\c@introthm=\count473
+) (../preamble/shortcuts.tex)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./main.aux (./sections/fundamental-group.aux) (./sections/sheaves-on-specAmodG.aux) (./sections/sheaves-on-a-stacky-curve.aux) (./sections/moduli-spaces-of-vector-bundles.aux) (./sections/dolbeault-moduli-spaces.aux) (./sections/de-Rham-moduli-space.aux) (./sections/non-abelian-hodge-homeomorphism.aux) (./sections/shendes-argument.aux))
-\openout1 = `main.aux'.
+ (./paper.aux)
+\openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -931,25 +917,26 @@ File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `main.bcf'.
+\openout3 = `paper.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 13.
-Package biblatex Info: Reference segment=0 on input line 13.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+Package biblatex Info: ... file 'paper.bbl' not found.
+
+No file paper.bbl.
+Package biblatex Info: Reference section=0 on input line 12.
+Package biblatex Info: Reference segment=0 on input line 12.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count479
-\scratchdimen=\dimen307
+\scratchcounter=\count474
+\scratchdimen=\dimen301
 \scratchbox=\box73
-\nofMPsegments=\count480
-\nofMParguments=\count481
+\nofMPsegments=\count475
+\nofMParguments=\count476
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count482
-\MPscratchDim=\dimen308
-\MPnumerator=\count483
-\makeMPintoPDFobject=\count484
+\MPscratchCnt=\count477
+\MPscratchDim=\dimen302
+\MPnumerator=\count478
+\makeMPintoPDFobject=\count479
 \everyMPtoPDFconversion=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -963,341 +950,60 @@ Package zref Info: New property: anchor on input line 56.
 
 Package zref-clever Info: Loaded 'english' language file.
 
-\c@zc@appendix=\count485
-Package zref Info: New property: subeq on input line 13.
+\c@zc@appendix=\count480
+Package zref Info: New property: subeq on input line 12.
 
 Package zref-clever Info: Loaded support for 'amsmath' package.
 
 
 Package zref-clever Info: Loaded support for 'mathtools' package.
 
-Package hyperref Info: Link coloring ON on input line 13.
- (./main.out) (./main.out)
+Package hyperref Info: Link coloring ON on input line 12.
+ (./paper.out) (./paper.out)
 \@outlinefile=\write6
-\openout6 = `main.out'.
+\openout6 = `paper.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 16.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-\openout2 = `sections/fundamental-group.aux'.
-
- (./sections/fundamental-group.tex
-
-[2
-
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-[3]
-
-[4]
-
-[5]
-
-[6])
-
-[7]
-\openout2 = `sections/sheaves-on-specAmodG.aux'.
-
- (./sections/sheaves-on-specAmodG.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathchardef' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.22144pt
-(hyperref)                removed on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-
-[8
-
-
-
-]
-
-[9]
-
-[10])
-
-[11]
-\openout2 = `sections/sheaves-on-a-stacky-curve.aux'.
-
- (./sections/sheaves-on-a-stacky-curve.tex
-
-[12
-
-
-
-]
-
-[13]
-
-[14]
-
-[15])
-
-[16]
-\openout2 = `sections/moduli-spaces-of-vector-bundles.aux'.
-
- (./sections/moduli-spaces-of-vector-bundles.tex
-
-[17
-
-
-
-]
-Overfull \hbox (22.96538pt too wide) in paragraph at lines 58--62
-[]\T1/cmr/m/n/10 In the other di-rec-tion, we first need to show that the push-for-ward $\OML/cmm/m/it/10 ^^Y[] [] []  []\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 X\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 !
- []
-
-
-Overfull \hbox (20.6445pt too wide) in paragraph at lines 73--74
-[]\T1/cmr/m/n/10 Notice now that ten-sor-ing with $\OMS/cmsy/m/n/10 O\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 )[]$ \T1/cmr/m/n/10 de-fines an equiv-a-lence $\OMS/cmsy/m/n/10 B\OML/cmm/m/it/10 un[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 X\OT1/cmr/m/n/10 ) []
- []
-
-
-
-[18])
-
-[19]
-\openout2 = `sections/dolbeault-moduli-spaces.aux'.
-
- (./sections/dolbeault-moduli-spaces.tex
-
-[20
-
-
-
-]
-
-[21])
-
-[22]
-\openout2 = `sections/de-Rham-moduli-space.aux'.
-
- (./sections/de-Rham-moduli-space.tex
-
-[23
-
-
-
-]
-
-[24])
-
-[25]
-\openout2 = `sections/non-abelian-hodge-homeomorphism.aux'.
-
- (./sections/non-abelian-hodge-homeomorphism.tex
-Overfull \hbox (10.21924pt too wide) detected at line 27
-[]\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 X\OT1/cmr/m/n/10 )[] [] [][] \OML/cmm/m/it/10 :
- []
-
-
-Overfull \hbox (1.07617pt too wide) detected at line 38
-[]\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )[] [] [][] \OML/cmm/m/it/10 ;
- []
-
-
-
-[26
-
-
-
-]
-
-[27]
-
-[28])
-
-[29]
-\openout2 = `sections/shendes-argument.aux'.
-
- (./sections/shendes-argument.tex
-Overfull \hbox (5.99329pt too wide) detected at line 75
-[]\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (^^A[]\OML/cmm/m/it/10 ; v[]\OT1/cmr/m/n/10 ) = [][] [] [][][]\OML/cmm/m/it/10 :
- []
-
-
-Overfull \hbox (8.94635pt too wide) detected at line 190
-[][]
- []
-
-
-
-[30
-
-
-
-]
-
-[31]
-
-[32]
-
-[33]
-
-[34]
-
-[35]
-Overfull \hbox (4.40965pt too wide) in paragraph at lines 525--527
-\T1/cmr/m/n/10 therefore a sim-pli-cial scheme re-al-iz-ing $\OMS/cmsy/m/n/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )$ \T1/cmr/m/n/10 is the in-ter-nal $[][]\OT1/cmr/m/n/10 (^^A[]\OML/cmm/m/it/10 ; BG\OT1/cmr/m/n/10 )$\T1/cmr/m/n/10 .
- []
-
-
-
-[36]
-Overfull \hbox (4.83319pt too wide) in paragraph at lines 568--569
-[][]\T1/cmr/bx/n/10 Theorem 8.7. []\T1/cmr/m/n/10 Un-der the iso-mor-phism $\OML/cmm/m/it/10  [] [] [] H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \U/msb/m/n/10 Q\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ! \OML/cmm/m/it/10 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 M[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \U/msb/m/n/10 Q\OT1/cmr/m/n/10 )$\T1/cmr/m/n/10 ,
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 571.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 571.
-
-
-
-[37]
-
-[38]
-
-[39]
-Overfull \hbox (12.73532pt too wide) in paragraph at lines 797--798
-[]\T1/cmr/m/n/10 On the other hand, $[][]$ can be thought of as the func-tor cat-e-gory $\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 BG; []\OT1/cmr/m/n/10 ]$\T1/cmr/m/n/10 .
- []
-
-
-
-[40]
-
-[41])
-
-[42]
-Overfull \hbox (12.62775pt too wide) in paragraph at lines 30--30
-\T1/cmr/m/it/10 Ga-lois The-o-ries\T1/cmr/m/n/10 . Cham: Springer In-ter-na-tional Pub-lish-ing, 2020, pp. 179^^U
- []
-
-
-Overfull \hbox (4.95265pt too wide) in paragraph at lines 30--30
-\T1/cmr/m/n/10 of large semipro-jec-tive hy-per-käh-ler va-ri-eties^^Q. In: \T1/cmr/m/it/10 Astérisque \T1/cmr/m/n/10 370 (2015),
- []
-
-
-
-[43
-
-
-]
-Overfull \hbox (12.43929pt too wide) in paragraph at lines 30--30
-[]\T1/cmr/m/n/10 Behrang \T1/cmr/m/sc/10 Noohi\T1/cmr/m/n/10 . \T1/cmr/m/it/10 Fun-da-men-tal groups of al-ge-braic stacks\T1/cmr/m/n/10 . The-sis (Ph.D.)--
- []
-
-
-
-[44] (./main.aux (./sections/fundamental-group.aux) (./sections/sheaves-on-specAmodG.aux) (./sections/sheaves-on-a-stacky-curve.aux) (./sections/moduli-spaces-of-vector-bundles.aux) (./sections/dolbeault-moduli-spaces.aux) (./sections/de-Rham-moduli-space.aux) (./sections/non-abelian-hodge-homeomorphism.aux) (./sections/shendes-argument.aux))
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 70CC4BA390EB0E724473BD5E1E7832B1;4818.
-Package logreq Info: Writing requests to 'main.run.xml'.
-\openout1 = `main.run.xml'.
+Package rerunfilecheck Info: File `paper.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'paper.run.xml'.
+\openout1 = `paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40698 strings out of 473197
- 861007 string characters out of 5718604
- 1611638 words of memory out of 5000000
- 63102 multiletter control sequences out of 15000+600000
- 580401 words of font info for 102 fonts, out of 8000000 for 9000
+ 35525 strings out of 473197
+ 718370 string characters out of 5718604
+ 1517396 words of memory out of 5000000
+ 58207 multiletter control sequences out of 15000+600000
+ 562406 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,21n,108p,747b,1984s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0500.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (44 pages, 621789 bytes).
+ 103i,5n,108p,734b,1779s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on paper.pdf (1 page, 80816 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 716 compressed objects within 8 object streams
- 185 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 57 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

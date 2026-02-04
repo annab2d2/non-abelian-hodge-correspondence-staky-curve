@@ -1,0 +1,32 @@
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+
+\title{Introduction}
+\author{Anna Borri}
+% \date{August 2025}
+
+\input{../preamble/packages}
+\input{../preamble/theorems}
+\input{../preamble/shortcuts}
+
+\begin{document}
+Simpson's non-abelian Hodge correspondence establishes a diffeomorphism between different moduli spaces of sheaves on a projective variety $X$ over the complex numbers.
+Specifically, let $M_{n,Dol}^0(X)$ be the moduli space of semistable Higgs bundles of rank $n$ and degree $0$ on $X$ and let $Rep(\pi_1(X), GL_n)$ be the variety of $n$-dimensional representations of the fundamental group of $X$. Then Simpson's correspondence is a diffeomorphism
+\begin{equation}
+\varphi\colon M_{n,Dol}^0(X) \to Rep(\pi_1(X), GL_n)
+\end{equation}
+between these varieties, inducing therefore an isomorphism of their cohomology rings.
+Since we are considering varieties over $\Cb$, the cohomology groups are endowed with mixed Hodge structures. But the morphism $\varphi$ is not algebraic and doesn't preserve the Hodge structures. Therefore, a natural question is to try and understand how $\varphi$ relates the Hodge structures.
+
+In order to understand this, it is convenient to factor the pullback $\varphi^*$ into pieces that are easier to understand.
+First of all, the Riemann-Hilbert correspondence establishes a diffeomorphism
+\begin{equation}
+Rep(\pi_1(X), GL_n) \simeq M_{n, DR}^0(X)
+\end{equation}
+between the character variety $Rep(\pi_1(X), GL_n)$ and the De Rham moduli space, i.e. the moduli space parametrizing pairs $(\mc{E}, \nabla)$ where $\mc{E}$ is a vector bundle of rank $n$ on $X$ and
+\begin{equation}
+\nabla\colon \mc{E} \to \mc{E}\otimes\Omega_X
+\end{equation}
+is a flat connection on $\mc{E}$.
+
+\end{document}
