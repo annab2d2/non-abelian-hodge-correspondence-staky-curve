@@ -21,15 +21,17 @@
 \newtheorem*{criterion}{A criterion for irrationality}
 \newtheorem*{theorem1*}{Theorem}
 \newtheorem*{conjecture1*}{Conjecture}
+\newtheorem*{theorem2*}{Upshot}
+\newtheorem*{theorem3*}{Problem}
 
 \author{Anna Borri} 
-\title{TBD} 
-\advisor{Prof.~Dr.~Jochen Heinloth} 
-\secondadvisor{} 
+\title{Higgs bundles on stacky curves} 
+% \advisor{Prof.~Dr.~Jochen Heinloth} 
+% \secondadvisor{} 
 \position{Doctoral Researcher} 
-\funding{RTG} 
+% \funding{RTG} 
 \period{10/2024-now} 
-\last_degree{Master: University of Pisa} 
+% \last_degree{Master: University of Pisa} 
 
 \begin{document}
 \node[above right,opacity=0.25,inner sep=0pt,outer sep=0pt] at (bottomleft) {\includegraphics[width=\paperwidth,height=\paperheight]{blackboard}};
@@ -56,11 +58,14 @@
         \end{tikzcd}
         \end{center}
         \vspace{-4.5cm}
-        We want to describe similarly the non-abelian Hodge correspondence for degree $d$ vector bundles on $X$, by adding an orbifold point on $X$ and using the monodromy action around this point.
+
+        \begin{theorem3*}
+        Degree $d$ vector bundles don't admit flat connection. How to get a good notion of $\mc{M}_{n,DR}^d(X)$ that fits into a similar description?
+        \end{theorem3*}
     }
 
     \column{.37}
-    \WhiteBlockSimple{The construction}{
+    \WhiteBlockSimple{The stacky curve $\mc{X}$}{
         Fix a point $p \in X$. We define the stacky curve $\mc{X}$ to be the $n$-th root stack of $X$ at $p$
         \begin{center}
             \begin{tikzcd}[ampersand replacement=\&, column sep=huge, row sep=huge]
@@ -78,7 +83,7 @@
 
 \begin{columns}
     \column{.5}
-    \RTGBlockThin{Dolbeault moduli space on $X$ and $\mc{X}$}{
+    \RTGBlockThin{Degree $d$ Higgs bundles on a curve as degree $0$ Higgs bundles on $\mc{X}$}{
         Vector bundles on $\mc{X}$ have a third numerical invariant beyond rank and degree, namely the representation obtained as stalk at the stacky point. We denote by $\lambda(-d)$ the weight $-d$ character of $\mu_n$ and by $n \cdot \lambda(-d)$ the corresponding $n$-dimensional representation.
 
         \begin{theorem1*}[]
@@ -87,29 +92,43 @@
             \mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n \cdot \lambda(-d), Dol}^0(\mc{X}).
             \]
         \end{theorem1*}
+
+        \begin{theorem2*}
+            Deegree $d$ vector bundles on $X$ can be understood as degree $0$ vector bundles on $\mc{X}$.
+        \end{theorem2*}
+
     }
 
     \column{.5}
-    \RTGBlockThin{The Betti moduli space}{
+    \RTGBlockThin{Twisted character variety as Betti moduli space on $\mc{X}$}{
         Computing the fundamental group of $\mc{X}$, we see that the Betti moduli space on $\mc{X}$ is
         \[
-        \mc{M}_{n, B}(\mc{X}) \cong \left[ \bigg\{ ((A_i, B_i)_{i = 1}^g, C) \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C, \, C^n = Id \bigg\} / GL_n \right].
+        \mc{M}_{n, B}(\mc{X}) = \left[ \bigg\{ ((A_i, B_i)_{i = 1}^g, C) \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C, \, C^n = Id \bigg\} / GL_n \right].
         \]
 
         It decomposes with respect to the conjugacy class of $C$, and the component corresponding to $\mc{M}_{n \cdot \lambda(-d), Dol}^0(\mc{X})$ is
         \[
-        \mc{M}_{n \cdot \lambda(-d), B}(\mc{X}) \cong \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right].
+        \mc{M}_{n \cdot \lambda(-d), B}(\mc{X}) = \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right].
         \]
-        In analogy with the Dolbeault case, we can denote this space by $\mc{M}_{n, B}^d(X)$
+        This is exactly the twisted character variety on $\mc{X}$.
+        
+        \begin{theorem2*}
+        The twisted character variety on $X$ is a connected component of the character variety on $\mc{X}$.
+        \end{theorem2*}
     }
 
 \end{columns}
 
 \WhiteBlockSimple{Conseqence}{
-        The inclusions $\mc{M}_{n, Dol}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and $\mc{M}_{n, DR}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and the (analytic) Riemann-Hilbert correspondence $\mc{M}_{n, DR}(\mc{X}) \cong \mc{M}_{n, B}(\mc{X})$ induce isomorphisms in cohomology
+        We can define $\mc{M}_{n,DR}^d(X)$ as $\mc{M}_{n \cdot \lambda(-d), DR}(\mc{X})$.
+        Therefore, the inclusions $\mc{M}_{n, Dol}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and $\mc{M}_{n, DR}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and the (analytic) Riemann-Hilbert correspondence $\mc{M}_{n, DR}(\mc{X}) \cong \mc{M}_{n, B}(\mc{X})$ induce isomorphisms in cohomology
         \[
         H^*(\mc{M}_{n, Dol}^d(X)) \cong H^*(\mc{M}_{n, DR}^d(X)) \cong H^*(\mc{M}_{n, B}^d(X)).
         \]
+
+        \begin{theorem2*}
+        The non-abelian Hodge correspondence for coprime $n,d$ on $X$ can be understood from the non-abelian Hodge correspondence for $0$-degree bundles on $\mc{X}$.
+        \end{theorem2*}
     }
 
 \begin{columns}
@@ -133,13 +152,13 @@
 
 \end{columns}
 
-\RTGBlockThin{What's next?}{
-    Possible problems to consider:
-        \begin{itemize}
-            \item Proceed from weight computation to carry out an alternative proof of $P=W$.
-            \item Replicate the argument for other connected components of $\mc{M}_{n, Dol}(\mc{X})$, corresponding to classes of parabolic bundles on $X$.
-        \end{itemize}
-    }
+% \RTGBlockThin{What's next?}{
+%     Possible problems to consider:
+%         \begin{itemize}
+%             \item Proceed from weight computation to carry out an alternative proof of $P=W$.
+%             \item Replicate the argument for other connected components of $\mc{M}_{n, Dol}(\mc{X})$, corresponding to classes of parabolic bundles on $X$.
+%         \end{itemize}
+%     }
 
 
 
@@ -160,6 +179,7 @@
 
 
 % At the end of the document, replace the RTGBlock with this:
+\nocite{*}
 \RTGBlockThin{References}{
     \renewcommand*{\bibfont}{} % If you want smaller font: inser \footnotesize in {}
     \printbibliography[heading=none]

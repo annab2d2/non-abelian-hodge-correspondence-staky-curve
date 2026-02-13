@@ -56,45 +56,6 @@
       \verb https://doi.org/10.1093/imrn/rnv363
       \endverb
     \endentry
-    \entry{simpson}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=cc5a29908c62a451e5c04382f75518ef}{%
-           family={Simpson},
-           familyi={S\bibinitperiod},
-           given={Carlos},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{fullhash}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{fullhashraw}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{bibnamehash}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{authorbibnamehash}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{authornamehash}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{authorfullhash}{cc5a29908c62a451e5c04382f75518ef}
-      \strng{authorfullhashraw}{cc5a29908c62a451e5c04382f75518ef}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1558-8599,1558-8602}
-      \field{journaltitle}{Pure Appl. Math. Q.}
-      \field{number}{4}
-      \field{title}{Local systems on proper algebraic {$V$}-manifolds}
-      \field{volume}{7}
-      \field{year}{2011}
-      \true{nocite}
-      \field{pages}{1675\bibrangedash 1759}
-      \range{pages}{85}
-      \verb{doi}
-      \verb 10.4310/PAMQ.2011.v7.n4.a27
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.4310/PAMQ.2011.v7.n4.a27
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.4310/PAMQ.2011.v7.n4.a27
-      \endverb
-    \endentry
   \enddatalist
 \endrefsection
 \endinput
