@@ -1,0 +1,146 @@
+% operators
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Mod}{Mod}
+\renewcommand{\mod}{\operatorname{mod}}
+\DeclareMathOperator{\Per}{Per}
+\DeclareMathOperator{\coh}{Coh}
+\DeclareMathOperator{\qcoh}{QCoh}
+\DeclareMathOperator{\Spec}{Spec}
+\renewcommand{\Im}{\operatorname{Im}}
+\DeclareMathOperator{\pic}{Pic}
+\DeclareMathOperator{\cl}{Cl}
+\DeclareMathOperator{\rank}{rk}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\dep}{depth}
+\DeclareMathOperator{\pdim}{projdim}
+\DeclareMathOperator{\projj}{\underline{Proj}}
+\DeclareMathOperator{\proj}{proj}
+\DeclareMathOperator{\irr}{Irr}
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\fun}{Fun}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Sch}{Sch}
+\DeclareMathOperator{\Higgs}{Higgs}
+\DeclareMathOperator{\Loc}{Loc}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator*{\holim}{holim}
+
+\newcommand{\inHom}{\underline{\Hom}}
+
+\renewcommand{\b}{\bullet}
+
+% derived functors
+\newcommand{\R}{\mathbf{R}}
+\renewcommand{\H}{\mathbf{H}}
+\renewcommand{\L}{\mathbf{L}}
+
+% mathbb shortcuts
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\Pb}{\mathbb{P}}
+\newcommand{\Zb}{\mathbb{Z}}
+\newcommand{\Qb}{\mathbb{Q}}
+\newcommand{\Nb}{\mathbb{N}}
+\newcommand{\Ab}{\mathbb{A}}
+\newcommand{\Gb}{\mathbb{G}}
+\newcommand{\Sb}{\mathbb{S}}
+\newcommand{\Db}{\mathbb{D}}
+
+% mathcal shortcuts
+\newcommand{\mc}[1]{\mathcal{#1}}
+\renewcommand{\O}{\mc{O}}
+\newcommand{\shHom}{\mc{H}\kern -.5pt om}
+\newcommand{\shEnd}{\mc{E}\kern -.5pt nd}
+\newcommand{\shExt}{\mc{E}\kern -.5pt xt}
+\newcommand{\Bun}{\mc{B}\kern -.5pt un}
+% \newcommand{\tmuno}{\mc{T}_{-1}}
+% \newcommand{\fmuno}{\mc{F}_{-1}}
+% \newcommand{\tzero}{\mc{T}_0}
+% \newcommand{\fzero}{\mc{F}_0}
+% \newcommand{\tp}{\mc{T}_p}
+% \newcommand{\fp}{\mc{F}_p}
+\newcommand{\Ac}{\mc{A}}
+\newcommand{\Bc}{\mc{B}}
+\newcommand{\Cc}{\mc{C}}
+\newcommand{\Dc}{\mc{D}}
+\newcommand{\Ec}{\mc{E}}
+\newcommand{\Fc}{\mc{F}}
+\newcommand{\Gc}{\mc{G}}
+\newcommand{\Hc}{\mc{H}}
+\newcommand{\Ic}{\mc{I}}
+\newcommand{\Jc}{\mc{J}}
+\newcommand{\Kc}{\mc{K}}
+\newcommand{\Lc}{\mc{L}}
+\newcommand{\Mc}{\mc{M}}
+\newcommand{\Nc}{\mc{N}}
+\newcommand{\Pc}{\mc{P}}
+\newcommand{\Qc}{\mc{Q}}
+\newcommand{\Rc}{\mc{R}}
+\newcommand{\Sc}{\mc{S}}
+\newcommand{\Tc}{\mc{T}}
+\newcommand{\Uc}{\mc{U}}
+\newcommand{\Vc}{\mc{V}}
+\newcommand{\Wc}{\mc{W}}
+\newcommand{\Xc}{\mc{X}}
+\newcommand{\Yc}{\mc{Y}}
+\newcommand{\Zc}{\mc{Z}}
+
+% mathfrak shortcuts
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\Mf}{\mathfrak{M}}
+\newcommand{\Vf}{\mathfrak{V}}
+
+%%%%%%%%%%%%%%
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\mymid}{\;\middle|\;}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}} %differential operator
+\DeclareMathSymbol{\mh}{\mathord}{operators}{`\-} %hyphen in math mode
+
+\newcommand{\modd}{/\!/} %quotient stack
+
+% Categories
+%\newcommand{\catname}[1]{{\normalfont\textbf{#1}}}
+\newcommand{\catname}[1]{\mathbf{#1}}
+\newcommand{\Top}{\catname{Top}}
+\newcommand{\Cov}{\catname{Cov}}
+\newcommand{\Set}{\catname{Set}}
+\newcommand{\SSet}{\catname{SSet}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Tikz commands and shortcuts
+
+% Define a helper for the path sequences
+\newcommand{\tikzpath}[1]{%
+  \begin{tikzpicture}[baseline={(v0.center)}, xscale=0.6, yscale=1]
+    \tikzset{dot/.style={circle, fill, inner sep=0.8pt}}
+    \node[dot, label=below:{\tiny $v_0$}] (v0) at (0,0) {};
+    #1
+  \end{tikzpicture}%
+}
+
+% Helper command for the graph fragment with dots in the middle
+  \newcommand{\graphfragment}[1]{
+    \begin{tikzpicture}[baseline=(v0.base), scale=0.8]
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_0$}] (v0) at (0,0) {};
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_1$}] (v1) at (0.8,0) {};
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_n$}] (vn) at (1.8,0) {};
+      \node[circle, fill, inner sep=1pt, label=below:{\tiny $v_0$}] (v0end) at (2.6,0) {};
+      
+      \draw[-{Stealth}] (v0) -- node[above] {\tiny $e_0$} (v1);
+      \draw[dashed] (v1) -- (vn);
+      \draw[-{Stealth}] (vn) -- node[above] {\tiny $e_n$} (v0end);
+    \end{tikzpicture}
+  }
+
+  %%% Tikzcd
+  % Set global style for all tikz-cd diagrams. All Math is to be in \displaystyle
+\tikzcdset{
+  every diagram/.append style={
+    cells={font=\everymath\expandafter{\the\everymath\displaystyle}}
+  }
+}

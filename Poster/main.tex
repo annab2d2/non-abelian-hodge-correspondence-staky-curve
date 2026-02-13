@@ -1,0 +1,169 @@
+\documentclass{RTGposter} 
+
+\usepackage[all]{xy}
+\usepackage[normalem]{ulem} 
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows}
+
+\input{preamble/shortcuts}
+
+% BibLaTeX setup
+\usepackage[style=numeric, backend=biber, sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+% Ensure these are defined if not in shortcuts
+%\newcommand{\Ab}{\mathbb{A}}
+%\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem*{observation*}{Observation}
+\newtheorem*{criterion}{A criterion for irrationality}
+\newtheorem*{theorem1*}{Theorem}
+\newtheorem*{conjecture1*}{Conjecture}
+
+\author{Anna Borri} 
+\title{TBD} 
+\advisor{Prof.~Dr.~Jochen Heinloth} 
+\secondadvisor{} 
+\position{Doctoral Researcher} 
+\funding{RTG} 
+\period{10/2024-now} 
+\last_degree{Master: University of Pisa} 
+
+\begin{document}
+\node[above right,opacity=0.25,inner sep=0pt,outer sep=0pt] at (bottomleft) {\includegraphics[width=\paperwidth,height=\paperheight]{blackboard}};
+\maketitle
+
+\begin{columns}
+    \column{.63}
+    \RTGBlockThin{Motivation}{
+        For a smooth projective complex curve $X$, the non-abelian Hodge correspondence can be understood as relating the geometry of the generic fiber and the special fiber inside the moduli space of $\lambda$-connections on $X$
+        \begin{center}
+            \begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
+                {\mc{M}_{n, Dol}^0(X)} \& {\mc{M}_{n,Hdg}^0(X)} \& {\mc{M}_{n, DR}^0(X)} \& {\mc{M}_{n,B}^0(X) = Loc_n(X)} \\
+                {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \}} \& {} \\
+                \arrow[hook, from=1-1, to=1-2]
+                \arrow[from=1-1, to=2-1]
+                \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+                \arrow[from=1-2, to=2-2]
+                \arrow[hook', from=1-3, to=1-2]
+                \arrow["\cong", from=1-3, to=1-4]
+                \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+                \arrow[from=1-3, to=2-3]
+                \arrow[from=2-1, to=2-2]
+                \arrow[from=2-3, to=2-2]
+        \end{tikzcd}
+        \end{center}
+        \vspace{-4.5cm}
+        We want to describe similarly the non-abelian Hodge correspondence for degree $d$ vector bundles on $X$, by adding an orbifold point on $X$ and using the monodromy action around this point.
+    }
+
+    \column{.37}
+    \WhiteBlockSimple{The construction}{
+        Fix a point $p \in X$. We define the stacky curve $\mc{X}$ to be the $n$-th root stack of $X$ at $p$
+        \begin{center}
+            \begin{tikzcd}[ampersand replacement=\&, column sep=huge, row sep=huge]
+            {\mc{X}= \sqrt[n]{p/X} } \&\& {[\Ab^1/\Gb_m]} \\
+            X \& {} \& {[\Ab^1/\Gb_m].}
+            \arrow[from=1-1, to=1-3]
+            \arrow["\pi"', from=1-1, to=2-1]
+            \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+            \arrow["{\wedge n}", from=1-3, to=2-3]
+            \arrow["{(\O(p), s_p)}"', from=2-1, to=2-3]
+        \end{tikzcd}
+        \end{center}
+    }
+\end{columns}
+
+\begin{columns}
+    \column{.5}
+    \RTGBlockThin{Dolbeault moduli space on $X$ and $\mc{X}$}{
+        Vector bundles on $\mc{X}$ have a third numerical invariant beyond rank and degree, namely the representation obtained as stalk at the stacky point. We denote by $\lambda(-d)$ the weight $-d$ character of $\mu_n$ and by $n \cdot \lambda(-d)$ the corresponding $n$-dimensional representation.
+
+        \begin{theorem1*}[]
+            The pullback and pushforward along the moduli map $\mc{X} \to X$ define equivalences of algebraic stacks
+            \[
+            \mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n \cdot \lambda(-d), Dol}^0(\mc{X}).
+            \]
+        \end{theorem1*}
+    }
+
+    \column{.5}
+    \RTGBlockThin{The Betti moduli space}{
+        Computing the fundamental group of $\mc{X}$, we see that the Betti moduli space on $\mc{X}$ is
+        \[
+        \mc{M}_{n, B}(\mc{X}) \cong \left[ \bigg\{ ((A_i, B_i)_{i = 1}^g, C) \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C, \, C^n = Id \bigg\} / GL_n \right].
+        \]
+
+        It decomposes with respect to the conjugacy class of $C$, and the component corresponding to $\mc{M}_{n \cdot \lambda(-d), Dol}^0(\mc{X})$ is
+        \[
+        \mc{M}_{n \cdot \lambda(-d), B}(\mc{X}) \cong \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right].
+        \]
+        In analogy with the Dolbeault case, we can denote this space by $\mc{M}_{n, B}^d(X)$
+    }
+
+\end{columns}
+
+\WhiteBlockSimple{Conseqence}{
+        The inclusions $\mc{M}_{n, Dol}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and $\mc{M}_{n, DR}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and the (analytic) Riemann-Hilbert correspondence $\mc{M}_{n, DR}(\mc{X}) \cong \mc{M}_{n, B}(\mc{X})$ induce isomorphisms in cohomology
+        \[
+        H^*(\mc{M}_{n, Dol}^d(X)) \cong H^*(\mc{M}_{n, DR}^d(X)) \cong H^*(\mc{M}_{n, B}^d(X)).
+        \]
+    }
+
+\begin{columns}
+    \column{.5}
+    \RTGBlockThin{What about the Hodge structure?}{
+        The equivalence between the De Rham and the Betti moduli space is analytic, so it doesn't preserve the Hodge structure.
+
+        \begin{theorem1*}[]
+            The tautological class $e_{i,j}$ (i.e. the $j$-th K\"unneth component of $c_i(\mc{E}_{univ})$) on $\mc{M}_{n, Dol}(\mc{X})$ has pure weight $j$. Under the isomorphism $\mc{M}_{n, DR}(\mc{X}) \cong \mc{M}_{n, B}(\mc{X})$ it is mapped to a cohomology class of weight $2i$.
+        \end{theorem1*}
+    }
+
+    \column{.5}
+    \WhiteBlockSimple{Computing the Hodge weights}{    
+    To compute the Hodge weights we replicate Shende's argument presented in \cite{Shende}. We construct a simplicial set $\Delta_{\mc{X}}$ realizing a triangulation of $\mc{X}$. We make it into a simplicial scheme and use the equivalence
+    \[
+    \mc{M}_{n, B}(\mc{X})=\left[ \text{Hom}(\pi_1(\mc{X}, v_0), GL_n) / GL_n \right] \cong \shHom_{SSch}(\Delta_X, BGL_n)
+    \]
+    and the universal object on $\shHom_{SSch}(\Delta_X, BGL_n)$ to carry out the computation of the weights.
+    }
+
+\end{columns}
+
+\RTGBlockThin{What's next?}{
+    Possible problems to consider:
+        \begin{itemize}
+            \item Proceed from weight computation to carry out an alternative proof of $P=W$.
+            \item Replicate the argument for other connected components of $\mc{M}_{n, Dol}(\mc{X})$, corresponding to classes of parabolic bundles on $X$.
+        \end{itemize}
+    }
+
+
+
+% \RTGBlock{References}{
+%     \begin{posterbib}
+%         \bibitem{Brown} F.C.S. Brown, \textit{Multiple zeta values and periods of moduli spaces $\overline{\mathfrak{M}}_{0,n}$}, (2009).
+%         \bibitem{wonderful} C. De Concini, C. Procesi, \textit{Wonderful Models of Subspace Arrangements}, (1995).
+%         \bibitem{Sprang} S. Fischler, J. Sprang, W. Zudilin, \textit{Many odd zeta values are irrational}, (2019).
+%         \bibitem{Shende} V. Shende, \textit{The weights of the tautological classes of character varieties}, International Mathematics Research Notices, (2017)
+%     \end{posterbib}
+% }
+
+% \block{References}{
+%         % Decreasing font size for references is crucial in posters
+%         \renewcommand*{\bibfont}{\scriptsize}
+%         \printbibliography[heading=none]
+%     }
+
+
+% At the end of the document, replace the RTGBlock with this:
+\RTGBlockThin{References}{
+    \renewcommand*{\bibfont}{} % If you want smaller font: inser \footnotesize in {}
+    \printbibliography[heading=none]
+}
+
+\FundingAndAcknowledgement
+\end{document}
