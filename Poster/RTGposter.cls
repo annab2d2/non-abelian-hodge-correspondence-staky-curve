@@ -71,7 +71,7 @@
   % #1 is empty
   \def\p@sterperiod{\phantom{.}}
 \else
-  \def\p@sterperiod{ (#1),}
+  \def\p@sterperiod{ (#1)}
 \fi
 }
 
@@ -100,10 +100,11 @@
 \renewcommand\TP@maketitle{%
 	%UDE logo
 	\begin{minipage}{\linewidth}
-		\includegraphics[width=\linewidth]{UDE_poster}
+		\includegraphics[width=\linewidth]{UDE_poster_cropped}
 	\end{minipage}
 	\hspace*{3cm}\begin{minipage}{0.5\linewidth}
-		\vspace{-12.5cm}\huge {\color{white}\bf RTG 2553:\\ Symmetries and classifying spaces:\\ Analytic, arithmetic and derived}
+		%\vspace{-12.5cm}\huge {\color{white}\bf RTG 2553:\\ Symmetries and classifying spaces:\\ Analytic, arithmetic and derived}
+		% \vspace{-12.5cm}\Huge {\color{white}\bf Higgs bundles on stacky curves}
 	\end{minipage}
     
     %Title of the project

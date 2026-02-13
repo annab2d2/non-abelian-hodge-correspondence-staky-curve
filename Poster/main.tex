@@ -65,6 +65,7 @@
     }
 
     \column{.37}
+    
     \WhiteBlockSimple{The stacky curve $\mc{X}$}{
         Fix a point $p \in X$. We define the stacky curve $\mc{X}$ to be the $n$-th root stack of $X$ at $p$
         \begin{center}
@@ -81,20 +82,21 @@
     }
 \end{columns}
 
+
 \begin{columns}
     \column{.5}
-    \RTGBlockThin{Degree $d$ Higgs bundles on a curve as degree $0$ Higgs bundles on $\mc{X}$}{
+    \RTGBlockThin{Degree $d$ on a curve as degree $0$ on $\mc{X}$}{
         Vector bundles on $\mc{X}$ have a third numerical invariant beyond rank and degree, namely the representation obtained as stalk at the stacky point. We denote by $\lambda(-d)$ the weight $-d$ character of $\mu_n$ and by $n \cdot \lambda(-d)$ the corresponding $n$-dimensional representation.
 
         \begin{theorem1*}[]
-            The pullback and pushforward along the moduli map $\mc{X} \to X$ define equivalences of algebraic stacks
+            The twisted pullback and pushforward along the moduli map $\mc{X} \to X$ define equivalences of algebraic stacks
             \[
             \mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n \cdot \lambda(-d), Dol}^0(\mc{X}).
             \]
         \end{theorem1*}
 
         \begin{theorem2*}
-            Deegree $d$ vector bundles on $X$ can be understood as degree $0$ vector bundles on $\mc{X}$.
+            Deegree $d$ Higgs bundles on $X$ can be understood as degree $0$ Higgs bundles on $\mc{X}$.
         \end{theorem2*}
 
     }
@@ -110,17 +112,17 @@
         \[
         \mc{M}_{n \cdot \lambda(-d), B}(\mc{X}) = \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right].
         \]
-        This is exactly the twisted character variety on $\mc{X}$.
+        This is exactly the twisted character variety of $X$.
         
         \begin{theorem2*}
-        The twisted character variety on $X$ is a connected component of the character variety on $\mc{X}$.
+        The twisted character variety of $X$ is a connected component of the character variety of $\mc{X}$.
         \end{theorem2*}
     }
 
 \end{columns}
 
-\WhiteBlockSimple{Conseqence}{
-        We can define $\mc{M}_{n,DR}^d(X)$ as $\mc{M}_{n \cdot \lambda(-d), DR}(\mc{X})$.
+\WhiteBlockSimple{Consequence}{
+        We can identify $\mc{M}_{n,DR}^d(X)$ with $\mc{M}_{n \cdot \lambda(-d), DR}^0(\mc{X})$.
         Therefore, the inclusions $\mc{M}_{n, Dol}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and $\mc{M}_{n, DR}(\mc{X}) \hookrightarrow \mc{M}_{n, Hdg}(\mc{X})$ and the (analytic) Riemann-Hilbert correspondence $\mc{M}_{n, DR}(\mc{X}) \cong \mc{M}_{n, B}(\mc{X})$ induce isomorphisms in cohomology
         \[
         H^*(\mc{M}_{n, Dol}^d(X)) \cong H^*(\mc{M}_{n, DR}^d(X)) \cong H^*(\mc{M}_{n, B}^d(X)).
