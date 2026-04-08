@@ -11,119 +11,259 @@
 \input{../preamble/shortcuts}
 
 \begin{document}
-Simpson's non-abelian Hodge correspondence establishes a diffeomorphism between different moduli spaces of sheaves on a projective variety $X$ over the complex numbers.
-Specifically, let $M_{n,Dol}^0(X)$ be the moduli space of semistable Higgs bundles of rank $n$ and degree $0$ on $X$ and let
-\begin{equation}
-M_{n,B}^0(X) \coloneqq \left\{ \Hom(\pi_1(X), GL_n) \right\} \modd GL_n
-\end{equation} 
-be the variety of $n$-dimensional representations of the fundamental group of $X$. Then Simpson's correspondence is a diffeomorphism
-\begin{equation}
-\varphi\colon M_{n,Dol}^0(X) \to M_{n,B}^0(X) \label{simpson correspondence}
-\end{equation}
-between these varieties, inducing therefore an isomorphism of their cohomology rings.
-Since we are considering varieties over $\Cb$, the cohomology groups are endowed with mixed Hodge structures. But the morphism $\varphi$ is not algebraic and doesn't preserve the Hodge structures. Therefore, a natural question is to try and understand how $\varphi$ relates the Hodge structures.
 
-In order to understand this, it is convenient to factor the pullback $\varphi^*$ into pieces that are easier to understand.
-First of all, the Riemann-Hilbert correspondence establishes a diffeomorphism
+\section{Introduction}
+Simpson's non abelian Hodge correspondence establishes a homeomorphism between the moduli space of semistable Higgs bundles on a smooth projective curve $X$ and the character variety of the curve. This can be understood as relating the geometry of the generic fiber and the special fiber inside the moduli space of $w$-connections.
+Namely, for a complex parameter $w$ and a vector bundle $\mc{E}$ on $X$, define a $w$-connection on $\mc{E}$ to be a $\Cb$-linear operator
 \begin{equation}
-M_{n,B}^0(X) \simeq M_{n, DR}^0(X)
+\nabla \colon \mc{E} \to \mc{E}\otimes \Omega_X
 \end{equation}
-between the character variety $Rep(\pi_1(X), GL_n)$ and the De Rham moduli space, i.e. the moduli space parametrizing pairs $(\mc{E}, \nabla)$ where $\mc{E}$ is a vector bundle of rank $n$ on $X$ and
+satisfying the Leibniz rule up to the scalar $w$. Explicitly, given sections $f \in \O_X(U)$ and $s \in \mc{E}(U)$ we have
 \begin{equation}
-\nabla\colon \mc{E} \to \mc{E}\otimes\Omega_X
+\nabla(f \, s) = f \, \nabla(s) + w \, s \otimes \dd f.
 \end{equation}
-is a flat connection on $\mc{E}$.
+The Hodge moduli space $\mc{M}_{n, Hdg}^0(X)$ parametrizes triples $(\mc{E}, w, \nabla)$, where $\mc{E}$ is a rank $n$ and degree $0$ vector bundle on $X$ and $\nabla$ is a $w$-connection on $\mc{E}$, subject to a stability condition.
+The assignment
+\begin{equation}
+(\mc{E}, w, \nabla) \mapsto w
+\end{equation}
+gives $\mc{M}_{n, Hdg}^0(X)$ the structure of a family over $\Ab^1$, trivial over $\Gb_m$.
+Notice that the generic fiber (identified with $w = 1$) is the moduli space of vector bundles on $X$ with a (flat) connection, i.e. the De Rham moduli space $\mc{M}_{n, DR}^0(X)$. The special fiber is the moduli space of semistable Higgs bundles on $X$, i.e. the Dolbeault moduli space $\mc{M}_{n, Dol}^0(X)$.
 
-Simpson introduced the notion of $\lambda$-connection as a way to interpolate between connections and Higgs fields. For a fixed complex parameter $\lambda$, a $\lambda$-connection on a vector bundle $\mc{E}$ is a $\Cb$-linear morphism
+Notice moreover that the De Rham moduli space is complex-analytically isomorphic to the moduli space of rank $n$ local systems on $X$, which can be identified with the character variety
 \begin{equation}
-\nabla_{\lambda}\colon \mc{E} \to \mc{E} \otimes \Omega_X,
+\mc{M}_{n, Betti}^0(X) \coloneqq \left[ \Hom(\pi_1(X), GL_n) / GL_n \right].
 \end{equation}
-respecting the Leibniz rule up to the scalar $\lambda$, namely such that
-\begin{equation}
-\nabla_{\lambda}(f \cdot s) = f \cdot \nabla(s) + \lambda \, s \otimes \dd f.
-\end{equation}
-Notice that for $\lambda = 1$ we recover the notion of a connection, while for $\lambda = 0$ we get an $\O_X$-linear morphism $\mc{E} \to \mc{E}\otimes \Omega_X$, making $(\mc{E}, \nabla_0)$ into a Higgs bundle.
 
-Let $M_{n, Hdg}^0(X)$ be the moduli space parametrizing triples $(\lambda, \mc{E}, \nabla)$, where $\lambda$ is a complex parameter, $\mc{E}$ is a rank $n$ and degree $0$ vector bundle on $X$ and $\nabla$ is a $\lambda$-connection on $X$. Th multiplicative group $\Gb_m$ acts on $M_{n, Hdg}^0(X)$ by scaling of $\nabla$. In particular, the projection $(\lambda, \mc{E}, \nabla) \mapsto \lambda$ defines a $\Gb_m$-equivariant morphism
-\begin{equation}
-f \colon M_{n, Hdg}^0(X) \to \Ab^1,
+In short, we have the following picture
+\begin{equation} \label{eq: pullback diagram}
+    \begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
+        {\mc{M}_{n, Dol}^0(X)} \& {\mc{M}_{n,Hdg}^0(X)} \& {\mc{M}_{n, DR}^0(X)} \& {\mc{M}_{n,B}^0(X)} \\
+        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \}} \& {} \\
+        \arrow[hook, from=1-1, to=1-2]
+        \arrow[from=1-1, to=2-1]
+        \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+        \arrow[from=1-2, to=2-2]
+        \arrow[hook', from=1-3, to=1-2]
+        \arrow["\cong", from=1-3, to=1-4]
+        \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+        \arrow[from=1-3, to=2-3]
+        \arrow[from=2-1, to=2-2]
+        \arrow[from=2-3, to=2-2]
+    \end{tikzcd}
 \end{equation}
-where $\Gb_m$ acts on $\Ab^1$ with weight one. The fibers of $f$ over $0$ and $1$ are $M_{n, Dol}^0(X)$ and $M_{n, DR}^0(X)$ respectively, i.e. we have the following picture
+and Simpson's correspondence shows that the analytic spaces underlying $\mc{M}_{n, Dol}^0(X)$ and $\mc{M}_{n, DR}^0(X)$ are homeomorphic. From an algebraic perspective, the main consequence is that these varieties have isomorphic cohomology rings. Indeed, we get that the inclusions of the fibers in the total space induce isomorphisms of cohomology rings
 \begin{equation}
+H^*(\mc{M}_{n, Dol}^0(X)) \cong H^*(\mc{M}_{n,Hdg}^0(X)) \cong H^*(\mc{M}_{n, DR}^0(X));
+\end{equation}
+and that the analytic isomorphism $\mc{M}_{n, DR}^0(X) \cong \mc{M}_{n,B}^0(X)$ induces an isomorphism
+\begin{equation}
+H^*(\mc{M}_{n, DR}^0(X)) \cong H^*(\mc{M}_{n,B}^0(X)).
+\end{equation}
+
+Notice that so far we have described only moduli spaces of degree $0$ vector bundles. Indeed, for a vector bundle to admit a flat connection it needs to have vanishing Chern classes, so the description given of $\mc{M}_{DR}$ only makes sense in degree $0$. However, the moduli space of Higgs bundles $\mc{M}_{Dol}$ can be constructed easily for any degree $d$. Classically, this issue has been solved by replacing the De Rham and Betti moduli spaces with ``twisted'' versions. Namely
+\begin{equation}
+\mc{M}_{n, DR}^d(X) \coloneqq \left< (\mc{E}, \nabla) \mid \nabla\colon \mc{E} \to \mc{E}\otimes\Omega(d \cdot p) \right>
+\end{equation}
+is the moduli space of semistable vector bundles with a logarithmic connection with a single pole $p \in X$ of multiplicity at most $d$, and
+\begin{equation} \label{eq: twisted betti}
+\mc{M}_{n, B}^d(X) = \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right]
+\end{equation}
+is the ``twisted character variety''.
+
+The main purpose of this article is to give an alternative description of $\mc{M}_{n, DR}^d(X)$ and $\mc{M}_{n, B}^d(X)$, which more clearly fits into a picture as the one described in \eqref{eq: pullback diagram}.
+
+In order to do this, the main insight is that the meromorphic structure around the point $p \in X$ can be interpreted as to be holomorphic around an orbifold point and similarly the twist appearing in $\mc{M}_{n,B}^d(X)$ can be interpreted as monodromy around an orbifold point. Algebraically, the way to realize this orbifold structure is to construct a stacky curve $\XX$ as the $n$-th root stack of $X$ at the point $p$, i.e. as
+\begin{equation}
+    \begin{tikzcd}[ampersand replacement=\&, column sep=huge, row sep=huge]
+            {\XX= \sqrt[n]{p/X} } \&\& {[\Ab^1/\Gb_m]} \\
+            X \& {} \& {[\Ab^1/\Gb_m].}
+            \arrow[from=1-1, to=1-3]
+            \arrow["\pi"', from=1-1, to=2-1]
+            \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+            \arrow["{\wedge n}", from=1-3, to=2-3]
+            \arrow["{(\O(p), \; s_p)}"', from=2-1, to=2-3]
+    \end{tikzcd}
+\end{equation}
+In order to get back the picture in \eqref{eq: pullback diagram}, we need to reduce to the study of degree $0$ vector bundles on $\XX$. Indeed, the main results presented are about realizing moduli spaces of degree $d$ vector bundles on $X$ as moduli spaces of degree $0$ vector bundles on $\XX$ and about realizing $\mc{M}_{n, B}^d(X)$ as moduli space of representations of $\pi_1(\XX)$.
+In what follows we give a more detailed description of how this insight is formalized.
+
+Vector bundles on $\XX$ have a third numerical invariant beyond rank and degree, namely the representation obtained as stalk at the stacky point. We denote by $w(-d)$ the weight $-d$ character of $\mu_n$ and by $n \cdot w(-d)$ the corresponding $n$-dimensional representation. Then the main result comparing moduli spaces on $X$ and on $\XX$ is the following.
+\begin{thm}
+The twisted pullback and pushforward along the moduli map $\mc{X} \to X$ define equivalences of algebraic stacks
+\begin{equation}
+\mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n \cdot w(-d), Dol}^0(\XX).
+\end{equation}
+\end{thm}
+
+Passing to the study of the Betti moduli space, a first observation is that the replacement of $p$ by an orbifold point changes the fundamental group of $X$ by adding a cyclic monodromy element. Namely, we get
+\begin{equation} \label{eq: fundamental group of stacky curve}
+\pi_1(\Xc) = \left\langle a_i, \, b_i, \, c \mymid \prod_{i = 1}^g [a_i, b_i] = c, \; c^n = 1 \right\rangle .
+\end{equation}
+Then, we get the twisted character variety thanks to the following theorem.
+\begin{thm} \label{the: twisted character variety}
+The connected component of the Betti moduli stack of $\mc{X}$ corresponding to the numerical invariant $n \cdot w(-d)$ is isomorphic to the twisted Betti moduli space of $X$, i.e. we have
+\begin{equation}
+\mc{M}_{n \cdot w(-d), B}^0(\mc{X}) = \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right].
+\end{equation}
+\end{thm}
+
+Just like in the case described in \eqref{eq: pullback diagram}, these moduli spaces can be realized as the special and the generic fiber inside the Hodge moduli space, i.e. we have
+\begin{equation}
+\begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
+        {\mc{M}_{n \cdot w(-d), Dol}^0(\XX)} \& {\mc{M}_{n \cdot w(-d),Hdg}^0(\XX)} \& {\mc{M}_{n \cdot w(-d), DR}^0(\XX)} \& {\mc{M}_{n \cdot w(-d),B}^0(\XX)} \\
+        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \},} \& {} \\
+        \arrow[hook, from=1-1, to=1-2]
+        \arrow[from=1-1, to=2-1]
+        \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+        \arrow[from=1-2, to=2-2]
+        \arrow[hook', from=1-3, to=1-2]
+        \arrow["\cong", from=1-3, to=1-4]
+        \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+        \arrow[from=1-3, to=2-3]
+        \arrow[from=2-1, to=2-2]
+        \arrow[from=2-3, to=2-2]
+    \end{tikzcd}
+\end{equation}
+where the isomorphism
+\begin{equation}
+\mc{M}_{n \cdot w(-d), DR}^0(\XX) \xlongrightarrow{\cong} \mc{M}_{n \cdot w(-d),B}^0(\XX)
+\end{equation}
+is complex analytic but not algebraic. As before, we get that the inclusions of the fibers in the total space induce isomorphisms of cohomology rings
+\begin{equation}
+H^*(\mc{M}_{n \cdot w(-d), Dol}^0(\XX)) \cong H^*(\mc{M}_{n \cdot w(-d),Hdg}^0(\XX)) \cong H^*(\mc{M}_{n \cdot w(-d), DR}^0(\XX));
+\end{equation}
+and that the analytic isomorphism $\mc{M}_{n \cdot w(-d), DR}^0(\XX) \cong \mc{M}_{n \cdot w(-d),B}^0(\XX)$ induces an isomorphism
+\begin{equation}
+H^*(\mc{M}_{n \cdot w(-d), DR}^0(\XX)) \cong H^*(\mc{M}_{n \cdot w(-d),B}^0(\XX)).
+\end{equation}
+
+This approach has the further advantage of simplifying the calculation of the Hodge weights of the tautological classes on $\mc{M}_{n, B}^d(X)$. In \cite[]{Shende-weights}, Shende computed the weights of the tautological classes on the character variety of a topological space by replacing the space by a triangulation and then realizing this triangulation as a simplicial scheme. He later employed the approach presented in \cite[\S 2.2]{MixedHodgePolynomials} to compute compute the weights also in the case of twisted character varieties, by reducing it to the case of $PGL_n$-character varieties. The following is the result of this computation.
+\begin{thm}[Shende] \label{thm shende}
+Under the isomorphism $ H^*(\mc{M}_{n, DR}^0(X)) \cong H^*(\mc{M}_{n, Dol}^0(X))$, the Künneth components $e_{i,j}$ of the $i$-th Chern class of the universal bundle $c_i(\mc{E}_{\text{univ}})$ are mapped to cohomology classes of weight $2i$. The same holds true in the twisted case, under the isomorphism $ H^*(\mc{M}_{n, DR}^d(X)) \cong H^*(\mc{M}_{n, Dol}^d(X))$.
+\end{thm}
+
+Our approach gives an alternative proof for the twisted case, which doesn't need to use the case of $PGL_n$-bundles and the decomposition presented by Hausel and Rodriguez-Villegas in \cite[]{MixedHodgePolynomials}. Indeed, using \zcref{the: twisted character variety} we see that the twisted character variety can be realized as an actual variety of local systems on $\XX$. Therefore Shende's argument can be extend directly to cover this case. The main ingredient is the construction of a simplicial scheme $\Delta_{\XX}$ which realizes a triangulation of the stacky curve $\XX$. In the article we explain in detail the construction of this simplicial decomposition. Once this is done, the argument amounts to using the equivalence
+\begin{equation}
+\mc{M}_{n, B}^0(\XX)=\left[ \text{Hom}(\pi_1(\XX), GL_n) / GL_n \right] \cong \shHom_{SSch}(\Delta_{\XX}, BGL_n)
+\end{equation}
+and the universal object on $\shHom_{SSch}(\Delta_{\XX}, BGL_n)$ to carry out the computation of the weights. Using this argument we get the following theorem.
+\begin{thm}
+The cohomology classes on $\mc{M}_{n, B}^0(\XX)$ obtained as Künneth components of the $i$-th Chern class of the universal bundle on $\mc{M}_{n, B}^0(\XX) \times \XX$ have pure weight $2i$.
+\end{thm}
+By restricting to the $n \cdot w(-d)$-component of the Betti moduli space we get an alternative proof of \zcref{thm shende}.
+
+\section{Vector bundles on the stacky curve}
+Let $X$ be a smooth, projective, genus $g$ curve over $\Cb$ and let $p \in X$ be a closed point. Following \cite[]{Cadman}, we construct $\mc{X} = \sqrt[n]{p/X} $ as a root stack over $X$, with multiplicity $n$ in $p$.
+
+Consider $p$ as an effective Cartier divisor on $X$. Associated to it, there is a pair $(\O_X(p), s_p)$, where $\O_X(p)$ is a line bundle and $s_p$ is a section of $\O_X(p)$ vanishing at $p$, called the \textit{tautological section}. This pair defines a morphism
+\[
+X \xrightarrow{(\O(p), \; s_p)} [\Ab^1/\Gb_m].
+\]
+Let $\wedge n \colon [\Ab^1/\Gb_m] \to [\Ab^1/\Gb_m]$ be the morphism induced by taking the $n$-th power maps on $\Ab^1$ and on $\Gb_m$. Define $\mc{X}$ as the pullback
+\begin{equation} \label{eq: definition of X}
 \begin{tikzcd}
-	{M_{n, Dol}^0(X)} & {M_{n,Hdg}^0(X)} & {M_{DR}} & {M_{n,B}^0(X)} \\
-	{\{ 0 \}} & {\Ab^1} & {\{ 1 \}.}
-	\arrow["i", hook, from=1-1, to=1-2]
+	\Xc && {[\Ab^1/\Gb_m]} \\
+	X & {} & {[\Ab^1/\Gb_m].}
+	\arrow[from=1-1, to=1-3]
+	\arrow["\pi"', from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["{\wedge n}", from=1-3, to=2-3]
+	\arrow["{(\O(p), \; s_p)}"', from=2-1, to=2-3]
+\end{tikzcd}
+\end{equation}
+The vertical map $\pi$ is a coarse moduli map, see \cite[Corollary 2.3.7]{Cadman}.
+The stack $\Xc$ comes equipped with a pair $(\O(\frac{1}{n}p), \frac{1}{n}s_p)$, where $\O(\frac{1}{n}p)$ is a line bundle and $\frac{1}{n}s_p$ is a section of $\O(\tfrac{1}{n}p)$. This pair corresponds to the upper horizontal morphism in \eqref{eq: definition of X}, and is characterized by the properties
+\begin{equation} \label{eq: pullback of O(p)}
+\pi^*\O(p) = \O(\tfrac{1}{n}p)^{\otimes n}, \quad \pi^* s_p = (\tfrac{1}{n}s_p)^{\otimes n}.
+\end{equation}
+The sheaf $\O(\frac{1}{n}p)$ is called the \textit{tautological sheaf} of the stacky curve $\Xc$. It corresponds to the composition
+\[
+\Xc \to [\Ab^1 / \Gb_m] \to B\Gb_m.
+\]
+
+With an abuse of notation, we denote by $p$ also the stacky point in $\mc{X}$ above $p$. Notice that in $p$ the stack $\mc{X}$ has the structure
+\begin{equation}\label{punctual structure X}
+\begin{tikzcd}
+	{B\mu_n} & \Xc \\
+	{\{p\}} & X.
+	\arrow[hook, from=1-1, to=1-2]
 	\arrow[from=1-1, to=2-1]
 	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
-	\arrow["f", from=1-2, to=2-2]
-	\arrow["j"', hook', from=1-3, to=1-2]
-	\arrow["\psi", "\cong"', from=1-3, to=1-4]
-	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
-	\arrow[from=1-3, to=2-3]
-	\arrow[from=2-1, to=2-2]
-	\arrow[from=2-3, to=2-2]
-\end{tikzcd} \label{moduli diagram}
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow[hook, from=2-1, to=2-2]
+\end{tikzcd}
 \end{equation}
-Using the fact that the morphism $f$ is $\Gb_m$-equivariant and that the fibers over all $\lambda \neq 0$ are isomorphic, one can show that $i$ and $j$ induce isomorphisms in cohomology. They are moreover algebraic maps, so they induce an isomorphism of mixed Hodge structures on between the cohomology of $M_{n,Dol}^0(X)$ and $M_{n, DR}(X)$. Finally, we need to understand how $\psi$ acts on the Hodge structures. In \cite[]{Shende-weights}, Shende approached this problem by replacing $X$ with a simplicial scheme $\Delta_X$ obtained by a trialeftngulation. The advantage of using this approach is that the simplicial scheme thus constructed admits an algebraic version of a universal local system, which can be used to compute the hodge weights.
-
-Notice that the problem explained so far concerns only vector bundles of degree $0$. Indeed, in order for a vector bundle to admit a nontrivial flat connection, it needs to have degree $0$. On the other side, positive degree vector bundles can admit nontrivial Higgs fields, so we would like to have a version of \eqref{simpson correspondence} for positive degree Higgs bundles.
-The purpose of this article is to study a version of \eqref{simpson correspondence} for vector bundles of nonzero degree in the case where $X$ is a genus $g$ curve and to apply Shende's technique to study the Hodge structure also in this case. Thanks to [Simpson], we know that in the degree $d$ case, the character variety in \eqref{simpson correspondence} should be replaced by
-\begin{equation}
-\left\{ (A_i, B_i) \in GL_n^{2g} \mymid \prod_{i=1}^{2g}[A_i, B_i]=e^{\frac{2 \pi i}{n} d} \right\} \modd \, GL_n. \label{stacky character variety}
+More explicitly, if $U \cong \Ab^1$ is an affine neighborhood of $p$, we have that
+\begin{equation}\label{X|U}
+\mc{X}\vert_U \cong [\Ab^1/\mu_n],
 \end{equation}
-Our main contribution, is to interpret this space as character variety of a stacky curve, and use this interpretation to get an analogue of the picture described in \zcref{moduli diagram} and replicate Shende's argument.
-Indeed, \eqref{stacky character variety} is a connected component of the variety of representations of the group
-\begin{equation}
-\left< a_i, b_i, c \mid i=1,\dots,g, \; \prod_{i=1}^g [a_i, b_i]=c, \; c^n=1 \right>.
-\end{equation}
-The key idea is that this group can be seen as the fundamental group of an orbifold curve with a singularity of order $n$, which algebraically corresponds to a stacky curve with a single stacky point with stabilizer $\mu_n$. If we let $\mc{X}$ be such a stacky curve, then we get the analogue of \eqref{moduli diagram}
-\begin{equation}
-\begin{tikzcd}
-	{M_{n, Dol}^0(\mc{X})} & {M_{n,Hdg}^0(\mc{X})} & {M_{DR}} & {M_{n,B}^0(\mc{X})} \\
-	{\{ 0 \}} & {\Ab^1} & {\{ 1 \}.}
-	\arrow["i", hook, from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-1]
-	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
-	\arrow["f", from=1-2, to=2-2]
-	\arrow["j"', hook', from=1-3, to=1-2]
-	\arrow["\psi", "\cong"', from=1-3, to=1-4]
-	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
-	\arrow[from=1-3, to=2-3]
-	\arrow[from=2-1, to=2-2]
-	\arrow[from=2-3, to=2-2]
-\end{tikzcd} \label{moduli diagram stacky}
-\end{equation}
-The stacky curve $\mc{X}$ admits a line bundle $\O(\frac{1}{n})$of fractional degree, which we can use to twist degree $d$ vector bundles into degree $0$ vector bundles.
-In particular, starting from a degree $d$ vector bundle $\mc{E}$ on $X$, we can pull it bach along $\pi\colon \mc{X} \to X$ and get a degree $d$ vector bundle on $\mc{X}$ with trivial type in the stacky point. After twisting, we get a vector bundle of degree $0$ on $\mc{X}$ which in the stacky point $p$ realizes the $\mu_n$-representation
-\begin{equation}
-\rho_n^{-d} \coloneqq 
-\begin{pmatrix}
-    \zeta_n^{-d} &  &  \\
-     & \ddots &  \\
-     &  & \zeta_n^{-d} \\
-\end{pmatrix}.
+see \cite[Lemma 2.3.1]{Cadman}.
+Away from $p$ the morphism $\pi$ is an isomorphism
+\begin{equation}\label{X-p}
+\mc{X} \setminus \{ p \} \cong X \setminus \{p\}.
 \end{equation}
 
-The described procedure lifts to an isomorphism of stacks
-\begin{equation}
-\mc{M}_n^d(X) \cong \mc{M}_{n, \text{triv}}^d(X) \cong \mc{M}_{n, \rho_n^{-d}}(\mc{X}),
-\end{equation}
-which extends to the various moduli stacks of vector bundles described above.
-In particular, looking at the connected component of \eqref{moduli diagram stacky} determined by the invariants $(n, d, \rho_n^{-d})$, we recover a version of \eqref{simpson correspondence} for degree $d$ vector bundles on $X$.
+The goal of the construction is to identify vector bundles on $X$ with their pullback along $\pi$. In particular, we need to mention the main properties of the pullback and pushforward functors $\pi^*$ and $\pi_*$.
+\begin{prop}\cite[]{abramovich-vistoli}
+The pushforward $\pi_* \colon \qcoh(\XX) \to \qcoh(X)$ is an exact functor and restricts to a functor $\pi_* \colon \Bun(\XX) \to \Bun(X)$. Similarly, the pullback $\pi_* \colon \qcoh(X) \to \qcoh(\XX)$ is an exact functor and restricts to a functor $\pi_* \colon \Bun(X) \to \Bun(\XX)$.
+\end{prop}
 
-Finally, we want to use \eqref{moduli diagram stacky} to compare the Hodge structures on $\mc{M}_{n, \rho_n^{-d}}(\mc{X})$ and on
-\begin{equation}
-\left\{ (A_i, B_i) \in GL_n^{2g} \mymid \prod_{i=1}^{2g}[A_i, B_i]=e^{\frac{2 \pi i}{n} d} \right\} \modd \, GL_n.
-\end{equation}
-In the case of \eqref{moduli diagram}, this was done by Shende in \cite[]{Shende-weights}, by replacing the complex manifold $X$ with a simplicial scheme $\Delta_X$ obtained from a triangulation of $X$. The key features of $\Delta_X$ are that its fundamental group coincides with the one of $X$, so it can be used to construct the stack of local systems on $X$, and that it has trivial Hodge Structure, giving the cohomology of moduli spaces on $\Delta_X$ an easier Hodge structure.
-Explicitly, Shende uses an isomorphism
-\begin{equation}
-[\Hom(\pi_1(X), GL_n) / GL_n ] \cong \inHom_{SSch}(\Delta_X, BG)
-\end{equation}
-to study how \eqref{simpson correspondence} acts on the Hodge weights.
 
-In the final part of the article, we replicate Shende's argument in the case we considered, by replacing the stacky curve $\mc{X}$ with a simplicial scheme $\Delta_{\mc{X}}$ realizing its fundamental group.
+We now want to understand the numerical invariants that decompose the moduli space of vector bundles on $\XX$ into connected components. Let $\mc{E}$ be a rank $m$ vector bundle on $\XX$. By pulling back along the inclusion of the stacky point
+\begin{equation}
+i \colon B \mu_n \hookrightarrow \XX
+\end{equation}
+we get a vector bundle on $B \mu_n$, i.e. an $m$-dimensional representation of the cyclic group $\mu_n$. Since $\mu_{n}$ is an abelian group, the representation decomposes as a direct sum of characters. In particular, denoting by $w(i)$ the weight $i$ character, we get a decomposition
+\[
+i^* \mc{E} = \bigoplus_{i \in \Zb / n \Zb} w(i)^{m_{i}}.
+\]
+\begin{defi}\cite[Definition 1.2.7]{Taams}
+To keep track of the multiplicities of all of the weights appearing, we denote the multiplicity vector of $\mc{E}$ at $p$ by
+\[
+m_p(\mc{E}) \coloneqq m_0 \, w(0) + \dots + m_{n-1} \, w(n-1).
+\]
+\end{defi}
+Notice that the rank is immediately recovered from the multiplicity vector as $m = m_0 + \dots + m_{n-1}$.
+
+By construction the tautological line bundle $\O(\tfrac{1}{n}p)$ has weight $1$ in $p$, i.e. we have
+\begin{equation}
+m_p(\O(\tfrac{1}{n}p)) = 1 \cdot w(1).
+\end{equation}
+
+The other numerical invariant associated to a vector bundle is its degree. We need to define a notion of degree for vector bundles on $\XX$, respecting the classical formulas for the degree of the direct sum and tensor product of two vector bundles. Keep in mind that we want to identify vector bundles on $X$ with their pullback along $\pi$, so we want
+\begin{equation}
+\pi^* \colon \Bun_n(X) \to \Bun_n(\XX)
+\end{equation}
+to be degree preserving. It turns out that this property completely determines the definition of the degree.
+
+\begin{defi}
+Let $K(\XX)$ denote the Groethendieck group of the stacky curve $\XX$. Then the degree is defined to be the unique group homomorphism
+\begin{equation}
+\deg\colon K(\XX) \to \Qb
+\end{equation}
+such that the pullback $\pi^*\colon K(X) \to K(\XX)$ is degree preserving.
+\end{defi}
+See \cite[\S 1.2]{Taams} for a more explicit definition. From \zcref{eq: pullback of O(p)} we get
+\begin{equation}
+\deg(\O(\tfrac{1}{n}p)) = \tfrac{1}{n},
+\end{equation}
+which further justifies the notation $\O(\tfrac{1}{n}p)$.
+% In practice, we have that the degree of a vector bundles equals by definition the degree of its determinantal line bundles and for line bundles we have an explicit description.
+% \begin{thm}\cites[Corollary 3.2.1]{Cadman}[Corollary 1.2.11]{Taams} \label{picard group stacky curve}
+% Let $\mc{L}$ be a line bundle on $\XX$. Let $w$ be the unique weight appearing in $m_p(\mc{L})$. Then there exist a unique (up to isomorphism) line bundle $L$ on $X$ such that
+% \begin{equation}\label{line bundle on stacky curve}
+% \mc{L} \cong \pi^*L \otimes \O(\tfrac{1}{n}p)^{w}.
+% \end{equation}
+% In particular, $L$ is characterized by the property $\pi_* \mc{L} \cong L$.
+% \end{thm}
+
+% \begin{rmk}
+% Using the above decomposition, we get
+% \begin{equation}
+% \deg(\mc{L}) = \deg L + \tfrac{w}{n}.
+% \end{equation}
+% \end{rmk}
 
 
 \printbibliography

@@ -1,0 +1,130 @@
+%\documentclass[class=article, crop=false]{standalone}
+\documentclass{article}
+
+\title{Introduction}
+\author{Anna Borri}
+% \date{August 2025}
+
+\input{../preamble/packages}
+%\addbibresource{../bibliography.bib}
+\input{../preamble/theorems}
+\input{../preamble/shortcuts}
+
+\begin{document}
+Simpson's non-abelian Hodge correspondence establishes a diffeomorphism between different moduli spaces of sheaves on a projective variety $X$ over the complex numbers.
+Specifically, let $M_{n,Dol}^0(X)$ be the moduli space of semistable Higgs bundles of rank $n$ and degree $0$ on $X$ and let
+\begin{equation}
+M_{n,B}^0(X) \coloneqq \left\{ \Hom(\pi_1(X), GL_n) \right\} \modd GL_n
+\end{equation} 
+be the variety of $n$-dimensional representations of the fundamental group of $X$. Then Simpson's correspondence is a diffeomorphism
+\begin{equation}
+\varphi\colon M_{n,Dol}^0(X) \to M_{n,B}^0(X) \label{simpson correspondence}
+\end{equation}
+between these varieties, inducing therefore an isomorphism of their cohomology rings.
+Since we are considering varieties over $\Cb$, the cohomology groups are endowed with mixed Hodge structures. But the morphism $\varphi$ is not algebraic and doesn't preserve the Hodge structures. Therefore, a natural question is to try and understand how $\varphi$ relates the Hodge structures.
+
+In order to understand this, it is convenient to factor the pullback $\varphi^*$ into pieces that are easier to understand.
+First of all, the Riemann-Hilbert correspondence establishes a diffeomorphism
+\begin{equation}
+M_{n,B}^0(X) \simeq M_{n, DR}^0(X)
+\end{equation}
+between the character variety $Rep(\pi_1(X), GL_n)$ and the De Rham moduli space, i.e. the moduli space parametrizing pairs $(\mc{E}, \nabla)$ where $\mc{E}$ is a vector bundle of rank $n$ on $X$ and
+\begin{equation}
+\nabla\colon \mc{E} \to \mc{E}\otimes\Omega_X
+\end{equation}
+is a flat connection on $\mc{E}$.
+
+Simpson introduced the notion of $\lambda$-connection as a way to interpolate between connections and Higgs fields. For a fixed complex parameter $\lambda$, a $\lambda$-connection on a vector bundle $\mc{E}$ is a $\Cb$-linear morphism
+\begin{equation}
+\nabla_{\lambda}\colon \mc{E} \to \mc{E} \otimes \Omega_X,
+\end{equation}
+respecting the Leibniz rule up to the scalar $\lambda$, namely such that
+\begin{equation}
+\nabla_{\lambda}(f \cdot s) = f \cdot \nabla(s) + \lambda \, s \otimes \dd f.
+\end{equation}
+Notice that for $\lambda = 1$ we recover the notion of a connection, while for $\lambda = 0$ we get an $\O_X$-linear morphism $\mc{E} \to \mc{E}\otimes \Omega_X$, making $(\mc{E}, \nabla_0)$ into a Higgs bundle.
+
+Let $M_{n, Hdg}^0(X)$ be the moduli space parametrizing triples $(\lambda, \mc{E}, \nabla)$, where $\lambda$ is a complex parameter, $\mc{E}$ is a rank $n$ and degree $0$ vector bundle on $X$ and $\nabla$ is a $\lambda$-connection on $X$. Th multiplicative group $\Gb_m$ acts on $M_{n, Hdg}^0(X)$ by scaling of $\nabla$. In particular, the projection $(\lambda, \mc{E}, \nabla) \mapsto \lambda$ defines a $\Gb_m$-equivariant morphism
+\begin{equation}
+f \colon M_{n, Hdg}^0(X) \to \Ab^1,
+\end{equation}
+where $\Gb_m$ acts on $\Ab^1$ with weight one. The fibers of $f$ over $0$ and $1$ are $M_{n, Dol}^0(X)$ and $M_{n, DR}^0(X)$ respectively, i.e. we have the following picture
+\begin{equation}
+\begin{tikzcd}
+	{M_{n, Dol}^0(X)} & {M_{n,Hdg}^0(X)} & {M_{DR}} & {M_{n,B}^0(X)} \\
+	{\{ 0 \}} & {\Ab^1} & {\{ 1 \}.}
+	\arrow["i", hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["f", from=1-2, to=2-2]
+	\arrow["j"', hook', from=1-3, to=1-2]
+	\arrow["\psi", "\cong"', from=1-3, to=1-4]
+	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-3, to=2-2]
+\end{tikzcd} \label{moduli diagram}
+\end{equation}
+Using the fact that the morphism $f$ is $\Gb_m$-equivariant and that the fibers over all $\lambda \neq 0$ are isomorphic, one can show that $i$ and $j$ induce isomorphisms in cohomology. They are moreover algebraic maps, so they induce an isomorphism of mixed Hodge structures on between the cohomology of $M_{n,Dol}^0(X)$ and $M_{n, DR}(X)$. Finally, we need to understand how $\psi$ acts on the Hodge structures. In \cite[]{Shende-weights}, Shende approached this problem by replacing $X$ with a simplicial scheme $\Delta_X$ obtained by a trialeftngulation. The advantage of using this approach is that the simplicial scheme thus constructed admits an algebraic version of a universal local system, which can be used to compute the hodge weights.
+
+Notice that the problem explained so far concerns only vector bundles of degree $0$. Indeed, in order for a vector bundle to admit a nontrivial flat connection, it needs to have degree $0$. On the other side, positive degree vector bundles can admit nontrivial Higgs fields, so we would like to have a version of \eqref{simpson correspondence} for positive degree Higgs bundles.
+The purpose of this article is to study a version of \eqref{simpson correspondence} for vector bundles of nonzero degree in the case where $X$ is a genus $g$ curve and to apply Shende's technique to study the Hodge structure also in this case. Thanks to [Simpson], we know that in the degree $d$ case, the character variety in \eqref{simpson correspondence} should be replaced by
+\begin{equation}
+\left\{ (A_i, B_i) \in GL_n^{2g} \mymid \prod_{i=1}^{2g}[A_i, B_i]=e^{\frac{2 \pi i}{n} d} \right\} \modd \, GL_n. \label{stacky character variety}
+\end{equation}
+Our main contribution, is to interpret this space as character variety of a stacky curve, and use this interpretation to get an analogue of the picture described in \zcref{moduli diagram} and replicate Shende's argument.
+Indeed, \eqref{stacky character variety} is a connected component of the variety of representations of the group
+\begin{equation}
+\left< a_i, b_i, c \mid i=1,\dots,g, \; \prod_{i=1}^g [a_i, b_i]=c, \; c^n=1 \right>.
+\end{equation}
+The key idea is that this group can be seen as the fundamental group of an orbifold curve with a singularity of order $n$, which algebraically corresponds to a stacky curve with a single stacky point with stabilizer $\mu_n$. If we let $\mc{X}$ be such a stacky curve, then we get the analogue of \eqref{moduli diagram}
+\begin{equation}
+\begin{tikzcd}
+	{M_{n, Dol}^0(\mc{X})} & {M_{n,Hdg}^0(\mc{X})} & {M_{DR}} & {M_{n,B}^0(\mc{X})} \\
+	{\{ 0 \}} & {\Ab^1} & {\{ 1 \}.}
+	\arrow["i", hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["f", from=1-2, to=2-2]
+	\arrow["j"', hook', from=1-3, to=1-2]
+	\arrow["\psi", "\cong"', from=1-3, to=1-4]
+	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-3, to=2-2]
+\end{tikzcd} \label{moduli diagram stacky}
+\end{equation}
+The stacky curve $\mc{X}$ admits a line bundle $\O(\frac{1}{n})$of fractional degree, which we can use to twist degree $d$ vector bundles into degree $0$ vector bundles.
+In particular, starting from a degree $d$ vector bundle $\mc{E}$ on $X$, we can pull it bach along $\pi\colon \mc{X} \to X$ and get a degree $d$ vector bundle on $\mc{X}$ with trivial type in the stacky point. After twisting, we get a vector bundle of degree $0$ on $\mc{X}$ which in the stacky point $p$ realizes the $\mu_n$-representation
+\begin{equation}
+\rho_n^{-d} \coloneqq 
+\begin{pmatrix}
+    \zeta_n^{-d} &  &  \\
+     & \ddots &  \\
+     &  & \zeta_n^{-d} \\
+\end{pmatrix}.
+\end{equation}
+
+The described procedure lifts to an isomorphism of stacks
+\begin{equation}
+\mc{M}_n^d(X) \cong \mc{M}_{n, \text{triv}}^d(X) \cong \mc{M}_{n, \rho_n^{-d}}(\mc{X}),
+\end{equation}
+which extends to the various moduli stacks of vector bundles described above.
+In particular, looking at the connected component of \eqref{moduli diagram stacky} determined by the invariants $(n, d, \rho_n^{-d})$, we recover a version of \eqref{simpson correspondence} for degree $d$ vector bundles on $X$.
+
+Finally, we want to use \eqref{moduli diagram stacky} to compare the Hodge structures on $\mc{M}_{n, \rho_n^{-d}}(\mc{X})$ and on
+\begin{equation}
+\left\{ (A_i, B_i) \in GL_n^{2g} \mymid \prod_{i=1}^{2g}[A_i, B_i]=e^{\frac{2 \pi i}{n} d} \right\} \modd \, GL_n.
+\end{equation}
+In the case of \eqref{moduli diagram}, this was done by Shende in \cite[]{Shende-weights}, by replacing the complex manifold $X$ with a simplicial scheme $\Delta_X$ obtained from a triangulation of $X$. The key features of $\Delta_X$ are that its fundamental group coincides with the one of $X$, so it can be used to construct the stack of local systems on $X$, and that it has trivial Hodge Structure, giving the cohomology of moduli spaces on $\Delta_X$ an easier Hodge structure.
+Explicitly, Shende uses an isomorphism
+\begin{equation}
+[\Hom(\pi_1(X), GL_n) / GL_n ] \cong \inHom_{SSch}(\Delta_X, BG)
+\end{equation}
+to study how \eqref{simpson correspondence} acts on the Hodge weights.
+
+In the final part of the article, we replicate Shende's argument in the case we considered, by replacing the stacky curve $\mc{X}$ with a simplicial scheme $\Delta_{\mc{X}}$ realizing its fundamental group.
+
+
+\printbibliography
+\end{document}

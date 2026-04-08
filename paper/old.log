@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  8 APR 2026 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  31 MAR 2026 17:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/anna/Documents/progetto latex/paper/paper"
-(/home/anna/Documents/progetto latex/paper/paper.tex
+**"/home/anna/Documents/progetto latex/paper/old"
+(/home/anna/Documents/progetto latex/paper/old.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -910,8 +910,9 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 13.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) (./paper.aux)
-\openout1 = `paper.aux'.
+)
+No file old.aux.
+\openout1 = `old.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -933,20 +934,20 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `paper.bcf'.
+\openout3 = `old.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'paper.bbl' found.
- (./paper.bbl)
+Package biblatex Info: ... file 'old.bbl' not found.
+
+No file old.bbl.
 Package biblatex Info: Reference section=0 on input line 13.
 Package biblatex Info: Reference segment=0 on input line 13.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1014,82 +1015,98 @@ Package zref-clever Info: Loaded support for 'amsmath' package.
 Package zref-clever Info: Loaded support for 'mathtools' package.
 
 Package hyperref Info: Link coloring ON on input line 13.
- (./paper.out) (./paper.out)
 \@outlinefile=\write6
-\openout6 = `paper.out'.
+\openout6 = `old.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 16.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 16.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 16.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 16.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 16.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 16.
+(Font)              scaled to size 10.42007pt on input line 14.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 16.
+(Font)              scaled to size 7.91925pt on input line 14.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 16.
+(Font)              scaled to size 6.25204pt on input line 14.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 16.
+(Font)              scaled to size 10.42007pt on input line 14.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 16.
+(Font)              scaled to size 7.91925pt on input line 14.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 16.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16.
+(Font)              scaled to size 6.25204pt on input line 14.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 16.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 24.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (2.78093pt too wide) in paragraph at lines 16--18
-[]\T1/ppl/m/n/10 Simpson's non abelian Hodge cor-re-spon-dence es-tab-lishes a home-o-mor-phism be-tween the mod-
- []
 
-
-Overfull \hbox (8.7868pt too wide) in paragraph at lines 54--56
-\T1/ppl/m/n/10 and Simp-son's cor-re-spon-dence shows that the an-a-lytic spaces un-der-ly-ing $\OMS/zplm/m/n/10 M[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$ \T1/ppl/m/n/10 and $\OMS/zplm/m/n/10 M[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$
- []
+LaTeX Warning: Citation 'Shende-weights' on page 1 undefined on input line 68.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-Overfull \hbox (1.3199pt too wide) in paragraph at lines 74--75
-[]\T1/ppl/m/n/10 The main pur-pose of this ar-ti-cle is to give an al-ter-na-tive de-scrip-tion of $\OMS/zplm/m/n/10 M[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$ \T1/ppl/m/n/10 and $\OMS/zplm/m/n/10 M[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )$\T1/ppl/m/n/10 ,
- []
+
+LaTeX Warning: Reference `simpson correspondence' on page 2 undefined on input line 70.
+
+
+LaTeX Warning: Reference `simpson correspondence' on page 2 undefined on input line 71.
+
+
+LaTeX Warning: Reference `simpson correspondence' on page 2 undefined on input line 71.
+
+
+LaTeX Warning: Reference `moduli diagram' on page 2 undefined on input line 75.
+
+
+LaTeX Warning: Reference `stacky character variety' on page 2 undefined on input line 76.
+
+
+LaTeX Warning: Reference `moduli diagram' on page 2 undefined on input line 80.
+
+
+LaTeX Warning: Reference `moduli diagram stacky' on page 2 undefined on input line 113.
+
+
+LaTeX Warning: Reference `simpson correspondence' on page 2 undefined on input line 113.
 
 [2]
-Overfull \hbox (8.55098pt too wide) detected at line 127
-[][]
- []
 
-[3] [4]
+LaTeX Warning: Reference `moduli diagram stacky' on page 3 undefined on input line 115.
 
-LaTeX Warning: Citation 'abramovich-vistoli' on page 5 undefined on input line 208.
 
-[5]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 269.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [6{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./paper.aux)
+LaTeX Warning: Reference `moduli diagram' on page 3 undefined on input line 119.
+
+
+LaTeX Warning: Citation 'Shende-weights' on page 3 undefined on input line 119.
+
+
+LaTeX Warning: Reference `simpson correspondence' on page 3 undefined on input line 124.
+
+
+LaTeX Warning: Empty bibliography on input line 129.
+
+[3] (./old.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1098,30 +1115,39 @@ L3 programming layer <2024-01-22>
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 5372352A1478AECCE816E70783F9816F;331.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `old.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `old.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                paper
+(biblatex)                old
 (biblatex)                and rerun LaTeX afterwards.
 
-Package logreq Info: Writing requests to 'paper.run.xml'.
-\openout1 = `paper.run.xml'.
+Package logreq Info: Writing requests to 'old.run.xml'.
+\openout1 = `old.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36816 strings out of 474222
- 748012 string characters out of 5748733
- 1949975 words of memory out of 5000000
- 58420 multiletter control sequences out of 15000+600000
- 585430 words of font info for 100 fonts, out of 8000000 for 9000
+ 36454 strings out of 474222
+ 738518 string characters out of 5748733
+ 1951975 words of memory out of 5000000
+ 58093 multiletter control sequences out of 15000+600000
+ 580088 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,19n,110p,852b,1775s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on paper.pdf (6 pages, 176531 bytes).
+ 103i,15n,110p,851b,1790s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on old.pdf (3 pages, 111427 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 75 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
