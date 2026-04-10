@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  23 MAR 2026 16:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.16)  9 APR 2026 11:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -957,12 +957,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-
-
-Package biblatex Warning: File 'main.bbl' is wrong format version - expected 3.2.
-
 Package biblatex Info: ... file 'main.bbl' found.
-(./main.bbl)
+ (./main.bbl)
 Package biblatex Info: Reference section=0 on input line 13.
 Package biblatex Info: Reference segment=0 on input line 13.
 
@@ -1279,105 +1275,66 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 571.
 
 [36] [37] [38] [39]) [40]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 29.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Overfull \hbox (22.93538pt too wide) in paragraph at lines 30--30
+\T1/ppl/m/n/10 Clas-sics. Reprint of the 1999 edi-tion [MR1711612]. Birkhäuser Ver-lag, Basel, 2009, pp. xvi+510.
+ []
 
-LaTeX Warning: Empty bibliography on input line 29.
 
-(./main.aux (./sections/fundamental-group.aux) (./sections/sheaves-on-specAmodG.aux) (./sections/sheaves-on-a-stacky-curve.aux) (./sections/moduli-spaces-of-vector-bundles.aux) (./sections/dolbeault-moduli-spaces.aux) (./sections/de-Rham-moduli-space.aux) (./sections/non-abelian-hodge-homeomorphism.aux) (./sections/shendes-argument.aux))
+Overfull \hbox (4.46786pt too wide) in paragraph at lines 30--30
+\T1/ppl/m/n/10 jec-tive hy-per-käh-ler va-ri-eties^^Q. In: \T1/ppl/m/it/10 Astérisque \T1/ppl/m/n/10 370 (2015), pp. 113^^U156. \T1/ppl/m/sc/10 issn\T1/ppl/m/n/10 : 0303-1179,2492-
+ []
+
+
+Overfull \hbox (1.5954pt too wide) in paragraph at lines 30--30
+\T1/ppl/m/n/10 pp. 632^^U658. \T1/ppl/m/sc/10 issn\T1/ppl/m/n/10 : 0024-6115,1460-244X. \T1/ppl/m/sc/10 doi\T1/ppl/m/n/10 : [][]$\T1/cmtt/m/n/10 10 . 1112 / S0024611503014618$[][]\T1/ppl/m/n/10 . \T1/ppl/m/sc/10 url\T1/ppl/m/n/10 : [][]$\T1/cmtt/m/n/10 https :
+ []
+
+
+Overfull \hbox (3.04723pt too wide) in paragraph at lines 30--30
+\T1/ppl/m/n/10 sym-plec-tic sur-faces^^Q. In: \T1/ppl/m/it/10 J. Reine Angew. Math. \T1/ppl/m/n/10 544 (2002), pp. 61^^U82. \T1/ppl/m/sc/10 issn\T1/ppl/m/n/10 : 0075-4102,1435-
+ []
+
+[41
+
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Overfull \hbox (3.56914pt too wide) in paragraph at lines 30--30
+[]\T1/ppl/m/n/10 Behrang \T1/ppl/m/sc/10 Noohi\T1/ppl/m/n/10 . \T1/ppl/m/it/10 Foun-da-tions of Topo-log-i-cal Stacks I\T1/ppl/m/n/10 . 2005. arXiv: [][]$\T1/cmtt/m/n/10 math / 0503247$ [math.AG][][]\T1/ppl/m/n/10 .
+ []
+
+
+Overfull \hbox (18.00098pt too wide) in paragraph at lines 30--30
+[]\T1/ppl/m/n/10 Carlos \T1/ppl/m/sc/10 Simp-son\T1/ppl/m/n/10 . ^^P  The Hodge fil-tra-tion on non-abelian co-ho-mol-ogy^^Q. In: \T1/ppl/m/it/10 Al-ge-braic geometry---
+ []
+
+[42] (./main.aux (./sections/fundamental-group.aux) (./sections/sheaves-on-specAmodG.aux) (./sections/sheaves-on-a-stacky-curve.aux) (./sections/moduli-spaces-of-vector-bundles.aux) (./sections/dolbeault-moduli-spaces.aux) (./sections/de-Rham-moduli-space.aux) (./sections/non-abelian-hodge-homeomorphism.aux) (./sections/shendes-argument.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 70CC4BA390EB0E724473BD5E1E7832B1;4818.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 41104 strings out of 474222
- 865208 string characters out of 5748733
+ 41158 strings out of 474222
+ 866668 string characters out of 5748733
  1967975 words of memory out of 5000000
- 62458 multiletter control sequences out of 15000+600000
- 617432 words of font info for 198 fonts, out of 8000000 for 9000
+ 62502 multiletter control sequences out of 15000+600000
+ 619995 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,21n,110p,747b,1952s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{cite.0@kerodon} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Heinloth-Gm-gerbes} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Olsson-sheaves-on-artin-stacks} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@SimplicialHomotopyTheory} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Shende-weights} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Tamas-Hausel} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@markman2001} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@MARKMAN2006} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Simpson-Hodge-filtration} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Hausel-RodriguezVillega} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@appendix-by-nakajima} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@simpson-local_systems_on_proper} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@abramovich-vistoli} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Taams} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Cadman} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Douady2020} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@SGA1-IX} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Noohi-paper} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Noohi-foundations} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Noohi-thesis} has been referenced but does not exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (40 pages, 306914 bytes).
+ 103i,21n,110p,747b,1950s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (42 pages, 353547 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 180 named destinations out of 1000 (max. 500000)
+ 736 PDF objects out of 1000 (max. 8388607)
+ 658 compressed objects within 7 object streams
+ 183 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

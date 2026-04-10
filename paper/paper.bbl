@@ -19,6 +19,48 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
+    \entry{abramovich-vistoli}{article}{}
+      \name{author}{2}{}{%
+        {{hash=97187eb4a6c3cbfa74d8150b2e476067}{%
+           family={Abramovich},
+           familyi={A\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4653d7593ec79bcfc9e4cfca1b52ab61}{%
+           family={Vistoli},
+           familyi={V\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{fullhash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{bibnamehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authorbibnamehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authornamehash}{35afeb63c430e88ad8e034685112b2f9}
+      \strng{authorfullhash}{35afeb63c430e88ad8e034685112b2f9}
+      \field{labelalpha}{AV02}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0894-0347,1088-6834}
+      \field{journaltitle}{J. Amer. Math. Soc.}
+      \field{number}{1}
+      \field{title}{Compactifying the space of stable maps}
+      \field{volume}{15}
+      \field{year}{2002}
+      \field{pages}{27\bibrangedash 75}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.1090/S0894-0347-01-00380-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/S0894-0347-01-00380-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/S0894-0347-01-00380-0
+      \endverb
+    \endentry
     \entry{Cadman}{article}{}
       \name{author}{1}{}{%
         {{hash=ee296d1babfb0b6bd14b29207b80189e}{%
@@ -49,6 +91,128 @@
       \verb{doi}
       \verb 10.1353/ajm.2007.0007
       \endverb
+    \endentry
+    \entry{appendix-by-nakajima}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ee3c0ecdee75a34a1be977e9970a8e0c}{%
+           family={Crawley-Boevey},
+           familyi={C\bibinithyphendelim B\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5f315521749bb6385ae6f9e0746e0516}{%
+           family={Van\bibnamedelimb den\bibnamedelima Bergh},
+           familyi={V\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{379e11243e40e8837f8c7fe282757979}
+      \strng{fullhash}{379e11243e40e8837f8c7fe282757979}
+      \strng{bibnamehash}{379e11243e40e8837f8c7fe282757979}
+      \strng{authorbibnamehash}{379e11243e40e8837f8c7fe282757979}
+      \strng{authornamehash}{379e11243e40e8837f8c7fe282757979}
+      \strng{authorfullhash}{379e11243e40e8837f8c7fe282757979}
+      \field{labelalpha}{CV04}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910,1432-1297}
+      \field{journaltitle}{Invent. Math.}
+      \field{note}{With an appendix by Hiraku Nakajima}
+      \field{number}{3}
+      \field{title}{Absolutely indecomposable representations and {K}ac-{M}oody {L}ie algebras}
+      \field{volume}{155}
+      \field{year}{2004}
+      \field{pages}{537\bibrangedash 559}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s00222-003-0329-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00222-003-0329-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00222-003-0329-0
+      \endverb
+    \endentry
+    \entry{Douady2020}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=b2541098261741f88fc53e5fd08db8da}{%
+           family={Douady},
+           familyi={D\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4fd713946e1f9c5a17e6d6a41fc969b1}{%
+           family={Douady},
+           familyi={D\bibinitperiod},
+           given={Régine},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{fullhash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{bibnamehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authorbibnamehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authornamehash}{19b550d524241a19d4732fcfd3e6f535}
+      \strng{authorfullhash}{19b550d524241a19d4732fcfd3e6f535}
+      \field{labelalpha}{DD20}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Let B be a topological space. A space overOver B (space)B is a topological space X together with a continuous map {\$}{\$}{\backslash}pi :X{\backslash}rightarrow B{\$}{\$}called projection.}
+      \field{booktitle}{Algebra and Galois Theories}
+      \field{isbn}{978-3-030-32796-5}
+      \field{title}{Coverings}
+      \field{year}{2020}
+      \field{pages}{179\bibrangedash 253}
+      \range{pages}{75}
+      \verb{doi}
+      \verb 10.1007/978-3-030-32796-5_4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-030-32796-5_4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-030-32796-5_4
+      \endverb
+    \endentry
+    \entry{SGA1-IX}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=fb0e3184fdd2fcd28fa74ca67d7cdcc1}{%
+           family={Grothendieck},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{fullhash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{bibnamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorbibnamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authornamehash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \strng{authorfullhash}{fb0e3184fdd2fcd28fa74ca67d7cdcc1}
+      \field{labelalpha}{Gro71}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Revêtements Etales et Groupe Fondamental}
+      \field{isbn}{978-3-540-36910-3}
+      \field{title}{Descente Des Morphismes Etales. Application Au Groupe Fondamental}
+      \field{year}{1971}
+      \field{pages}{228\bibrangedash 260}
+      \range{pages}{33}
     \endentry
     \entry{MixedHodgePolynomials}{article}{}
       \name{author}{2}{}{%
@@ -93,6 +257,72 @@
       \verb https://doi.org/10.1007/s00222-008-0142-x
       \endverb
     \endentry
+    \entry{Hausel-RodriguezVillega}{article}{}
+      \name{author}{2}{}{%
+        {{hash=044c11ee38ec9311f63c208b2db20b4f}{%
+           family={Hausel},
+           familyi={H\bibinitperiod},
+           given={Tamás},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d25d8a1e916239fa2ac8e7e392d3765c}{%
+           family={Rodriguez\bibnamedelima Villegas},
+           familyi={R\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e10e1e4669b22a5ed18ff740d009498d}
+      \strng{fullhash}{e10e1e4669b22a5ed18ff740d009498d}
+      \strng{bibnamehash}{e10e1e4669b22a5ed18ff740d009498d}
+      \strng{authorbibnamehash}{e10e1e4669b22a5ed18ff740d009498d}
+      \strng{authornamehash}{e10e1e4669b22a5ed18ff740d009498d}
+      \strng{authorfullhash}{e10e1e4669b22a5ed18ff740d009498d}
+      \field{labelalpha}{HR15}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-2-85629-806-0}
+      \field{issn}{0303-1179,2492-5926}
+      \field{journaltitle}{Astérisque}
+      \field{number}{370}
+      \field{title}{Cohomology of large semiprojective hyperkähler varieties}
+      \field{year}{2015}
+      \field{pages}{113\bibrangedash 156}
+      \range{pages}{44}
+    \endentry
+    \entry{Noohi-foundations}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ef46964fa6644f7c88eae2cf25c8a8ea}{%
+           family={Noohi},
+           familyi={N\bibinitperiod},
+           given={Behrang},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{fullhash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{bibnamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorbibnamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authornamehash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \strng{authorfullhash}{ef46964fa6644f7c88eae2cf25c8a8ea}
+      \field{labelalpha}{Noo05}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.AG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Foundations of Topological Stacks I}
+      \field{year}{2005}
+      \verb{eprint}
+      \verb math/0503247
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/math/0503247
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/math/0503247
+      \endverb
+    \endentry
     \entry{Shende-weights}{article}{}
       \name{author}{1}{}{%
         {{hash=e0753055678dd73b837981566ecffb18}{%
@@ -127,6 +357,85 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1093/imrn/rnv363
+      \endverb
+    \endentry
+    \entry{simpson-local_systems_on_proper}{article}{}
+      \name{author}{1}{}{%
+        {{hash=cc5a29908c62a451e5c04382f75518ef}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{fullhash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{bibnamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorbibnamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authornamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorfullhash}{cc5a29908c62a451e5c04382f75518ef}
+      \field{extraname}{1}
+      \field{labelalpha}{Sim11}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1558-8599,1558-8602}
+      \field{journaltitle}{Pure Appl. Math. Q.}
+      \field{number}{4}
+      \field{title}{Local systems on proper algebraic {$V$}-manifolds}
+      \field{volume}{7}
+      \field{year}{2011}
+      \field{pages}{1675\bibrangedash 1759}
+      \range{pages}{85}
+      \verb{doi}
+      \verb 10.4310/PAMQ.2011.v7.n4.a27
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/PAMQ.2011.v7.n4.a27
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/PAMQ.2011.v7.n4.a27
+      \endverb
+    \endentry
+    \entry{Simpson-Hodge-filtration}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=cc5a29908c62a451e5c04382f75518ef}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Amer. Math. Soc., Providence, RI}%
+      }
+      \strng{namehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{fullhash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{bibnamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorbibnamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authornamehash}{cc5a29908c62a451e5c04382f75518ef}
+      \strng{authorfullhash}{cc5a29908c62a451e5c04382f75518ef}
+      \field{extraname}{2}
+      \field{labelalpha}{Sim97}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Algebraic geometry---{S}anta {C}ruz 1995}
+      \field{isbn}{0-8218-0895-8}
+      \field{series}{Proc. Sympos. Pure Math.}
+      \field{title}{The {H}odge filtration on nonabelian cohomology}
+      \field{volume}{62, Part 2}
+      \field{year}{1997}
+      \field{pages}{217\bibrangedash 281}
+      \range{pages}{65}
+      \verb{doi}
+      \verb 10.1090/pspum/062.2/1492538
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/pspum/062.2/1492538
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/pspum/062.2/1492538
       \endverb
     \endentry
     \entry{Taams}{thesis}{}
