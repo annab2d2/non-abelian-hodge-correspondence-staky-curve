@@ -87,24 +87,24 @@ In order to get back the picture in \eqref{eq: pullback diagram}, we need to red
 In what follows we give a more detailed description of how this insight is formalized.
 
 Vector bundles on $\XX$ have a third numerical invariant beyond rank and degree, namely the representation obtained as stalk at the stacky point. We denote by $w(-d)$ the weight $-d$ character of $\mu_n$ and by $n \cdot w(-d)$ the corresponding $n$-dimensional representation. Then the main result comparing moduli spaces on $X$ and on $\XX$ is the following.
-\begin{thm}
+\begin{introthm}
 The twisted pullback and pushforward along the moduli map $\mc{X} \to X$ define equivalences of algebraic stacks
 \begin{equation}
 \mc{M}_{n, Dol}^d(X) \cong \mc{M}_{n \cdot w(-d), Dol}^0(\XX).
 \end{equation}
-\end{thm}
+\end{introthm}
 
 Passing to the study of the Betti moduli space, a first observation is that the replacement of $p$ by an orbifold point changes the fundamental group of $X$ by adding a cyclic monodromy element. Namely, we get
 \begin{equation} \label{eq: fundamental group of stacky curve}
 \pi_1(\Xc) = \left\langle a_i, \, b_i, \, c \mymid \prod_{i = 1}^g [a_i, b_i] = c, \; c^n = 1 \right\rangle .
 \end{equation}
-Then, we get the twisted character variety thanks to the following theorem.
-\begin{thm} \label{the: twisted character variety}
+Then we get the twisted character variety thanks to the following theorem.
+\begin{introthm} \label{the: twisted character variety}
 The connected component of the Betti moduli stack of $\mc{X}$ corresponding to the numerical invariant $n \cdot w(-d)$ is isomorphic to the twisted Betti moduli space of $X$, i.e. we have
 \begin{equation}
 \mc{M}_{n \cdot w(-d), B}^0(\mc{X}) = \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} / GL_n \right].
 \end{equation}
-\end{thm}
+\end{introthm}
 
 Just like in the case described in \eqref{eq: pullback diagram}, these moduli spaces can be realized as the special and the generic fiber inside the Hodge moduli space, i.e. we have
 \begin{equation}
@@ -138,10 +138,10 @@ H^*(\mc{M}_{n \cdot w(-d), DR}^0(\XX)) \cong H^*(\mc{M}_{n \cdot w(-d),B}^0(\XX)
 
 This approach has the further advantage of simplifying the calculation of the Hodge weights of the tautological classes on $\mc{M}_{n, B}^d(X)$. In \cite[]{Shende-weights}, Shende computed the weights of the tautological classes on the character variety of a topological space by replacing the space by a triangulation and then realizing this triangulation as a simplicial scheme. He later employed the approach presented in \cite[\S 2.2]{MixedHodgePolynomials} to compute compute the weights also in the case of twisted character varieties, by reducing it to the case of $PGL_n$-character varieties. The following is the result of this computation.
 \begin{thm}[Shende] \label{thm shende}
-Under the isomorphism $ H^*(\mc{M}_{n, DR}^0(X)) \cong H^*(\mc{M}_{n, Dol}^0(X))$, the Künneth components $e_{i,j}$ of the $i$-th Chern class of the universal bundle $c_i(\mc{E}_{\text{univ}})$ are mapped to cohomology classes of weight $2i$. The same holds true in the twisted case, under the isomorphism $ H^*(\mc{M}_{n, DR}^d(X)) \cong H^*(\mc{M}_{n, Dol}^d(X))$.
+Under the isomorphism $ H^*(\mc{M}_{n, DR}^0(X)) \cong H^*(\mc{M}_{n, B}^0(X))$, the Künneth components $e_{i,j}$ of the $i$-th Chern class of the universal bundle $c_i(\mc{E}_{\text{univ}})$ are mapped to cohomology classes of weight $2i$. The same holds true in the twisted case, under the isomorphism $ H^*(\mc{M}_{n, DR}^d(X)) \cong H^*(\mc{M}_{n, B}^d(X))$.
 \end{thm}
 
-Our approach gives an alternative proof for the twisted case, which doesn't need to use the case of $PGL_n$-bundles and the decomposition presented by Hausel and Rodriguez-Villegas in \cite[]{MixedHodgePolynomials}. Indeed, using \zcref{the: twisted character variety} we see that the twisted character variety can be realized as an actual variety of local systems on $\XX$. Therefore Shende's argument can be extend directly to cover this case. The main ingredient is the construction of a simplicial scheme $\Delta_{\XX}$ which realizes a triangulation of the stacky curve $\XX$. In the article we explain in detail the construction of this simplicial decomposition. Once this is done, the argument amounts to using the equivalence
+Our approach gives an alternative proof for the twisted case, which doesn't need to use the case of $PGL_n$-bundles and the decomposition presented by Hausel and Rodriguez-Villegas in \cite[]{MixedHodgePolynomials}. Indeed, using Theorem~\ref{the: twisted character variety} we see that the twisted character variety can be realized as an actual variety of local systems on $\XX$. Therefore Shende's argument can be extend directly to cover this case. The main ingredient is the construction of a simplicial scheme $\Delta_{\XX}$ which realizes a triangulation of the stacky curve $\XX$. In the article we explain in detail the construction of this simplicial decomposition. Once this is done, the argument amounts to using the equivalence
 \begin{equation}
 \mc{M}_{n, B}^0(\XX)=\left[ \text{Hom}(\pi_1(\XX), GL_n) / GL_n \right] \cong \shHom_{SSch}(\Delta_{\XX}, BGL_n)
 \end{equation}
@@ -149,9 +149,9 @@ and the universal object on $\shHom_{SSch}(\Delta_{\XX}, BGL_n)$ to carry out th
 % \begin{thm}
 % The cohomology classes on $\mc{M}_{n, B}^0(\XX)$ obtained as Künneth components of the $i$-th Chern class of the universal bundle on $\mc{M}_{n, B}^0(\XX) \times \XX$ have pure weight $2i$.
 % \end{thm}
-\begin{thm}
+\begin{introthm}
 The cohomology classes on on $\mc{M}_{n, B}^0(\XX)$ obtained by pulling back the $i$-th tautological classes on $\mc{M}_{n, DR}^0(\XX)$ have pure weight $2i$.
-\end{thm}
+\end{introthm}
 
 By restricting to the $n \cdot w(-d)$-component of the Betti moduli space we get an alternative proof of \zcref{thm shende}.
 
@@ -206,19 +206,17 @@ Away from $p$ the morphism $\pi$ is an isomorphism
 \mc{X} \setminus \{ p \} \cong X \setminus \{p\}.
 \end{equation}
 
-{ \color{blue}
 The goal of the construction is to identify vector bundles on $X$ with their pullback along $\pi$. In particular, we need to mention the main properties of the pullback and pushforward functors $\pi^*$ and $\pi_*$.
-\begin{prop}\cite[]{abramovich-vistoli} \label{properties of pullback and pushforward}
+\begin{prop} \label{properties of pullback and pushforward}
 The pullback and pusforward functors along $\pi$ have the following properties.
 \begin{itemize}
     \item The pushforward $\pi_* \colon \qcoh(\XX) \to \qcoh(X)$ is exact and restricts to a functor $\pi_* \colon \Bun(\XX) \to \Bun(X)$. \cite[Theorem 2.3.4]{abramovich-vistoli}
     \item The pullback $\pi_* \colon \qcoh(X) \to \qcoh(\XX)$ is exact. \cite[Proposition 1.2.3]{Taams}. 
-    \item The natural morphism $\O_X \to \pi_* \O_{\XX}$ is an isomorphism. \cite[Theorem 1.2.4]{Taams}
-    \item The natural morphism $\Hom_{\XX}(\O_{\XX}, \pi^* \pi_* \mc{F}) \to \Hom_{\XX}(\O_{\XX}, \mc{F})$ is an isomorphism. \cite[Theorem 1.2.4]{Taams}
-    \item There is a natural isomorphism $\hom_X(\O_X, \pi_* \mc{F}) \to \hom_{\XX}(\O_{\XX}, \mc{F})$. In particular, $H^i(X, \pi_* \mc{F}) = H^i(\XX, \mc{F})$. \cite[Theorem 1.2.4]{Taams}
+    % \item The natural morphism $\O_X \to \pi_* \O_{\XX}$ is an isomorphism. \cite[Theorem 1.2.4]{Taams}
+    % \item The natural morphism $\Hom_{\XX}(\O_{\XX}, \pi^* \pi_* \mc{F}) \to \Hom_{\XX}(\O_{\XX}, \mc{F})$ is an isomorphism. \cite[Theorem 1.2.4]{Taams}
+    % \item There is a natural isomorphism $\Hom_X(\O_X, \pi_* \mc{F}) \to \Hom_{\XX}(\O_{\XX}, \mc{F})$. In particular, $H^i(X, \pi_* \mc{F}) = H^i(\XX, \mc{F})$. \cite[Theorem 1.2.4]{Taams}
 \end{itemize}
 \end{prop}
-}
 
 We now want to understand the numerical invariants that decompose the moduli space of vector bundles on $\XX$ into connected components. Let $\mc{E}$ be a rank $m$ vector bundle on $\XX$. By pulling back along the inclusion of the stacky point
 \begin{equation}
@@ -247,7 +245,7 @@ Since pullback commutes with tensor product and $w(i) \otimes w(j) = w(i+j)$, we
 
 
 \begin{prop}\cite[Example 1.2.9]{Taams} \label{multiplicity of pullback}
-If $F$ is a coherent sheaf on $X$, then $m_p(\pi^* F) = n \cdot w(0)$. Namely, the pullback $\pi^* F$ is endowed with the trivial $\mu_{n}$ action at $p$.
+If $F$ is a coherent sheaf on $X$, then $\underline{m}(\pi^* F) = n \cdot w(0)$. Namely, the pullback $\pi^* F$ is endowed with the trivial $\mu_{n}$ action at $p$.
 \end{prop}
 
 The other numerical invariant associated to a vector bundle is its degree. We need to define a notion of degree for vector bundles on $\XX$, respecting the classical formulas for the degree of the direct sum and tensor product of two vector bundles. Keep in mind that we want to identify vector bundles on $X$ with their pullback along $\pi$, so we want
@@ -269,7 +267,6 @@ See \cite[\S 1.2]{Taams} for a more explicit definition. From \zcref{eq: pullbac
 \end{equation}
 which further justifies the notation $\O(\tfrac{1}{n}p)$.
 
-{ \color{blue}
 In practice, we have an explicit formula to relate the degree of a vector bundle to the degree of its pushforward along $\pi$.
 \begin{prop}\cite[Theorem 1.2.30]{Taams} \label{formula degree-multiplicities}
 Let $\mc{E}$ be a vector bundle on $\XX$ and suppose $\underline{m}(\mc{E}) = m_0 \, w(0) + \dots + m_{n-1} \, w(n-1)$. Then we have
@@ -277,7 +274,7 @@ Let $\mc{E}$ be a vector bundle on $\XX$ and suppose $\underline{m}(\mc{E}) = m_
 \deg \mc{E} = \deg(\pi_* \mc{E}) + \sum_{i=0}^{n-1} i \,  m_i .
 \end{equation}
 \end{prop}
-}
+
 
 % In practice, we have that the degree of a vector bundles equals by definition the degree of its determinantal line bundles and for line bundles we have an explicit description.
 % \begin{thm}\cites[Corollary 3.2.1]{Cadman}[Corollary 1.2.11]{Taams} \label{picard group stacky curve}
@@ -308,7 +305,7 @@ In \cite[\S 2]{Taams} the connected components of $\Bun(\XX)$ are described by a
 \begin{equation}
 d_{i}(\mc{E}) \coloneqq \deg \left( \pi_* \mc{E} \otimes \O(\tfrac{i}{e_p}p) \right)
 \end{equation}
-for $i = 0, \dots , n-1$. But the pair $(\rank \mc{E}, \underline{d}(\mc{E}))$ is equivalent to the pair $(m_p(\mc{E}), \deg \mc{E})$, as one can easily see using \cite[Corollary 1.2.21]{Taams}. Therefore \zcref{connected components of the moduli stack} is indeed the same as \cite[Corollary 2.0.9, Theorem 2.0.10]{Taams}.
+for $i = 0, \dots , n-1$. But the pair $(\rank \mc{E}, \underline{d}(\mc{E}))$ is equivalent to the pair $(\underline{m}(\mc{E}), \deg \mc{E})$, as one can easily see using \cite[Corollary 1.2.21]{Taams}. Therefore \zcref{connected components of the moduli stack} is indeed the same as \cite[Corollary 2.0.9, Theorem 2.0.10]{Taams}.
 \end{rmk}
 
 We are finally ready to compare the moduli spaces of vector bundles on $X$ with moduli spaces of vector bundles on $\XX$.
@@ -381,7 +378,7 @@ Indeed, let $\mc{E} \in \Bun_{n \cdot w(0)}^d(\mc{X})$ be a semistable vector bu
 \[
 \mu(\mc{E}' \otimes \O(-\tfrac{d}{n}p)) = \frac{\deg \mc{E}' - \rank \mc{E}' \frac{d}{n}}{\rank \mc{E}'} = \mu(\mc{E}') - \frac{d}{n}.
 \]
-Repeating the same computation for $\mc{E}$, one shows that $\mu(\mc{E}' \otimes \O(-\frac{d}{n}p)) \leq \mu(\mc{E} \otimes \O(-\frac{d}{n}p))$. The computation in the other direction is completely analogous.
+Repeating the same computation for $\mc{E}$, one shows that $\mu(\mc{E}' \otimes \O(-\frac{d}{n}p)) \leq \mu(\mc{E} \otimes \O(-\frac{d}{n}p))$. The computation in the other direction is analogous.
 
 The thesis follows after composing with the equivalences described in \zcref{pullback and pushforward are equivalences}.
 \end{proof}
@@ -529,7 +526,7 @@ This is a straightforward consequence of \zcref{lemma Dol}, obtained with the sa
 In the previous section we considered the Dolbeault moduli space of the stacky curve $\XX$. Keeping in mind the end goal of studying the non abelian Hodge correspondence on $\XX$, we now come to the study of the two other moduli spaces appearing in the correspondence, namely the De Rham and Betti moduli spaces.
 These are defined as follows
 \begin{gather}
-\mc{M}_{n, DR}(\mc{X}) \coloneqq \left< (\mc{E}, \nabla) \mymid \mc{E}\in \Bun_n(\mc{X}), \; \nabla\colon \mc{E} \to \mc{E}\otimes \Omega_{X} \text{ is a flat connection} \right> \\
+\mc{M}_{n, DR}(\mc{X}) \coloneqq \left< (\mc{E}, \nabla) \mymid \mc{E}\in \Bun_n(\mc{X}), \; \nabla\colon \mc{E} \to \mc{E}\otimes \Omega_{\XX} \text{ is a flat connection} \right> \\
 \mc{M}_{n, B}(\mc{X}) \coloneqq [\Hom(\pi_1(\XX), GL_n) / GL_n].
 \end{gather}
 The Riemann-Hilbert correspondence establishes a natural isomorphism in the analytic topology
@@ -559,7 +556,7 @@ In order to decompose the Betti moduli space in connected components, we first n
 
 Fix a point $x \in \XX \setminus \{p\}$. By $\pi_1(\XX, x)$ we mean the fundamental group of the complex analytic orbifold underlying the stacky curve $\XX$. This is equivalent to considering $\XX$ as a topological stack with respect to the analytic topology and taking Noohi's fundamental group, defined in \cite{Noohi-foundations}.
 
-Since $\XX$ is connected, locally path connected and semilocally $1$-connected, following Noohi's approach we get that $\pi_1(\XX, x)$ can be computed from the covering spaces of $\XX$, as the automorphism group of the fiber functor over $x$, see \cite[18.13, 18.19, 18.22]{Noohi-foundations}. This is analogous to Grothendieck's theory of Galois categories, presented in \cite[]{SGA1-IX}.
+Since $\XX$ is connected, locally path connected and semilocally $1$-connected, following Noohi's approach we get that $\pi_1(\XX, x)$ can be computed from the covering spaces of $\XX$, as the automorphism group of the fiber functor over $x$, see \cite[{}18.13, 18.19, 18.22]{Noohi-foundations}. This is analogous to Grothendieck's theory of Galois categories, presented in \cite[]{SGA1-IX}.
 
 The advantage of computing the fundamental group using covering spaces is that we easily get a version of the Seifert-Van Kampen theorem. This is completely analogous to the classical setting of Galois categories, as exposed for example in \cite[Theorem 4.7.7]{Douady2020}. However, since an explicit version of this theorem in our setting seems to be missing, we report the proof for completeness.
 
@@ -778,7 +775,7 @@ so we get
 Clearly the composition $GL_n(\Cb) \subseteq GL_n(\Cb[x]) \xrightarrow{\text{ev}_0} GL_n(\Cb)$ is the identity, so the representations $\rho$ and $\sigma$ coincide.
 \end{proof}
 
-\begin{cor}
+\begin{cor}\label{cor: betti moduli space decomposition}
 Under the identification \eqref{eq: betti moduli space}, the connected component of the Betti moduli space corresponding to the multiplicity vector $\underline{m}= m_0 \, w(0) + \dots + m_{n-1} \, w(n-1)$ is
 \begin{equation}
 \mc{M}_{\underline{m}, B}(\XX) \cong \left[ \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \mymid \prod_{i=1}^{g}[A_i, B_i] = C_{\underline{m}} \bigg\} / GL_n \right],
@@ -810,7 +807,7 @@ Let $\mc{Y} = \mc{X}$ be the stacky curve that we have studied so far. Of course
 M_{\underline{m}, DR}^0(\mc{X})^{\text{an}} \cong M_{\underline{m}, B}(\mc{Y})^{\text{an}}, \\
 M_{\underline{m}, Dol}^0(\mc{X})^{\text{top}} \cong M_{\underline{m}, DR}^0(\mc{X})^{\text{top}}.
 \end{gather}
-By \zcref{Betti moduli space}, the coarse moduli space $M_{\underline{m}, B}(\XX)$ can be described as a GIT quotient
+By \zcref{cor: betti moduli space decomposition}, the coarse moduli space $M_{\underline{m}, B}(\XX)$ can be described as a GIT quotient
 \begin{equation}
 M_{\underline{m}, B}(\XX) = \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g} \;\bigg|\; \prod_{i=1}^{g}[A_i, B_i] = C_{\underline{m}} \bigg\} \modd GL_n
 \end{equation}
@@ -836,7 +833,7 @@ Of course these homeomorphisms induce isomorphisms in singular cohomology
 \begin{equation}
 H^*(M_{n, Dol}^d(X)) = H^*(M_{n \cdot w(-d), Dol}^d(\XX)) \cong H^*(M_{n \cdot w(-d), DR}^0(\XX)) \cong H^*(M_{n \cdot w(-d), B}(\XX)).
 \end{equation}
-We now give a more explicit description of these isomorphisms, with the goal of understanding how they relate the Hodge structures. The key idea of this approach, due to Simpson, is that the non abelian Hodge correspondence can be understanding as relating the geometry of the generic and the special fiber inside the Hodge moduli space, i.e. the moduli space of vector bundles with $\lambda$-connections.
+We now give a more explicit description of these isomorphisms, with the goal of understanding how they relate the Hodge structures. The key idea of this approach, due to Simpson, is that the non abelian Hodge correspondence can be understood as relating the geometry of the generic and the special fiber inside the Hodge moduli space, i.e. the moduli space of vector bundles with $\lambda$-connections.
 
 \begin{defi}
 Let $\mc{E}$ be a vector bundle on $\XX$. For a fixed complex number $\lambda$, define a \textit{$\lambda$-connection} $\mc{E}$ to be a $\Cb$-linear morphism $\nabla\colon \mc{E} \to \mc{E} \otimes \Omega_{\XX}$, respecting the Leibniz rule up to the scalar $\lambda$, namely
@@ -848,7 +845,7 @@ Define the \textit{Hodge moduli space} of $\XX$ to be the moduli stack parametri
 \begin{equation}
 \mc{M}_{\underline{m}, Hdg}^0(\XX) \coloneqq \left< (\mc{E}, \lambda, \nabla) \mymid
 \begin{gathered}
-\mc{E}\in \Bun_{\underline{m}}^0(\XX), \; \lambda \in \Ab^1, \; \nabla\colon \mc{E} \to \mc{E}\otimes \Omega_{X} \text{ is a } \lambda-\text{connection}, \\
+\mc{E}\in \Bun_{\underline{m}}^0(\XX), \; \lambda \in \Ab^1, \; \nabla\colon \mc{E} \to \mc{E}\otimes \Omega_{\XX} \text{ is a } \lambda-\text{connection}, \\
 (\mc{E}, \nabla) \text{ is semistable}
 \end{gathered}
 \right>.
@@ -891,7 +888,7 @@ Summing up, we have the following diagram
 \end{equation}
 where $\psi$ is defined analytically via the Riemann-Hilbert correspondence and $\pi$ is a trivial fibration over $\Ab^1 \setminus \{0\}$.
 
-Restrict now to the case $\underline{m} = n \cdot w(-d)$ and suppose that $n$ and $d$ are coprime. This hypothesis ensures that in a point $(\mc{E}, \lambda, \nabla)$ is semistable if and and only if it is stable. Consequently, the coarse moduli space $M_{n \cdot w(-d), Hdg}^0(\XX)$ is smooth, the morphism $\pi$ and the moduli map
+Restrict now to the case $\underline{m} = n \cdot w(-d)$ and suppose that $n$ and $d$ are coprime. This hypothesis ensures that in a point $(\mc{E}, \lambda, \nabla)$ is semistable if and and only if it is stable. Consequently, the coarse moduli space $M_{n \cdot w(-d), Hdg}^0(\XX)$ is smooth, the morphism $\pi$ is smooth and the moduli map
 \begin{equation}
 \mc{M}_{n \cdot w(-d), Hdg}^0(\XX) \to M_{n \cdot w(-d), Hdg}^0(\XX)
 \end{equation}
@@ -914,7 +911,7 @@ Descending the diagram \eqref{diagram Hodge} to the coarse moduli spaces we get 
 	\arrow[from=2-3, to=2-2]
 \end{tikzcd}
 \end{equation}
-Using the $\Gb_m$-action, we can use a Bia\l{y}nicki-Birula decomposition of $M_{n \cdot w(-d), Hdg}^{0}(\XX)$ to show that $i$ and $j$ induce isomorphisms in cohomology. The idea to use the Bia\l{y}nicki-Birula decomposition to make this cohomological computation was inspired by by Nakajima's appendix to \cite{appendix-by-nakajima}.
+Using the $\Gb_m$-action, we can use the Bia\l{y}nicki-Birula decomposition of $M_{n \cdot w(-d), Hdg}^{0}(\XX)$ to show that $i$ and $j$ induce isomorphisms in cohomology. The idea to use the Bia\l{y}nicki-Birula decomposition to make this cohomological computation was inspired by by Nakajima's appendix to \cite{appendix-by-nakajima}.
 
 \begin{thm} \label{thm: isomorphic cohomologies}
 The inclusions $i$ and $j$ induce isomorphisms of pure mixed Hodge structures in cohomology.
@@ -931,6 +928,8 @@ Therefore the theorem is just \cite[Corollary 1.3.3]{Hausel-RodriguezVillega}.
 \begin{rmk}
 The proof of \zcref{thm: isomorphic cohomologies} fails to be algebraic in two different ways. On one side, to show that $M_{n \cdot w(-d), Hdg}^0(\XX)$ is a semiprojective variety we employed Simpsons' results \cite[Lemma 10.4, Corollary 10.3]{Simpson-Hodge-filtration}, which are proved analytically. On the other side, the proof of \cite[Corollary 1.3.3]{Hausel-RodriguezVillega} is itself analytic. In the appendix we solve the second issue by giving an algebraic proof of \cite[Corollary 1.3.3]{Hausel-RodriguezVillega}.
 \end{rmk}
+
+\section{The Hodge weights}
 
 
 \include{appendix}
