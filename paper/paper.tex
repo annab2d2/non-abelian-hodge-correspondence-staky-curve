@@ -37,9 +37,9 @@ Notice moreover that the De Rham moduli space is complex-analytically isomorphic
 
 In short, we have the following picture
 \begin{equation} \label{eq: pullback diagram}
-    \begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
+    \begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge, baseline=(current bounding box.center)]
         {\mc{M}_{n, Dol}^0(X)} \& {\mc{M}_{n,Hdg}^0(X)} \& {\mc{M}_{n, DR}^0(X)} \& {\mc{M}_{n,B}^0(X)} \\
-        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \}} \& {} \\
+        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \}} 
         \arrow[hook, from=1-1, to=1-2]
         \arrow[from=1-1, to=2-1]
         \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
@@ -110,7 +110,7 @@ Just like in the case described in \eqref{eq: pullback diagram}, these moduli sp
 \begin{equation}
 \begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
         {\mc{M}_{n \cdot w(-d), Dol}^0(\XX)} \& {\mc{M}_{n \cdot w(-d),Hdg}^0(\XX)} \& {\mc{M}_{n \cdot w(-d), DR}^0(\XX)} \& {\mc{M}_{n \cdot w(-d),B}^0(\XX)} \\
-        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \},} \& {} \\
+        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \},}
         \arrow[hook, from=1-1, to=1-2]
         \arrow[from=1-1, to=2-1]
         \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
@@ -373,6 +373,7 @@ Secondly, the formula for the degree of a tensor product gives
 \[
 \deg\left( \mc{E} \otimes \O(-\tfrac{d}{n}p) \right) = \deg \mc{E} + n \left( -\frac{d}{n} \right) = 0.
 \]
+
 Finally, notice how these equivalences also preserve (semi)stability.
 Indeed, let $\mc{E} \in \Bun_{n \cdot w(0)}^d(\mc{X})$ be a semistable vector bundle. Since the indicated functors are equivalences, in particular they preserve subbundles. Therefore, it suffices to show that if $\mc{E}' \subseteq \mc{E}$ is a subbundle such that $\mu(\mc{E}') \leq \mu(\mc{E})$, then $\mu(\mc{E}' \otimes \O(-\frac{d}{n}p)) \leq \mu(\mc{E} \otimes \O(-\frac{d}{n}p))$. This follows from the simple computation
 \[
@@ -387,13 +388,13 @@ The thesis follows after composing with the equivalences described in \zcref{pul
 \section{Higgs bundles and Dolbeault moduli space}
 Recall that the end goal is to study the non abelian Hodge correspondence in degree $0$ on $\XX$ to get information about the non abelian Hodge correspondence in degree $d$ on $X$. For this reason, we need to elevate \zcref{thm: equivalence for Bun} to an equivalence of stacks of Higgs bundles.
 
-A first step in this direction is to compare the cotangent sheaf on $X$ and on $\XX$.
-\begin{thm} \cite[Theorem 1.2.34]{Taams} \label{omega mc(X)}
-The cotangent sheaf on $\XX$ is
-\[
-\Omega_{\XX} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n -1}.
-\]
-\end{thm}
+% A first step in this direction is to compare the cotangent sheaf on $X$ and on $\XX$.
+% \begin{thm} \cite[Theorem 1.2.34]{Taams} \label{omega mc(X)}
+% The cotangent sheaf on $\XX$ is
+% \[
+% \Omega_{\XX} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n -1}.
+% \]
+% \end{thm}
 
 In order to extend \zcref{thm: equivalence for Bun} to Higgs bundles, we need to lift the functors $\pi^*$ and $\pi_*$ to the Higgs fields. A Higgs bundle on $X$ is a pair $(E, \varphi)$ where $E$ is a vector bundle on $X$ and $\varphi$ is an $\O_X$-linear operator
 \begin{equation}
@@ -406,17 +407,19 @@ After pulling back, we get an operator
 \end{equation}
 In order to get a Higgs field on $\pi^* E$ we compose with the canonical morphism $\pi^* \Omega_X \to \Omega_{\XX}$. In the case under study, we have an explicit expression for this canonical morphism.
 \begin{lemma}
-Under the isomorphism
-\begin{equation}
-\Omega_{\mc{X}} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n-1}
-\end{equation}
-described in \zcref{omega mc(X)}, the canonical morphism
+There is a canonical isomorphism
+\[
+\Omega_{\XX} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n -1}
+\]
+under the which the canonical morphism
 \begin{equation} \label{eq: canonical morphism cotangent}
 \pi^* \Omega_X \to \Omega_{\mc{X}} \cong \pi^*\Omega_X \otimes \O(\tfrac{n-1}{n}p)
 \end{equation}
 has the form $n \id_{\pi^* \Omega_X} \otimes s^{n-1}$, where $s$ is the tautological section of $\O(\tfrac{1}{n}p)$.
 \end{lemma}
 \begin{proof}
+The isomorphism $\Omega_{\XX} \cong \pi^* \Omega_X \otimes \O(\tfrac{1}{n}p)^{\otimes n -1}$ is \cite[Theorem 1.2.34]{Taams}.\\
+In order to describe this isomorphism and the canonical morphism $\pi^* \Omega_X \to \Omega_{\mc{X}} $ it suffices to to work in an affine neighborhood of $p$.
 The coarse moduli map $\pi \colon \mc{X} \to X $ locally around $p$ has the following form
 \[\begin{tikzcd}
 	{\Ab^1 = \Spec k[x]} & \\
@@ -519,7 +522,7 @@ define inverse equivalences of algebraic stacks. These equivalences preserve (se
 \end{equation}
 \end{thm}
 \begin{proof}
-This is a straightforward consequence of \zcref{lemma Dol}, obtained with the same argument as discussed in \zcref{thm: equivalence for Bun}.
+As discussed in \zcref{thm: equivalence for Bun}, twisting with $\O(-\tfrac{d}{n}p)$ shifts the weight at $p$ by $-d$. It also shifts the degree by $-d$ and thus the slope by $-\tfrac{d}{n}$, preserving semistability.
 \end{proof}
 
 \section{De Rham and Betti moduli spaces}
@@ -543,7 +546,7 @@ As already observed for the moduli space of vector bundles and for the Dolbeault
 \mc{M}_{n, DR}(\mc{X}) = \coprod_{(\underline{m}, d)} \mc{M}_{\underline{m}, DR}^d(\mc{X}),
 \end{equation}
 with the latter union ranging over the pairs $(\underline{m} = m_0 w(0)+ \dots m_{n-1} w(n-1), \; d)$ such that $\sum_{i=0}^{n-1}m_{i} = n$.
-Recall that for a vector bundle to admit a flat connection it is a necessary condition that $\deg \mc{E} = 0$. Therefore we get
+{\color{blue} Recall that for a vector bundle to admit a flat connection it is a necessary condition that $\deg \mc{E} = 0$.} Therefore we get
 %can set $\mc{M}_{\underline{m}, DR} \coloneqq \mc{M}_{\underline{m}, DR}^0(\mc{X})$ and get
 \begin{equation} \label{eq: decomposition of MDR}
 \mc{M}_{n, DR}(\mc{X}) = \coprod_{\underline{m}} \mc{M}_{\underline{m}, DR}^0(\mc{X}).
@@ -558,87 +561,9 @@ Fix a point $x \in \XX \setminus \{p\}$. By $\pi_1(\XX, x)$ we mean the fundamen
 
 Since $\XX$ is connected, locally path connected and semilocally $1$-connected, following Noohi's approach we get that $\pi_1(\XX, x)$ can be computed from the covering spaces of $\XX$, as the automorphism group of the fiber functor over $x$, see \cite[{}18.13, 18.19, 18.22]{Noohi-foundations}. This is analogous to Grothendieck's theory of Galois categories, presented in \cite[]{SGA1-IX}.
 
-The advantage of computing the fundamental group using covering spaces is that we easily get a version of the Seifert-Van Kampen theorem. This is completely analogous to the classical setting of Galois categories, as exposed for example in \cite[Theorem 4.7.7]{Douady2020}. However, since an explicit version of this theorem in our setting seems to be missing, we report the proof for completeness.
+The advantage of computing the fundamental group using covering spaces is that we easily get a version of the Seifert--Van Kampen theorem. This is completely analogous to the classical setting of Galois categories, as exposed for example in \cite[Theorem 4.7.7]{Douady2020}. However, since an explicit version of this theorem in our setting seems to be missing, in the appendix we report the proof for completeness.
 
-\begin{thm}\label{van kampen}
-Let $\XX$ be a topological stack and suppose that it is connected, locally path connected and semilocally $1$-connected. Let $\mc{U}_1 \xhookrightarrow{i_1} \mc{X}$ and $\mc{U}_2 \xhookrightarrow{i_2} \mc{X}$ be open substacks such that $\mc{X} = \mc{U}_1 \cup \mc{U}_2$. Let $\mc{V} \coloneqq \mc{U}_1 \times_{\mc{X}} \mc{U}_2$. Suppose that $\mc{U}_1, \mc{U}_2$ and $\mc{V}$ are connected. Then, for $x \in \mc{V}$, there is an isomorphism
-\[
-\pi_1(\mc{X}, x) \cong \pi_1(\mc{U}_1, x) *_{\pi_1(\mc{V}, x)} \pi_1(\mc{U}_2, x).
-\]
-Equivalently, the following diagram is cocartesian
-\[\begin{tikzcd}
-	{{\pi_1(\mc{V}, x)}} & {\pi_1(\mc{U}_1, x)} \\
-	{\pi_1(\mc{U}_2, x)} & {\pi_1(\mc{X}, x).}
-	\arrow[from=1-1, to=1-2]
-	\arrow[from=1-1, to=2-1]
-	\arrow[from=1-2, to=2-2]
-	\arrow[from=2-1, to=2-2]
-	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=180}, draw=none, from=2-2, to=1-1]
-\end{tikzcd}\]
-\end{thm}
 
-\begin{proof}
-In order to simplify the notation, let $G\coloneqq \pi_1(\mc{X}, x)$, $H \coloneqq \pi_1(\mc{V}, x)$ and $G_l \coloneqq \pi_1(\mc{U}_l, x)$ for $l=1,2$, . The inclusions
-\[\begin{tikzcd}
-	{\mc{V}} & {\mc{U}_l} & {\mc{X}}
-	\arrow["{j_l}", hook, from=1-1, to=1-2]
-	\arrow["j", curve={height=-18pt}, hook, from=1-1, to=1-3]
-	\arrow["{i_l}", hook, from=1-2, to=1-3]
-\end{tikzcd}\]
-give rise to a commutative diagram
-\[\begin{tikzcd}
-	H & {G_1} \\
-	{G_2} & {G_1 *_H G_2} \\
-	&& G,
-	\arrow["{j_{1*}}", from=1-1, to=1-2]
-	\arrow["{j_{2*}}"', from=1-1, to=2-1]
-	\arrow["\iota_1", from=1-2, to=2-2]
-	\arrow["{i_{1*}}", curve={height=-12pt}, from=1-2, to=3-3]
-	\arrow["\iota_2", from=2-1, to=2-2]
-	\arrow["{i_{2*}}"', curve={height=12pt}, from=2-1, to=3-3]
-	\arrow["v", dashed, from=2-2, to=3-3]
-\end{tikzcd}\]
-where the dashed arrow can be filled out by the universal property of $G_1 *_H G_2$. We want to prove that $v$ is an isomorphism.
-
-Consider the following $2$-commutative diagram
-% \[\begin{tikzcd}
-% 	{\Cov_{\mc{X}}} && {G\mh\Set} \\
-% 	&&& {(G_1 *_H G_2)\mh \Set} \\
-% 	{\Cov_{\mc{U}_1} \times_{\Cov_{\mc{V}}} \Cov_{\mc{U}_2}} && {G_1\mh\Set \times_{H\mh\Set} G_2\mh\Set.}
-% 	\arrow["{\theta = F_x^{\mc{X}}}"', from=1-1, to=1-3]
-% 	\arrow["\alpha", from=1-1, to=3-1]
-% 	\arrow[from=1-3, to=2-4]
-% 	\arrow["\beta"', from=1-3, to=3-3]
-% 	\arrow[from=2-4, to=3-3]
-% 	\arrow["{\varphi =F_x^{\mc{U}_1} \, \times_{F_x^{\mc{V}}} \, F_x^{\mc{U}_2}}", from=3-1, to=3-3]
-% \end{tikzcd}\]
-\[\begin{tikzcd}
-	{\Cov_{\mc{X}}} &&& {G\mh\Set} \\
-	\\
-	{\Cov_{\mc{U}_1} \times_{\Cov_{\mc{V}}} \Cov_{\mc{U}_2}} &&& {G_1\mh\Set \times_{H\mh\Set} G_2\mh\Set,}
-	\arrow["{{\theta = F_x^{\mc{X}}}}", from=1-1, to=1-4]
-	\arrow["\alpha", from=1-1, to=3-1]
-	\arrow["\beta"', from=1-4, to=3-4]
-	\arrow["{{\varphi =F_x^{\mc{U}_1} \, \times_{F_x^{\mc{V}}} \, F_x^{\mc{U}_2}}}", from=3-1, to=3-4]
-\end{tikzcd}\]
-where $\alpha$ is induced by the restriction of covering spaces and $\beta$ is induced by $i_{1*}$ and $i_{2*}$.
-Notice that $\alpha$ is an equivalence of categories, obtained by the glueing of covering spaces, $\varphi$ and $\theta$ are equivalences, as a consequence of \cite[Theorem 18.19]{Noohi-foundations}. Therefore, $\beta$ is an equivalence as well.
-
-Notice moreover that the homomorphisms $(\iota_1, \iota_2)$ induce an equivalence of categories
-\[
-\gamma \colon (G_1 *_H G_2)\mh\Set \, \to \, G_1\mh\Set \, \times_{H\mh\Set} \,G_2\mh\Set,
-\]
-making the following diagram $2$-commute
-\[\begin{tikzcd}
-	{G\mh\Set} \\
-	& {(G_1 *_H G_2)\mh\Set} \\
-	{G_1\mh\Set \times_{H-set} G_2\mh\Set.}
-	\arrow["{v^*}", from=1-1, to=2-2]
-	\arrow["\beta"', from=1-1, to=3-1]
-	\arrow["\gamma", from=2-2, to=3-1]
-\end{tikzcd}\]
-Since both $\beta$ and $\gamma$ are equivalences, this shows that $v^*$ is also an equivalence and therefore, see \cite[Proposition 4.7.1]{Douady2020}, that $v$ is an isomorphism of groups.
-\end{proof}
 
 Using this theorem we can compute the fundamental group of the stacky curve $\XX$.
 \begin{prop}\label{prop: fundamental group of stacky curve}
@@ -665,7 +590,7 @@ Finally, the intersection $\mc{V}$ is isomorphic to $\Ab^1 \setminus\{0\}$, ther
 \[
 \pi_1(\Vc, x) = \langle d \rangle.
 \]
-Now we can use \zcref{van kampen} to compute the fundamental group of $\mc{X}$. Indeed, the inclusions $j_1\colon \mc{V} \to \mc{U}_1$ and $j_2 \colon \mc{V} \to \mc{U}_2$ induce
+Now we can use the Seifert--Van Kampen theorem to compute the fundamental group of $\mc{X}$. Indeed, the inclusions $j_1\colon \mc{V} \to \mc{U}_1$ and $j_2 \colon \mc{V} \to \mc{U}_2$ induce
 \begin{align}
 j_{1*}\colon \pi_1(\mc{V}, x) & \to \pi_1(\mc{U}_1, x)\\
 d & \mapsto c,
@@ -677,8 +602,9 @@ d & \mapsto \prod_{i = 1}^g [a_i, b_i].
 Taking the pushout we get the above presentation of $\pi_1(\XX)$.
 \end{proof}
 
+As a consequence, we get an explicit description of the Betti moduli space of $\XX$.
 \begin{cor} \label{Betti moduli space}
-As a consequence, we get an explicit description of the Betti moduli space
+The Betti moduli space of the stacky curve $\XX$ can be expressed as a quotient of an affine variety as
 \begin{equation}
 \mc{M}_{n, B}(\XX) \cong \left[ \bigg\{ ((A_i, B_i)_{i = 1}^g, \, C) \in GL_n^{2g +1} \mymid \prod_{i=1}^{g}[A_i, B_i] = C, \, C^n = Id \bigg\} / GL_n \right]. \label{eq: betti moduli space}
 \end{equation}
@@ -821,10 +747,11 @@ On the other hand, the isomorphism proven in \zcref{thm: equivalence for Higgs} 
 M_{n, Dol}^d(X) \cong M_{n \cdot w(-d), Dol}^0(\mc{X}).
 \end{equation}
 
+Putting the above homeomorphisms together, we get the non abelian Hodge correspondence for vector bundles of degree $d$ on $X$.
 \begin{prop}
-Putting the above homeomorphisms together, we get
+The degree $d$ Dolbeault moduli space of $X$ is homeomorphic to the twisted character variety of $X$, i.e. we have
 \begin{equation}
-M_{n, Dol}^d(X)^{\text{top}} \cong M_{n \cdot w(-d), DR}^0(\XX)^{\text{top}} \cong \left( \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \;\bigg|\; \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} \modd GL_n \right)^{\text{top}}.
+M_{n, Dol}^d(X)^{\text{top}} \cong \left( \bigg\{ (A_i, B_i)_{i = 1}^g \in GL_n^{2g +1} \;\bigg|\; \prod_{i=1}^{g}[A_i, B_i] = \mathrm{e}^{-\frac{2 \pi \mathrm{i}}{n} d} Id \bigg\} \modd GL_n \right)^{\text{top}}.
 \end{equation}
 \end{prop}
 This is exactly the non abelian Hodge correspondence for vector bundles of degree $d$ on $X$, where we gave a description of the twisted character variety of $X$ as a component of the character variety of $\XX$.
@@ -873,7 +800,7 @@ Summing up, we have the following diagram
 \begin{equation} \label{diagram Hodge}
     \begin{tikzcd}[ampersand replacement=\&, column sep=large, row sep=huge]
         {\mc{M}_{\underline{m}, Dol}^0(\XX)} \& {\mc{M}_{\underline{m},Hdg}^0(\XX)} \& {\mc{M}_{\underline{m}, DR}^0(\XX)} \& {\mc{M}_{\underline{m},B}(\XX)} \\
-        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \},} \& {} \\
+        {\{ 0 \}} \& {\Ab^1} \& {\{ 1 \},}
         \arrow["i", hook, from=1-1, to=1-2]
         \arrow[from=1-1, to=2-1]
         \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
@@ -914,7 +841,15 @@ Descending the diagram \eqref{diagram Hodge} to the coarse moduli spaces we get 
 Using the $\Gb_m$-action, we can use the Bia\l{y}nicki-Birula decomposition of $M_{n \cdot w(-d), Hdg}^{0}(\XX)$ to show that $i$ and $j$ induce isomorphisms in cohomology. The idea to use the Bia\l{y}nicki-Birula decomposition to make this cohomological computation was inspired by by Nakajima's appendix to \cite{appendix-by-nakajima}.
 
 \begin{thm} \label{thm: isomorphic cohomologies}
-The inclusions $i$ and $j$ induce isomorphisms of pure mixed Hodge structures in cohomology.
+The inclusions
+\begin{equation}
+i \colon M_{n \cdot w(-d), Dol}^0(\XX) \hookrightarrow M_{n \cdot w(-d), Hdg}^{0}(\XX) \quad \text{ and } \quad j \colon M_{n \cdot w(-d), DR}^0(\XX) \hookrightarrow M_{n \cdot w(-d), Hdg}^{0}(\XX)
+\end{equation}
+% and
+% \begin{equation}
+% j \colon M_{n \cdot w(-d), DR}^0(\XX) \hookrightarrow M_{n \cdot w(-d), Hdg}^{0}(\XX)
+% \end{equation}
+induce isomorphisms of pure mixed Hodge structures in cohomology.
 \end{thm}
 \begin{proof}
 The Hodge moduli space $M_{n \cdot w(-d), Hdg}^0(\XX)$ is a \textit{semiprojective variety}, according to the terminology used in \cite[]{Hausel-RodriguezVillega}. This means that the fixed-point locus 
@@ -931,8 +866,9 @@ The proof of \zcref{thm: isomorphic cohomologies} fails to be algebraic in two d
 
 \section{The Hodge weights}
 
-
-\include{appendix}
+\appendix
+\include{appendices/cohomology}
+\include{appendices/VanKampen}
 
 \printbibliography
 \end{document}
