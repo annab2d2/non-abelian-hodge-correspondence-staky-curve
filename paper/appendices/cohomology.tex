@@ -1,0 +1,113 @@
+\section{Cohomology of the fibers}
+We give an algebraic proof of Hausel and Rodriguez-Villega's result \cite[Corollary 1.3.3]{Hausel-RodriguezVillega}.
+
+\begin{thm}
+Let $M$ be a smooth semiprojective variety and let $\pi\colon M \to \Ab^1$ be a $\Gb_m$-equivariant morphism, where $\Gb_m$ acts on $\Ab^1$ with weight $1$. Denote by $M_t \subseteq M$ the fiber over $t \in \Ab^1$. Consider the inclusions
+\[\begin{tikzcd}
+	{M_0} & M & {M_{1}} \\
+	{\{ 0 \}} & {\Ab^1} & {\{1\}.}
+	\arrow["i_0", hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=2-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow["i_1"', hook', from=1-3, to=1-2]
+	\arrow["\lrcorner"{anchor=center, pos=0.125, rotate=-90}, draw=none, from=1-3, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-3, to=2-2]
+\end{tikzcd}\]
+Then $i_0$ and $i_1$ induce isomorphisms in cohomology.
+\end{thm}
+
+\begin{proof}
+The fact that $i_0$ induces an isomorphism in cohomology is standard. Indeed, thanks to \cite[Eq. 1.2.2]{Hausel-RodriguezVillega}, the Bia\l{y}nicki-Birula decomposition of $M$ gives a stratification which can be used to compute the cohomology. Since the $\Gb_m$-action restricts to $M_0$, the stratification restricts to the Bia\l{y}nicki-Birula stratification of $M_0$. Using these stratifications to compute the singular cohomology, one can easily show that $i_0$ induces an isomorphism in cohomology.
+
+In order to show that also $i_1$ induces an isomorphism in cohomology, it is convenient to factor it as
+\begin{equation}
+M_1 \hookrightarrow M_{\neq 0} \xhookrightarrow{j} M,
+\end{equation}
+where $M_{\neq 0}$ is the fiber over $\Gb_m = \Ab^1 \setminus \{0\}$.
+Since $M_{\neq 0}$ is open in $M$ with complement $M_0$, the diagram
+\begin{equation}
+M_0 \xhookrightarrow{i_0} M \xhookleftarrow{j} M_{\neq 0}
+\end{equation}
+yields a short exact sequence of constructible sheaves of $\mathbb{Q}$-vector spaces on $M$
+\begin{equation} \label{Gysin sequence}
+0 \to j_! \underline{\Qb}_{M \neq 0} \to \underline{\Qb}_M \to i_{0,*}\underline{\Qb}_{M_0} \to 0.
+\end{equation}
+%[add ref, i.e. Vakil, this is often referred to as the gysin sequence, we are taking the etale topology]\\
+
+Let $n$ be the topological dimension of $M$. The dualizing sheaf for Verdier duality is $\underline{\Qb}_M[n]$. Namely, if $\mc{F}$ is a constructible sheaf of $\Qb$-vector spaces on $M$, then its Verider dual in the derived category is $\Db_M \mc{F} = \R \shHom(\mc{F}, \underline{\Qb}_M[n])$.
+In the case of the sheaves appearing in the sequence \eqref{Gysin sequence} we get the following identifications.
+\begin{align}
+\Db_M j_! \underline{\Qb}_{M_{\neq 0}} &= \R \shHom(j_! \underline{\Qb}_{M_{\neq 0}}, \underline{\Qb}_M[n]) \\
+                                       &= \R \shHom(\R j_! \underline{\Qb}_{M_{\neq 0}}, \underline{\Qb}_M[n]) \label{VD 1.1}\\
+                                       &= \R j_* \R \shHom(\underline{\Qb}_{M_{\neq 0}}, j^!\underline{\Qb}_M[n]) \label{VD 1.2}\\
+                                       &= \R j_* \R \shHom(\underline{\Qb}_{M_{\neq 0}}, \underline{\Qb}_{M_{\neq 0}}[n]) \label{VD 1.3} \\
+                                       &= \R j_* \R \shHom(\underline{\Qb}_{M_{\neq 0}}, \underline{\Qb}_{M_{\neq 0}})[n] \label{VD 1.4} \\
+                                       &= \R j_* \underline{\Qb}_{M_{\neq 0}}[n],
+\end{align}
+where \eqref{VD 1.1} is due to $j_!$ being exact since $j$ is an open immersion; \eqref{VD 1.2} is Verdier duality; and \eqref{VD 1.3} is due to the fact that $M_{\neq 0}$ has the same dimension as $M$ and $j^!$ takes the dualizing sheaf on $M$ to the dualizing sheaf on $M_{\neq 0}$.\\
+By definition $\Db_M \underline{\Qb}_M = \underline{\Qb}_M[n]$. Finally
+\begin{align}
+\Db_M i_{0,*} \underline{\Qb}_{M_0} &= i_{0,!} \Db_{M_0} \underline{\Qb}_{M_0} \label{VD 2.1}\\
+                                &= i_{0,!} \underline{\Qb}_{M_0}[n-2] \label{VD 2.2}\\
+                                &= i_{0,*} \underline{\Qb}_{M_0}[n-2] \label{VD 2.3},
+\end{align}
+where \eqref{VD 2.1} is a property of Verdier duality, \eqref{VD 2.2} is because the topological dimension of $M_0$ is $n-2$ and \eqref{VD 2.3} is due to $i$ being a closed immersion.
+
+Therefore, applying the Verdier duality functor to the Gysin sequence \eqref{Gysin sequence}, we get the exact triangle
+\begin{equation}
+i_* \underline{\Qb}_{M_0}[-2] \to \underline{\Qb}_M \to \R j_* \underline{\Qb}_{M_{\neq 0}}.
+\end{equation}
+
+Summing up, we get a commutative diagram
+\[\begin{tikzcd} \label{eq: Gysin sequence 2}
+	{i_* \underline{\Qb}_{M_0}[-2] } & {\underline{\Qb}_M} & {\R j_* \underline{\Qb}_{M_{\neq 0}}} \\
+	& {i_* \underline{\Qb}_{M_0},}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+\end{tikzcd}\]
+where the horizontal line is an exact triangle and the vertical morphism induces isomorphisms in cohomology.\\
+Applying the functor $\R \Gamma(M, -)$, we get
+\begin{equation} \label{eq: gyisin sequence in cohomology}
+\begin{tikzcd}
+	{H^{*-2}(M_0, \Qb)} & {H^*(M, \Qb)} & {H^*(M_{\neq 0}, \Qb)} \\
+	& {H^*(M_0, \Qb)}
+	\arrow["(\star \star)", from=1-1, to=1-2]
+	\arrow["(\star)"', from=1-1, to=2-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["\cong", from=1-2, to=2-2]
+\end{tikzcd}
+\end{equation}
+The morphism $(\star)$ is obtained by cup product with $c_1(\mc{N})$, i.e. the first Chern class of the normal bundle to $M_0$ in $M$. [\textbf{TO DO}: add ref, use gysin sequence]\\
+Since $\pi$ is smooth, $\mc{N}$ is the pullback of the normal bundle to to $\{0\}$ in $\Ab^1$, which is trivial.
+Therefore $\mc{N} \cong \O_{M_0}$ and $c_1(\mc{N}) = 0$. This shows that $(\star)$ is the zero map. Substituting in \eqref{eq: gyisin sequence in cohomology} we get that $(\star \star)$ is also the zero map. Therefore, we get short exact sequences
+\begin{equation} \label{ses}
+0 \to H^*(M, \Qb) \to H^*(M_{\neq 0}, \Qb) \to H^{*-1}(M_0, \Qb) \to 0.
+\end{equation}
+
+Finally, we can use these short exact sequences to show $H^*(M, \Qb) \cong H^*(M_1, \Qb)$. The morphism $\pi\colon M_{\neq 0} \to \Gb_m$ is a trivial fibration, therefore $M_{\neq 0} \cong M_1 \times \Gb_m$. By K\"unneth's formula
+    \begin{equation} \label{eq: cohomology of M_neq0}
+    H^*(M_{\neq 0}) = H^*(M_1) \otimes H^*(\Gb_m).
+    \end{equation}
+    The multiplicative group $\Gb_m$ has the homotopy type of a circle, so \zcref{eq: cohomology of M_neq0} becomes
+    \begin{equation}
+    H^*(M_{\neq 0}) = H^*(M_1) \oplus H^{*-1}(M_1).
+    \end{equation}
+    Substituting in \eqref{ses} we get short exact sequences
+    \begin{equation}
+    0 \to H^*(M) \to H^*(M_1)\oplus H^{*-1}(M_1) \to H^{*-1}(M) \to 0.
+    \end{equation}
+    Then the thesis is proven by induction on the cohomological degree.
+\end{proof}
+
+\begin{rmk}
+Since the inclusions $i_0$ and $i_1$ are algebraic, the pullbacks
+\begin{equation}
+i_0^* \colon H^*(M, \Qb) \to H^*(M_0, \Qb), \quad i_1^* \colon H^*(M, \Qb) \to H^*(M_1, \Qb)
+\end{equation}
+are isomorphisms of mixed Hodge structures. Moreover, $M$ has pure Hodge structure, as shown in \cite[Corollary 1.3.2]{Hausel-RodriguezVillega}. Therefore $i_0^*$ and $i_1^*$ are isomorphisms of pure mixed Hodge structures.
+\end{rmk}
